@@ -684,7 +684,7 @@ def main_metrics():
     print("Betweenness Centrality:", g.betweenness_centrality())
     print("Closeness Centrality:", g.closeness_centrality())
     print("Clustering Coefficient:", g.clustering_coefficient())
-
+    print("Similarity Matrix:", g.similarity_matrix())
 if __name__ == "__main__":
     main_undirected_graphs()
     main_directed_graphs()
