@@ -354,7 +354,51 @@ class Graph:
                 similarity[v][u] = sum(1/len(self.__adjacency_list[z]) for z in common_neighbors)
         
         return similarity
-    
+    def jaccard_similarity(self):
+        """Tính ma trận Jaccard similarity của đồ thị"""
+        # Khởi tạo ma trận similarity với giá trị 0
+        jaccard = {v: {u: 0 for u in self.__adjacency_list} for v in self.__adjacency_list}
+        
+        # Tính độ tương đồng Jaccard cho từng cặp đỉnh
+        for v in self.__adjacency_list:
+            for u in self.__adjacency_list:
+                # Lấy tập hợp láng giềng của v và u
+                neighbors_v = set(self.__adjacency_list[v])
+                neighbors_u = set(self.__adjacency_list[u])
+                
+                # Tính intersection và union
+                intersection = len(neighbors_v.intersection(neighbors_u))
+                union = len(neighbors_v.union(neighbors_u))
+                
+                # Tính hệ số Jaccard
+                jaccard[v][u] = intersection / union if union > 0 else 0
+                
+        return jaccard
+
+    def cosine_similarity(self):
+        """Tính ma trận Cosine similarity của đồ thị"""
+        # Khởi tạo ma trận similarity với giá trị 0
+        cosine = {v: {u: 0 for u in self.__adjacency_list} for v in self.__adjacency_list}
+        
+        # Tính độ tương đồng Cosine cho từng cặp đỉnh
+        for v in self.__adjacency_list:
+            for u in self.__adjacency_list:
+                # Lấy tập hợp láng giềng của v và u
+                neighbors_v = set(self.__adjacency_list[v])
+                neighbors_u = set(self.__adjacency_list[u])
+                
+                # Tính dot product (số lượng láng giềng chung)
+                dot_product = len(neighbors_v.intersection(neighbors_u))
+                
+                # Tính magnitude của vectors
+                magnitude_v = (len(neighbors_v)) ** 0.5
+                magnitude_u = (len(neighbors_u)) ** 0.5
+                
+                # Tính hệ số Cosine
+                denominator = magnitude_v * magnitude_u
+                cosine[v][u] = dot_product / denominator if denominator > 0 else 0
+                
+        return cosine
 
 # Subclass WeightedGraph from Graph (weighted graph)
 class WeightedGraph(Graph):
@@ -685,6 +729,8 @@ def main_metrics():
     print("Closeness Centrality:", g.closeness_centrality())
     print("Clustering Coefficient:", g.clustering_coefficient())
     print("Similarity Matrix:", g.similarity_matrix())
+    print("Jaccard Similarity:", g.jaccard_similarity())
+    print("Cosine Similarity:", g.cosine_similarity())
 if __name__ == "__main__":
     main_undirected_graphs()
     main_directed_graphs()
