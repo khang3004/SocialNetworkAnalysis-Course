@@ -1,0 +1,83 @@
+[
+    {
+        "id": "122098685378646827_122098694684646827",
+        "message": "Post để lấy dữ liệu thoai",
+        "created_time": "2024-11-26T01:29:23+0000",
+        "comments": {
+            "data": [],
+            "summary": {
+                "order": "chronological",
+                "total_count": 0,
+                "can_comment": true
+            }
+        },
+        "reactions": {
+            "data": [],
+            "summary": {
+                "total_count": 0,
+                "viewer_reaction": "NONE"
+            }
+        },
+        "type": "photo"
+    },
+    {
+        "id": "122098685378646827_122098694384646827",
+        "created_time": "2024-11-26T01:28:47+0000",
+        "comments": {
+            "data": [],
+            "summary": {
+                "order": "chronological",
+                "total_count": 0,
+                "can_comment": true
+            }
+        },
+        "reactions": {
+            "data": [],
+            "summary": {
+                "total_count": 0,
+                "viewer_reaction": "NONE"
+            }
+        },
+        "type": "status"
+    },
+    {
+        "id": "122098685378646827_122098686512646827",
+        "created_time": "2024-11-26T01:06:49+0000",
+        "comments": {
+            "data": [],
+            "summary": {
+                "order": "chronological",
+                "total_count": 0,
+                "can_comment": true
+            }
+        },
+        "reactions": {
+            "data": [],
+            "summary": {
+                "total_count": 0,
+                "viewer_reaction": "NONE"
+            }
+        },
+        "type": "status"
+    },
+    {
+        "id": "122098685378646827_122098130642646827",
+        "created_time": "2003-02-26T08:00:00+0000",
+        "comments": {
+            "data": [],
+            "summary": {
+                "order": "chronological",
+                "total_count": 0,
+                "can_comment": true
+            }
+        },
+        "reactions": {
+            "data": [],
+            "summary": {
+                "total_count": 0,
+                "viewer_reaction": "NONE"
+            }
+        },
+        "type": "link"
+    }
+]

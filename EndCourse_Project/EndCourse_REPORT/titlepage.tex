@@ -1,0 +1,50 @@
+\newgeometry{left=60pt,right=60pt,bottom=8pt,top=38pt}
+\begin{titlepage}
+    %Khung
+    \begin{tikzpicture}[overlay, remember picture] 
+	\draw [line width=3pt]
+            ($ (current page.north west) + (1.5cm,-1.5cm) $) rectangle	($ (current page.south east) + (-1.5cm, 1.5cm) $); 
+	\draw [line width=0.5pt]
+		($ (current page.north west) +        (1.6cm,-1.6cm) $) rectangle ($ (current page.south east) + (-1.6cm, 1.6cm) $); 
+    \end{tikzpicture}
+		
+    \begin{center}
+	%\vspace{0.1cm}
+ \textbf{\fontsize{14pt}  {0pt}\fontfamily{ugq}\selectfont 
+        HUTECH UNIVERSITY \\
+	\vspace{0.5cm}
+	FACULTY of INFORMATION TECHNOLOGY\\
+        \vspace{0.1cm}
+        -----------------}
+        
+    \end{center}
+		
+    \begin{figure}[H]
+	\centering
+	\vspace{0.6cm}\includegraphics[scale=0.55]{Images/logoHutech.png}
+    \end{figure}
+		
+    \vspace{0.8cm}
+    \begin{center}
+	\fontsize{25pt}
+        {0pt}\fontfamily{cmbr}\selectfont 
+        \textbf{\textcolor{pink}{Enhancing Drug-drug Interaction Prediction via DGNN-DDI \& EmerGNN}\\
+	\vspace{1.5cm}
+	\fontsize{18pt}
+        {25pt}\fontfamily{cmbr}\selectfont {
+        Final Project \vspace{0.2cm} in Social Network Analysis Course\\}}
+	\vspace{1.5cm}
+	\fontsize{12pt}{25pt}\fontfamily{cmbr}
+        {\selectfont 
+				
+        \begin{tabular}{rl}
+		{Module Code} & 
+            \textbf{CMP1048} \\
+            {Instructor} & \textbf{Nhat-Tung Le} \\
+             Student & \textbf{Hoang-Khang Nguyen} \\
+             Student ID & \textbf{2186400244}
+	\end{tabular} \\
+	\vfill\vspace{1cm}
+	Ho Chi Minh City, \today            \vfill\vspace{0.75cm}}
+    \end{center}
+\end{titlepage}  

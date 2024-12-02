@@ -1,0 +1,361 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{ynt/global//global/global}
+    \entry{GCN}{article}{}
+      \name{author}{1}{}{%
+        {{hash=54c6e185b6f001293d0b37b4076ef8d6}{%
+           family={Thomas\bibnamedelimb N.\bibnamedelimi Kipf},
+           familyi={T\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim K\bibinitperiod},
+           given={Max\bibnamedelima Welling},
+           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{54c6e185b6f001293d0b37b4076ef8d6}
+      \strng{fullhash}{54c6e185b6f001293d0b37b4076ef8d6}
+      \strng{bibnamehash}{54c6e185b6f001293d0b37b4076ef8d6}
+      \strng{authorbibnamehash}{54c6e185b6f001293d0b37b4076ef8d6}
+      \strng{authornamehash}{54c6e185b6f001293d0b37b4076ef8d6}
+      \strng{authorfullhash}{54c6e185b6f001293d0b37b4076ef8d6}
+      \field{labelalpha}{Tho17}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Semi-Supervised Classification with Graph Convolutional Networks}
+      \field{year}{2017}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1609.02907
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1609.02907
+      \endverb
+    \endentry
+    \entry{GAT}{misc}{}
+      \name{author}{6}{}{%
+        {{hash=b1208a71c9b067bcef8fb29c15a09b5d}{%
+           family={Veličković},
+           familyi={V\bibinitperiod},
+           given={Petar},
+           giveni={P\bibinitperiod}}}%
+        {{hash=c30bc5878e196747275a7ff581c6ed22}{%
+           family={Cucurull},
+           familyi={C\bibinitperiod},
+           given={Guillem},
+           giveni={G\bibinitperiod}}}%
+        {{hash=5a0765951987db22af274a31732111fa}{%
+           family={Casanova},
+           familyi={C\bibinitperiod},
+           given={Arantxa},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8e0f06556535de7b7d9d04d390dc4ac3}{%
+           family={Romero},
+           familyi={R\bibinitperiod},
+           given={Adriana},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b1dc447055a5e64105a2984bf8306851}{%
+           family={Liò},
+           familyi={L\bibinitperiod},
+           given={Pietro},
+           giveni={P\bibinitperiod}}}%
+        {{hash=40a8e4774982146adc2688546f54efb2}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Yoshua},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{a923132f6a9d7d93c40facfd855c7dc4}
+      \strng{fullhash}{e36c8bf9f36dc60726c1c2afa402755c}
+      \strng{bibnamehash}{a923132f6a9d7d93c40facfd855c7dc4}
+      \strng{authorbibnamehash}{a923132f6a9d7d93c40facfd855c7dc4}
+      \strng{authornamehash}{a923132f6a9d7d93c40facfd855c7dc4}
+      \strng{authorfullhash}{e36c8bf9f36dc60726c1c2afa402755c}
+      \field{labelalpha}{Vel+18}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{stat.ML}
+      \field{eprinttype}{arXiv}
+      \field{title}{Graph Attention Networks}
+      \field{year}{2018}
+      \true{nocite}
+      \verb{eprint}
+      \verb 1710.10903
+      \endverb
+    \endentry
+    \entry{SAGPool}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1cc06b066358162722a53d776671e180}{%
+           family={Junhyun\bibnamedelima Lee},
+           familyi={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Jaewoo\bibnamedelima Kang},
+           giveni={J\bibinitperiod\bibinitdelim K\bibinitperiod},
+           suffix={Inyeop\bibnamedelima Lee},
+           suffixi={I\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{1cc06b066358162722a53d776671e180}
+      \strng{fullhash}{1cc06b066358162722a53d776671e180}
+      \strng{bibnamehash}{1cc06b066358162722a53d776671e180}
+      \strng{authorbibnamehash}{1cc06b066358162722a53d776671e180}
+      \strng{authornamehash}{1cc06b066358162722a53d776671e180}
+      \strng{authorfullhash}{1cc06b066358162722a53d776671e180}
+      \field{labelalpha}{Jun19}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Self-Attention Graph Pooling}
+      \field{year}{2019}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1904.08082
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1904.08082
+      \endverb
+    \endentry
+    \entry{survey}{article}{}
+      \name{author}{12}{}{%
+        {{hash=03581f3580e6c13533d81ddd72160c62}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Xuan},
+           giveni={X\bibinitperiod}}}%
+        {{hash=e85c68fd4c689a7f61555bc8540df1a5}{%
+           family={Dai},
+           familyi={D\bibinitperiod},
+           given={Lichang},
+           giveni={L\bibinitperiod}}}%
+        {{hash=f56ea70b333c89d2fe8fea6a680b0262}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Yafang},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=b7fa062c1f207067561c77ca4b1d0dff}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Zu-Guo},
+           giveni={Z\bibinithyphendelim G\bibinitperiod}}}%
+        {{hash=3fa0b98bdb0330cc0ea22e655fd964c2}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Wen},
+           giveni={W\bibinitperiod}}}%
+        {{hash=6c9dffad758a705f0d4fe224e6ed1d4c}{%
+           family={Shi},
+           familyi={S\bibinitperiod},
+           given={Jian-Yu},
+           giveni={J\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=ed1860ee599be251cb2c5614942bc011}{%
+           family={Cao},
+           familyi={C\bibinitperiod},
+           given={Dong-Sheng},
+           giveni={D\bibinithyphendelim S\bibinitperiod}}}%
+        {{hash=93f91d9e10f2f4fdbc72d7adc984494e}{%
+           family={Zeng},
+           familyi={Z\bibinitperiod},
+           given={Li},
+           giveni={L\bibinitperiod}}}%
+        {{hash=49445a86fa5d5e41bab617788120ef9c}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Haowen},
+           giveni={H\bibinitperiod}}}%
+        {{hash=5fb703d00f78046722bc5c469b3e7701}{%
+           family={Song},
+           familyi={S\bibinitperiod},
+           given={Bosheng},
+           giveni={B\bibinitperiod}}}%
+        {{hash=ed7b2de2f08bfa6638d5d174d55d839b}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Philip\bibnamedelima S},
+           giveni={P\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=a7534c5f51973ec6c521fab21e85b88a}{%
+           family={Zeng},
+           familyi={Z\bibinitperiod},
+           given={Xiangxiang},
+           giveni={X\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press (OUP)}%
+      }
+      \strng{namehash}{3623244f5bfdd5be918395724424c9f5}
+      \strng{fullhash}{6ef0bac0a63e67e0f9f0def5224feb2a}
+      \strng{bibnamehash}{3623244f5bfdd5be918395724424c9f5}
+      \strng{authorbibnamehash}{3623244f5bfdd5be918395724424c9f5}
+      \strng{authornamehash}{3623244f5bfdd5be918395724424c9f5}
+      \strng{authorfullhash}{6ef0bac0a63e67e0f9f0def5224feb2a}
+      \field{labelalpha}{Lin+23}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1477-4054}
+      \field{journaltitle}{Briefings in Bioinformatics}
+      \field{month}{7}
+      \field{number}{4}
+      \field{title}{Comprehensive evaluation of deep and graph learning on drug–drug interactions prediction}
+      \field{volume}{24}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.1093/bib/bbad235
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1093/bib/bbad235
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1093/bib/bbad235
+      \endverb
+    \endentry
+    \entry{DGNN-DDI}{article}{}
+      \name{author}{1}{}{%
+        {{hash=821e43d339d4e13af93650752d6c86ef}{%
+           family={Mei\bibnamedelima Ma},
+           familyi={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Xiujuan\bibnamedelima Lei},
+           giveni={X\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{821e43d339d4e13af93650752d6c86ef}
+      \strng{fullhash}{821e43d339d4e13af93650752d6c86ef}
+      \strng{bibnamehash}{821e43d339d4e13af93650752d6c86ef}
+      \strng{authorbibnamehash}{821e43d339d4e13af93650752d6c86ef}
+      \strng{authornamehash}{821e43d339d4e13af93650752d6c86ef}
+      \strng{authorfullhash}{821e43d339d4e13af93650752d6c86ef}
+      \field{labelalpha}{Mei23}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A dual graph neural network for drug–drug interactions prediction based on molecular structure and interactions}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010812
+      \endverb
+      \verb{url}
+      \verb https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010812
+      \endverb
+    \endentry
+    \entry{EmerGNN}{misc}{}
+      \name{author}{7}{}{%
+        {{hash=0fd4ba18e0fe824343d37fd54343fc06}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Yongqi},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=bbd2f07f8ca58ba3ce584f2ef1bbccdb}{%
+           family={Yao},
+           familyi={Y\bibinitperiod},
+           given={Quanming},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=e5fdd5eebec6b4f88e7afc4f783ddb63}{%
+           family={Yue},
+           familyi={Y\bibinitperiod},
+           given={Ling},
+           giveni={L\bibinitperiod}}}%
+        {{hash=3a8ac5ed3d061d6fd4375a30170119c8}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Xian},
+           giveni={X\bibinitperiod}}}%
+        {{hash=8f0302860c26e228adbfd950cf4b26e2}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Ziheng},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=0c6989985b72574251d72a0d5e61fed0}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Zhenxi},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=828d9baf956fa25bba9fb1a2dc3ab299}{%
+           family={Zheng},
+           familyi={Z\bibinitperiod},
+           given={Yefeng},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{6b88490f2b1551cb14a68d0450ecf106}
+      \strng{fullhash}{d77c79153f6633e2b44902d00fec9425}
+      \strng{bibnamehash}{6b88490f2b1551cb14a68d0450ecf106}
+      \strng{authorbibnamehash}{6b88490f2b1551cb14a68d0450ecf106}
+      \strng{authornamehash}{6b88490f2b1551cb14a68d0450ecf106}
+      \strng{authorfullhash}{d77c79153f6633e2b44902d00fec9425}
+      \field{labelalpha}{Zha+23}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{q-bio.QM}
+      \field{eprinttype}{arXiv}
+      \field{title}{Emerging Drug Interaction Prediction Enabled by Flow-based Graph Neural Network with Biomedical Network}
+      \field{year}{2023}
+      \true{nocite}
+      \verb{eprint}
+      \verb 2311.09261
+      \endverb
+    \endentry
+    \entry{IDOLpro}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=4099f246e64c21256a4300ae22f5ed37}{%
+           family={Kadan},
+           familyi={K\bibinitperiod},
+           given={Amit},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f1a3609183e7f07004b3fd3977d50e89}{%
+           family={Ryczko},
+           familyi={R\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod}}}%
+        {{hash=d946502a548ca42a33aea79957b7fd64}{%
+           family={Roitberg},
+           familyi={R\bibinitperiod},
+           given={Adrian},
+           giveni={A\bibinitperiod}}}%
+        {{hash=fbbfc6ed97e1af7ee422ba06019c0162}{%
+           family={Yamazaki},
+           familyi={Y\bibinitperiod},
+           given={Takeshi},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{fa939b3a610d385637d30d128708e614}
+      \strng{fullhash}{dfc0a5d2f12b93fc91bc0409e28cb966}
+      \strng{bibnamehash}{fa939b3a610d385637d30d128708e614}
+      \strng{authorbibnamehash}{fa939b3a610d385637d30d128708e614}
+      \strng{authornamehash}{fa939b3a610d385637d30d128708e614}
+      \strng{authorfullhash}{dfc0a5d2f12b93fc91bc0409e28cb966}
+      \field{labelalpha}{Kad+24}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{physics.chem-ph}
+      \field{eprinttype}{arXiv}
+      \field{title}{Guided Multi-objective Generative AI to Enhance Structure-based Drug Design}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{eprint}
+      \verb 2405.11785
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

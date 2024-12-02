@@ -1,0 +1,32 @@
+\contentsline {section}{\numberline {1}Bài tập 1: Phân tích mạng học tập}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Yêu cầu}{2}{}%
+\contentsline {subsection}{\numberline {1.2}Giải}{2}{}%
+\contentsline {subsubsection}{\numberline {1.2.1}Biểu diễn đồ thị}{2}{}%
+\contentsline {subsubsection}{\numberline {1.2.2}Tính mật độ mạng}{2}{}%
+\contentsline {subsubsection}{\numberline {1.2.3}Các số đo trung tâm}{2}{}%
+\contentsline {paragraph}{a. Degree Centrality}{2}{}%
+\contentsline {paragraph}{b. Closeness Centrality}{3}{}%
+\contentsline {paragraph}{c. Betweenness Centrality}{3}{}%
+\contentsline {subsubsection}{\numberline {1.2.4}Số đo gom cụm}{3}{}%
+\contentsline {subsubsection}{\numberline {1.2.5}Phân tích vai trò của Em}{3}{}%
+\contentsline {section}{\numberline {2}Bài tập 2: Phân tích luồng thông tin trong tổ chức}{4}{}%
+\contentsline {subsection}{\numberline {2.1}Yêu cầu}{4}{}%
+\contentsline {subsection}{\numberline {2.2}Giải Bài tập 2}{4}{}%
+\contentsline {subsubsection}{\numberline {2.2.1}Biểu diễn đồ thị}{4}{}%
+\contentsline {subsubsection}{\numberline {2.2.2}Mật độ mạng}{4}{}%
+\contentsline {subsubsection}{\numberline {2.2.3}Bậc vào và ra:}{4}{}%
+\contentsline {subsubsection}{\numberline {2.2.4}Các số đo trung tâm có hướng}{4}{}%
+\contentsline {paragraph}{a. In/Out-Degree Centrality}{4}{}%
+\contentsline {paragraph}{b. In/Out-Closeness Centrality}{4}{}%
+\contentsline {paragraph}{c. Betweenness Centrality (chuẩn hóa)}{5}{}%
+\contentsline {subsubsection}{\numberline {2.2.5}Phân tích cấu trúc tổ chức}{5}{}%
+\contentsline {section}{\numberline {3}Bài tập 3: Phân tích mạng xã hội trực tuyến}{5}{}%
+\contentsline {subsection}{\numberline {3.1}Yêu cầu}{5}{}%
+\contentsline {subsection}{\numberline {3.2}Giải}{6}{}%
+\contentsline {subsubsection}{\numberline {3.2.1}Biểu diễn đồ thị}{6}{}%
+\contentsline {subsubsection}{\numberline {3.2.2}Mật độ mạng có hướng}{6}{}%
+\contentsline {subsubsection}{\numberline {3.2.3}Các số đo trung tâm}{6}{}%
+\contentsline {paragraph}{a. In/Out-Degree Centrality}{6}{}%
+\contentsline {paragraph}{b. In/Out-Closeness Centrality}{6}{}%
+\contentsline {paragraph}{c. Betweenness Centrality (chuẩn hóa)}{7}{}%
+\contentsline {subsubsection}{\numberline {3.2.4}Phân tích vai trò và tương tác}{7}{}%

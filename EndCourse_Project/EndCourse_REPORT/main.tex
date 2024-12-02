@@ -1,0 +1,732 @@
+\documentclass[12pt, a4paper,oneside]{book}
+\usepackage[utf8]{vietnam}
+
+
+\usepackage[british,UKenglish,USenglish,english,american]{babel}
+\usepackage{lipsum}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{multirow}
+\usepackage{textcomp}
+\usepackage{lmodern}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{bm}
+\usepackage{longtable}
+\usepackage{caption}
+\usepackage{lscape}
+\usepackage{booktabs}
+
+%\usepackage[table,xcdraw]{xcolor}
+%for \xRightarrow
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{systeme}
+\usepackage{lettrine}
+\usepackage[backend=biber,style=alphabetic,sorting=ynt]{biblatex}
+\addbibresource{sample.bib}
+\renewcommand{\baselinestretch}{1.0} 
+\newcommand{\vect}[1]{\boldsymbol{\mathbf{#1}}}
+%=================================================================================
+\newenvironment{code}{\captionsetup{type=listing}}{}
+%\SetupFloatingEnvironment{listing}{name=SourceCode}
+\usepackage{listings}
+\usepackage{color} %% Tô màu cho code thêm đẹp
+\usepackage{xcolor}
+\usepackage{courier}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{blue},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\small,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+
+\lstset{style=mystyle}
+%///////////////////
+
+%Kí hiệu toán học
+\usepackage{bigints} %Mở rộng dấu tích phân
+\newcommand{\hoac}[1]{
+\left[\begin{aligned}#1\end{aligned}\right.}
+\newcommand{\heva}[1]{
+\left\{\begin{aligned}#1\end{aligned}\right.}
+\newcommand{\td}{\Leftrightarrow} %dấu tương đương
+\newcommand{\sr}{\Rightarrow} %dấu suy ra
+\newcommand{\tp}[2]{\ensuremath{\displaystyle \int^{#1}_{#2}}} %dấu tích phân
+\renewcommand{\vec}[1]{\protect\overrightarrow{#1}} %vector
+\newcommand{\taprong}{\varnothing} %tập rỗng
+\newcommand{\vocung}{\infty} %vô cùng
+\newcommand{\rr}{\mathbb{R}} %tập số thực
+\newcommand{\z}{\mathbb{Z}} %tập số nguyên
+\newcommand{\q}{\mathbb{Q}} %tập số hữu tỉ
+\newcommand{\n}{\mathbb{N}} %tập số tự nhiên
+\newcommand{\lh}{\langle} %tích vô hướng bên trái
+\newcommand{\rh}{\rangle} %tích vô hướng bên phải
+\newcommand{\interior}[1]{%
+	{\kern0pt#1}^{\mathrm{o}}%
+} %Phần trong của một tập hợp
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu} %Gạch đầu vừa
+%----------
+
+%Canh chỉnh
+\setlength{\parindent}{0pt} %Không lùi đầu dòng
+\renewcommand{\baselinestretch}{1.35} %Giãn dòng
+%----------
+
+%Chia cột
+\usepackage{multicol} 
+\usepackage{vwcol} %Chia cột không đều
+%----------
+
+%Kí hiệu
+\usepackage{fontawesome} 
+\usepackage{bbding} 
+\usepackage{utfsym}
+%----------
+
+%Liệt kê
+\usepackage{enumerate} 
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand\labelitemii{$\circ$}
+\renewcommand{\labelenumi}{%
+	\begin{tikzpicture}[baseline=(1.base)]
+		\node[circle,fill=chapnumberbg,text=white,font=\bfseries,minimum size=5mm,inner sep=0mm](1){\alph{enumi}};
+	\end{tikzpicture}
+}
+%----------
+
+%Màu sắc
+\usepackage{color} 
+\usepackage{colortbl} %for tabular
+\definecolor{chapnumberbg}{RGB}{26,40,105}
+\definecolor{chapname}{RGB}{100,117,158}
+\definecolor{bb}{rgb}{0.2, 0.2, 0.6}
+\definecolor{ggg}{RGB}{250,250,250}
+\definecolor{grannysmithapple}{rgb}{0.66, 0.89, 0.63}
+\definecolor{honeydew}{rgb}{0.94, 1.0, 0.94}
+\definecolor{beaublue}{RGB}{231,241,255}
+\definecolor{bblue}{RGB}{244,247,255}
+\definecolor{bang}{RGB}{160, 200, 255}
+\definecolor{emerald}{rgb}{0.31, 0.78, 0.47}
+
+%---------
+
+\usepackage{array}
+\usepackage{emptypage}
+\usepackage{esint,amscd,xspace,authblk,srcltx,fontenc,bbm,amsxtra,pgfplots,mathrsfs,pgf,stmaryrd}
+\pgfplotsset{compat=1.8}
+\usepackage[hidelinks,unicode]{hyperref} %Không highlight mục lục
+\usepackage[paperheight=29.7cm, paperwidth=21cm, right=2cm,left=2cm,top=2 cm, bottom=2cm] {geometry}
+
+\usetikzlibrary{arrows}
+\usepackage{float} % 5ét vị trí chèn ảnh 
+\usepackage{tikz} % Thư vien tao khung bia
+\usepackage{tkz-tab} 
+\usetikzlibrary{calc,angles,patterns,shapes.geometric,patterns.meta} % Thu vien tikz
+\usepackage[framemethod=TikZ]{mdframed}
+
+%Header&Footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+%\rhead{\fontfamily{qhv}\selectfont{Bài tập lí thuyết tối ưu tuyến tính}}
+%\lhead{\fontfamily{qhv}\selectfont{\small{Nhóm 2}}}
+
+\lhead{\small{Nguyen Hoang Khang}}
+\rhead{\small{\textsc{Enhancing Drug-drug Interaction Prediction via DGNN-DDI}}}
+\cfoot{\footnotesize{\fontfamily{bch}\selectfont{\thepage}}}
+\renewcommand{\headrulewidth}{0.2pt} % cho header
+\renewcommand{\footrulewidth}{0pt} % cho footer
+%---------
+
+%Mẫu chapter
+\usepackage{titletoc}
+\usepackage{babel}
+\usepackage[explicit]{titlesec}
+\usepackage{lmodern} % to have a large font size for the chapter numbers
+\usepackage{sectsty}
+\allsectionsfont{\fontfamily{cmbr}\selectfont}
+
+\titleformat{\chapter}[display]
+{\normalfont}
+{}
+{0pt}
+{
+	\begin{tikzpicture}
+		\node[
+		draw=chapname,
+		rounded corners,
+		outer sep=0pt,
+		inner sep=6pt,
+		rotate=90,
+		line width=1pt,
+		font=\Large\color{chapnumberbg}\bfseries
+		]
+		(chapname) 
+		{\chaptertitlename};
+		\node[
+		fill=chapnumberbg,
+		minimum width=2cm,
+		minimum height=2.3cm,
+		rounded corners,
+		anchor=west,
+		font=\color{white}\fontsize{40}{48}\selectfont\bfseries
+		]
+		at ([xshift=6pt]chapname.south)
+		(chapnumber)
+		{\thechapter};
+		\node[
+		anchor=west,
+		text width=\textwidth-4cm,
+		font=\bfseries\Large
+		] 
+		at ([xshift=10pt]chapnumber.east)
+		{#1};
+		\fill[
+		overlay,
+		draw=none,
+		line width=0pt,
+		rounded corners=1pt,
+		left color=chapnumberbg,
+		right color=chapnumberbg!10
+		]
+		([yshift=-3pt]chapname.north west) rectangle ++(\textwidth,-3pt);  
+	\end{tikzpicture}%
+}
+\titleformat{name=\chapter,numberless}[display]
+{\normalfont}
+{}
+{0pt}
+{%
+	\begin{tikzpicture}
+		\node[
+		anchor=west,
+		inner sep=0pt,
+		outer sep=0pt,
+		text width=\textwidth,
+		font=\bfseries\LARGE
+		]
+		(chaptitle) 
+		{#1};
+		\fill[
+		overlay,
+		draw=none,
+		line width=0pt,
+		rounded corners=1pt,
+		left color=chapnumberbg,
+		right color=chapnumberbg!10
+		]
+		([yshift=-3pt]chaptitle.south west) rectangle ++(\textwidth,-3pt);  
+	\end{tikzpicture}%
+}
+
+
+
+\renewcommand\thechapter{\arabic{chapter}} %Đánh số chapter
+
+
+
+% Set font for section headings
+
+%---------
+
+%Khung đề bài
+\usepackage[most]{tcolorbox}
+\newtcolorbox[auto counter,number within=chapter]{de}{breakable,top=1cm,title={\fontfamily{bch}\selectfont\textbf{\fontfamily{uhv}\selectfont Proposition \thetcbcounter} },enhanced,before skip=5mm,after skip=5mm,boxsep=3mm,coltitle=black!5!white,attach boxed title to top left={xshift=5mm,yshift=-\tcboxedtitleheight},boxrule=.5pt,boxed title style={interior empty,frame code={
+			\fill([xshift=1mm]frame.north east)arc(180:0:1mm)([xshift=-1mm]frame.north west)arc(0:180:1mm);
+			\path[right color=chapnumberbg,left color=chapnumberbg,middle color=chapnumberbg] ([shift={(-.2,.1)}]frame.north west)--([shift={(.2,.1)}]frame.north east)[rounded corners=1mm]--([xshift=.1cm]frame.north east)--(frame.south east)--(frame.south west)--([xshift=-.1cm]frame.north west)[sharp corners]--cycle;
+		}
+}}
+
+%----------
+% \newtcolorbox[auto counter,number within=chapter]{proposition}{breakable,top=1cm,title={\fontfamily{bch}\selectfont\textbf{Proposition \thetcbcounter} },enhanced,before skip=5mm,after skip=5mm,boxsep=3mm,coltitle=black!5!white,attach boxed title to top left={xshift=5mm,yshift=-\tcboxedtitleheight},boxrule=.5pt,boxed title style={interior empty,frame code={
+% 			\fill([xshift=1mm]frame.north east)arc(180:0:1mm)([xshift=-1mm]frame.north west)arc(0:180:1mm);
+% 			\path[right color=chapnumberbg,left color=chapnumberbg,middle color=chapnumberbg] ([shift={(-.2,.1)}]frame.north west)--([shift={(.2,.1)}]frame.north east)[rounded corners=1mm]--([xshift=.1cm]frame.north east)--(frame.south east)--(frame.south west)--([xshift=-.1cm]frame.north west)[sharp corners]--cycle;
+% 		}
+% }}
+%Môi trường lời giải, chứng minh
+\newenvironment{luuy}{\fontfamily{bch}\HandPencilLeft \selectfont{\textbf{ Note.}} \normalfont}{ \hfill \ensuremath{\blacksquare}}
+%------
+\newenvironment{cminh}{\fontfamily{bch}\selectfont{\textbf{Proof.}} \normalfont}{ \hfill \ensuremath{\blacksquare}}
+%------
+%Môi trường định nghĩa
+\usepackage[amsmath,standard,thmmarks]{ntheorem}
+\theoremseparator{.}
+\newtheorem{dnghia}{Definition}
+%------
+%Môi trường bổ đề
+\usepackage[amsmath,standard,thmmarks]{ntheorem}
+\theoremseparator{.}
+\newtheorem{bd}{Lemma}
+
+\newcommand{\nxet}{\color{chapnumberbg}\fontfamily{bch}\faCommentsO \selectfont{\textbf{ Comment. }} \normalfont\normalcolor}
+%------
+\newcommand{\hqua}{\color{chapnumberbg}\fontfamily{qhv} \faEdit \selectfont{\textbf{ Corollary. }} \normalfont\normalcolor}
+
+%Đánh số lại
+\setcounter{chapter}{0}
+\usetikzlibrary{patterns.meta}
+
+%=================================================================================
+
+\begin{document}
+\include{titlepage}
+
+\begin{titlepage}
+\setlength{\baselineskip}{18truept}                                             % Đây là trang bìa
+\begin{center}
+{\large\bf HUTECH UNIVERSITY}\\
+{\large\bf FACULTY of INFOMATION TECHNOLOGY} \\
+{---------------------o0o--------------------}
+\vskip 4cm
+{\bf Final Project in Social Network Analysis Course}\\[1cm]
+
+\vskip 1cm
+{\Large\bf \textbf{Enhancing Drug-drug Interaction Prediction via DGNN-DDI leveraging EmerGNN}}\\
+\vskip 5cm
+
+\begin{tabular}{r l}
+Instructor:&{\bf Nhat-Tung Le}\\[0.5cm]
+Student:&{\bf Hoang-Khang Nguyen}\\[0.5cm]
+Student ID: &{\bf 2186400244}
+\end{tabular}
+\vfill
+{\bf Ho Chi Minh City, \today}
+\end{center}
+\end{titlepage}
+
+\newgeometry{left=60pt,right=60pt,bottom=60pt,top=50pt} %chỉnh margin
+\setlength{\headheight}{14pt}
+
+\thispagestyle{empty}
+\tableofcontents
+\listoffigures\addcontentsline{toc}{chapter}{{\bf  List of Figures}\rm} 
+\listoftables\addcontentsline{toc}{chapter}{{\bf  List of Tables}\rm} 
+\chapter*{Acronyms \& Abbreviations}
+\begin{table}[ht]\caption{List of Abbreviations and their Definitions}
+    \centering
+    \begin{tabular}{|p{3cm}|p{13cm}|}
+        \hline
+        \textbf{Abbreviation} & \textbf{Definition} \\
+        \hline
+        DDI & \textsc{Drug-drug Interaction} \\
+        MLP & \textsc{Multi-layer Perceptron} \\
+        GAT & \textsc{Graph Attention Network} \\
+        SAGPooling & \textsc{Self-Attention Pooling} \\
+        GCN & \textsc{Graph Convolutional Network} \\
+        DGNN-DDI & \textsc{Dual Graph Neural Network for drug–drug interactions prediction} \\
+        SA-DMDNN & \textsc{Directed Message Passing Neural Network with Substructure Attention Mechanism} \\
+        IDOLpro & \textsc{Inverse Design of Optimal Ligands for Protein Pockets} \\
+        SBDD & \textsc{Structure-based Drug Design} \\
+        DDPM & \textsc{Denoising Diffusion Probabilistic Model} \\
+        \hline
+    \end{tabular}
+    
+    \label{tab:abbreviations}
+\end{table}
+
+\addcontentsline{toc}{chapter}{{\bf List of Acronyms \& Abbreviations}\rm} 
+\chapter{\fontfamily{ugq}\selectfont OVERVIEW}
+\section{Problems}
+\lettrine[lines=3, slope=0.6em, lhang=0.0, nindent=3pt]{R}{ecent}  advancements in artificial intelligence (AI), particularly in deep learning and graph learning models, have demonstrated their effectiveness in biomedical applications, especially for predicting drug-drug interactions (DDIs)\footnote{DDIs involve changes in the effects of one drug caused by the presence of another drug in the human body, which is crucial for drug discovery and clinical research.\\DDIs prediction is one of the applications of molecular representation. DDIs is
+referred to as a situation where the pleasant or adverse effects caused by the co-administration
+of two drugs, which may cause adverse drug events and side effects that damage the body. In order to avoid such events, it’s urgent to develop computational approaches to
+detect DDIs \cite{DGNN-DDI}.}. Traditional methods for predicting DDIs through clinical trials and experiments are costly and time-consuming. The application of advanced AI and deep learning techniques faces several challenges, including data resource availability and encoding, as well as the design of computational methods \cite{survey}.  \\
+
+
+\lettrine[lines=3, slope=0.6em, lhang=0.0, nindent=3pt]{D}{rug-drug} interactions (DDIs) are a critical concern in the field of pharmacology and medicine, as they can lead to adverse drug reactions, reduced therapeutic efficacy, and even life-threatening conditions. With the increasing number of available drugs and the complexity of their interactions, it becomes essential to develop reliable computational methods for predicting potential DDIs. Traditional approaches, such as rule-based systems and statistical models, often fall short due to their inability to capture the complex and nonlinear relationships between drugs.\\
+
+Graph Neural Networks (GNNs) have emerged as a powerful tool for modeling relational data and have shown great promise in various applications, including social networks, molecular chemistry, and recommender systems. In this study, we propose a novel Dual Graph Neural Network (DGNN) framework for DDI prediction, which leverages the strengths of GNNs to effectively capture the intricate relationships between drugs.\\
+
+The main contributions of DGNN-DDI are as follows:
+\begin{itemize}
+    \item We introduce a dual graph neural network architecture that simultaneously models drug-level and substructure-level interactions.
+    \item We employ substructure attention mechanisms to enhance the representation learning of drug substructures.
+    \item We perform a comprehensive evaluation of our model on real-world DDI datasets, demonstrating its superior performance compared to existing state-of-the-art methods.
+\end{itemize}
+
+
+
+%\addcontentsline{toc}{section}{Exercise 3.1}
+
+
+\chapter{\fontfamily{ugq}\selectfont DATABASE \& DATA PREPROCESSING}
+\begin{table}[ht]\caption{Detailed Description and Structure of Datasets}
+    \centering
+    \begin{tabular}{|p{3cm}|p{12cm}|}
+        \hline
+        \textbf{Dataset} & \textbf{Description and Structure} \\
+        \hline
+        \textsc{anti-COVID-19 drug} & A dataset containing information on drugs and compounds tested for activity against COVID-19. It includes drug names, chemical structures, activity data, clinical trial statuses, and target proteins. \\
+        \hline
+        \textsc{DRUGBANK} & A comprehensive database containing detailed drug data and drug-target interactions. Structure includes drug information (name, chemical structure, mechanism of action), pharmacological data, interactions, and clinical trial information. \\
+        \hline
+        \textsc{TWOSIDES} & A dataset focused on drug-drug interactions and their side effects. It includes pairs of drugs, interaction effects, frequency of side effects, and severity ratings. \\
+        \hline
+        \textsc{CrossDocked} & A dataset providing information on docking poses of small molecules in various protein pockets. Structure includes protein targets, small molecule ligands, docking scores, and pose coordinates. \\
+        \hline
+        \textsc{MOAD} & The Mother of All Databases (MOAD), which contains high-quality data on protein-ligand complexes. Structure includes protein-ligand complexes, binding affinity data, experimental conditions, and crystallographic information. \\
+        \hline
+    \end{tabular}
+    
+    \label{tab:datasets}
+\end{table}
+
+
+\section{DrugBank}
+\lettrine[lines=3, slope=0.6em, lhang=0.0, nindent=3pt]{D}{rugBank}  is a comprehensive resource that combines detailed drug data with comprehensive drug target information. It is widely used in bioinformatics research, drug discovery, and pharmaceutical applications. This document provides a detailed guide on how to preprocess and utilize the DrugBank database.
+
+The DrugBank database can be downloaded in various formats, including XML, CSV, and SQL. Each format contains rich information about drugs, including their chemical properties, targets, interactions, and pathways. For this guide, we will focus on the XML format, as it is the most comprehensive.
+
+\subsection{Structure of DrugBank XML}
+
+The DrugBank XML file contains multiple entries, each corresponding to a single drug. Each drug entry includes:
+
+
+
+\chapter{\fontfamily{ugq}\selectfont PROPOSED METHODS}
+\section{Theoretical Foundation of Social Network Analysis}
+
+\subsection{Graph Density}
+Graph density is a measure of how "complete" a graph is, defined as the ratio of the actual number of edges to the maximum possible number of edges.
+
+\begin{itemize}
+    \item \textbf{For undirected graphs:}
+    \[
+    D = \frac{2|\mathcal{E}|}{|\mathcal{V}|(|\mathcal{V}| - 1)}
+    \]
+    where:
+    \begin{itemize}
+        \item \( |\mathcal{E}| \): The number of edges in the graph.
+        \item \( |\mathcal{V}| \): The number of vertices (nodes) in the graph.
+    \end{itemize}
+
+    \item \textbf{For directed graphs:}
+    \[
+    D = \frac{|\mathcal{E}|}{|\mathcal{V}|(|\mathcal{V}| - 1)}
+    \]
+    Here, there is no factor of 2 since edges are directed and each pair of nodes can have up to two edges (one in each direction).
+\end{itemize}
+
+\subsection{Degree Centrality}
+Degree centrality quantifies how well-connected a node is in the network. It is calculated as the degree of the node normalized by the maximum possible degree.
+
+\begin{itemize}
+    \item \textbf{For undirected graphs:}
+    \[
+    C_D(v) = \frac{\deg(v)}{|\mathcal{V}| - 1}
+    \]
+    where \( \deg(v) \) is the degree of node \( v \), representing the number of edges connected to \( v \).
+
+    \item \textbf{For directed graphs:}
+    \[
+    C_D^{\text{in}}(v) = \frac{\deg^{\text{in}}(v)}{|\mathcal{V}| - 1}, \quad C_D^{\text{out}}(v) = \frac{\deg^{\text{out}}(v)}{|\mathcal{V}| - 1}
+    \]
+    where:
+    \begin{itemize}
+        \item \( \deg^{\text{in}}(v) \): The in-degree of node \( v \) (number of incoming edges).
+        \item \( \deg^{\text{out}}(v) \): The out-degree of node \( v \) (number of outgoing edges).
+    \end{itemize}
+\end{itemize}
+\begin{luuy}
+    Số đo này giúp đo số lượng các mối quan hệ trực tiếp của mộttác nhân với các thành viên khác trong mạng xã hội
+\end{luuy}
+
+\subsection{Closeness Centrality}
+Closeness centrality measures the average length of the shortest paths from a node \( v \) to all other nodes. It quantifies how quickly information spreads from \( v \) to other nodes in the network.
+
+\[
+C_C(v) = \frac{|\mathcal{V}| - 1}{\sum_{u \in\mathcal{V}, u \neq v} d(v, u)}
+\]
+where:
+\begin{itemize}
+    \item \( d(v, u) \): The shortest path distance between nodes \( v \) and \( u \).
+    \item \( |\mathcal{V}| \): The total number of nodes in the graph.
+\end{itemize}
+
+\begin{luuy}
+    Số đo này tương ứng với thời gian cần thiết để thông tin truyền từmột actor tới các actor khác. Khoảng cách càng nhỏ, khả năngtruyền tin càng lớn
+\end{luuy}
+
+
+\subsection{Betweenness Centrality}
+Betweenness centrality quantifies the importance of a node as a bridge for information flow between other nodes. It is defined as:
+
+\[
+C_B(v) = \sum_{s \neq v \neq t \in\mathcal{V}} \frac{\sigma_{st}(v)}{\sigma_{st}}
+\]
+where:
+\begin{itemize}
+    \item \( \sigma_{st} \): The total number of shortest paths between nodes \( s \) and \( t \).
+    \item \( \sigma_{st}(v) \): The number of those shortest paths that pass through node \( v \).
+\end{itemize}
+
+\subsection*{4. Betweenness Centrality (Normalized)}
+
+Betweenness centrality measures the importance of a node \( v \) in facilitating information flow by counting how often it lies on shortest paths between other nodes.
+
+\subsubsection*{Unnormalized Form}
+\[
+C_B(v) = \sum_{s \neq v \neq t \in V} \frac{\sigma_{st}(v)}{\sigma_{st}}
+\]
+where:
+\begin{itemize}
+    \item \( \sigma_{st} \): The total number of shortest paths between nodes \( s \) and \( t \).
+    \item \( \sigma_{st}(v) \): The number of shortest paths between \( s \) and \( t \) that pass through node \( v \).
+\end{itemize}
+
+\subsubsection*{Normalized Form}
+
+Normalization ensures that the centrality score lies in the range \([0, 1]\). The normalization factor depends on whether the graph is directed or undirected.
+
+\paragraph{For undirected graphs:}
+\[
+C_B^{\text{norm}}(v) = \frac{C_B(v)}{\frac{(|V| - 1)(|V| - 2)}{2}}
+\]
+where:
+\begin{itemize}
+    \item \( |V| \): The total number of nodes in the graph.
+    \item \( \frac{(|V| - 1)(|V| - 2)}{2} \): The total number of pairs of nodes (excluding \( v \)).
+\end{itemize}
+
+\paragraph{For directed graphs:}
+\[
+C_B^{\text{norm}}(v) = \frac{C_B(v)}{(|V| - 1)(|V| - 2)}
+\]
+where:
+\begin{itemize}
+    \item \( (|V| - 1)(|V| - 2) \): The total number of ordered pairs of nodes (excluding \( v \)).
+\end{itemize}
+
+\begin{luuy}
+    Số đo này càng lớn thì actor càng quan trọng trong việc kiểm soátthông tin và giao dịch trong mạng.ThS. Lê Nhật TùngMẠNG XÃ HỘI
+
+\end{luuy}
+
+\subsection{Clustering Coefficient}
+The clustering coefficient measures the tendency of a node's neighbors to form a complete subgraph (triangle).
+
+\begin{itemize}
+    \item \textbf{For undirected graphs:}
+    \[
+    C(v) = \frac{2T(v)}{\deg(v)(\deg(v) - 1)}
+    \]
+    where \( T(v) \) is the number of triangles involving node \( v \).
+
+    \item \textbf{For directed graphs:}
+    \[
+    C(v) = \frac{T(v)}{\deg^{\text{in}}(v) \deg^{\text{out}}(v) - \deg^{\text{loop}}(v)}
+    \]
+    where:
+    \begin{itemize}
+        \item \( \deg^{\text{loop}}(v) \): The number of self-loops at node \( v \).
+    \end{itemize}
+\end{itemize}
+
+\subsection*{6. Jaccard Similarity}
+The Jaccard similarity index measures the similarity between the neighbor sets of two nodes:
+\[
+J(u, v) = \frac{|N(u) \cap N(v)|}{|N(u) \cup N(v)|}
+\]
+where \( N(u) \) and \( N(v) \) represent the sets of neighbors of nodes \( u \) and \( v \), respectively.
+
+\subsection*{7. Adamic-Adar Index}
+The Adamic-Adar index evaluates the importance of common neighbors between two nodes:
+\[
+A(u, v) = \sum_{w \in N(u) \cap N(v)} \frac{1}{\log(\deg(w))}
+\]
+where \( \deg(w) \) is the degree of node \( w \).
+
+\subsection*{Modularity in Community Detection}
+
+Modularity measures the quality of a graph partition \( P \) by comparing the actual edge density within communities to the expected edge density in a random graph.
+
+\subsubsection*{General Formula}
+\[
+Q = \frac{1}{2|E|} \sum_{i, j} \left[ A_{ij} - \frac{k_i k_j}{2|E|} \right] \delta(c_i, c_j)
+\]
+where:
+\begin{itemize}
+    \item \( A_{ij} \): Adjacency matrix element; \( A_{ij} = 1 \) if there is an edge between nodes \( i \) and \( j \), otherwise \( A_{ij} = 0 \).
+    \item \( k_i = \sum_j A_{ij} \): Degree of node \( i \).
+    \item \( |E| \): Total number of edges in the graph.
+    \item \( c_i, c_j \): Communities to which nodes \( i \) and \( j \) belong.
+    \item \( \delta(c_i, c_j) \): Kronecker delta, \( \delta(c_i, c_j) = 1 \) if \( c_i = c_j \), otherwise \( \delta(c_i, c_j) = 0 \).
+\end{itemize}
+
+\subsubsection*{Directed Graphs}
+For directed graphs, modularity accounts for in-degrees and out-degrees:
+\[
+Q = \frac{1}{|E|} \sum_{i, j} \left[ A_{ij} - \frac{k_i^{\text{out}} k_j^{\text{in}}}{|E|} \right] \delta(c_i, c_j)
+\]
+where:
+\begin{itemize}
+    \item \( k_i^{\text{out}} = \sum_j A_{ij} \): Out-degree of node \( i \).
+    \item \( k_j^{\text{in}} = \sum_i A_{ij} \): In-degree of node \( j \).
+\end{itemize}
+
+\subsubsection*{Interpretation of Modularity}
+\begin{itemize}
+    \item \( Q > 0 \): The graph has significant community structure.
+    \item \( Q = 0 \): The graph has no more community structure than a random graph.
+\end{itemize}
+
+\subsubsection*{Steps to Compute Modularity}
+\begin{enumerate}
+    \item Construct the adjacency matrix \( A \).
+    \item Compute node degrees (\( k_i \), \( k_i^{\text{in}} \), or \( k_i^{\text{out}} \)).
+    \item Partition the nodes into communities \( c_1, c_2, \dots, c_k \).
+    \item Use the appropriate formula to compute \( Q \).
+\end{enumerate}
+
+
+
+\subsection*{8. Community Detection Algorithms}
+
+\subsubsection*{8.1. Louvain Algorithm}
+The Louvain algorithm detects communities by optimizing modularity in a hierarchical manner.
+
+\paragraph{Pseudo-code:}
+\begin{verbatim}
+1. Initialize each node as its own community.
+2. Repeat until no improvement:
+   a. For each node:
+      - Move it to the community that maximizes modularity.
+3. Aggregate nodes in the same community into a single node.
+4. Repeat steps 1-3 on the aggregated graph.
+\end{verbatim}
+
+\subsubsection*{8.2. Girvan-Newman Algorithm}
+The Girvan-Newman algorithm divides a graph into communities by iteratively removing edges with the highest betweenness centrality.
+
+\paragraph{Pseudo-code:}
+\begin{verbatim}
+1. Compute betweenness centrality for all edges.
+2. Remove the edge with the highest betweenness centrality.
+3. Repeat until the graph is divided into the desired number of communities.
+\end{verbatim}
+
+\subsection*{9. PageRank Algorithm}
+PageRank is a ranking algorithm that assigns scores to nodes based on their importance.
+
+\[
+PR(v) = (1 - d) + d \sum_{u \in \text{In}(v)} \frac{PR(u)}{\deg^{\text{out}}(u)}
+\]
+where:
+\begin{itemize}
+    \item \( d \): Damping factor (typically \( 0.85 \)).
+    \item \( \text{In}(v) \): The set of nodes with edges pointing to \( v \).
+    \item \( \deg^{\text{out}}(u) \): The out-degree of node \( u \).
+\end{itemize}
+
+\paragraph{Pseudo-code:}
+\begin{verbatim}
+1. Initialize PR(v) = 1 / |\mathcal{V}| for all nodes.
+2. Repeat until convergence:
+   a. For each node v:
+      PR(v) = (1 - d) + d * sum(PR(u) / out-degree(u)) for all u pointing to v.
+\end{verbatim}
+\subsection*{9. PageRank Algorithm with Matrix Representation}
+
+The PageRank algorithm can be expressed in matrix form, allowing for efficient computation in large-scale networks.
+
+\subsubsection*{Mathematical Formulation}
+\[
+\mathbf{PR} = d \cdot \mathbf{A} \cdot \mathbf{PR} + (1 - d) \cdot \mathbf{e}
+\]
+where:
+\begin{itemize}
+    \item \( \mathbf{PR} \): A column vector of PageRank scores for all nodes.
+    \item \( d \): The damping factor, typically set to \( 0.85 \), representing the probability of continuing a random walk.
+    \item \( \mathbf{A} \): The transition matrix, defined as:
+    \[
+    A_{ij} =
+    \begin{cases}
+    \frac{1}{\deg^{\text{out}}(j)} & \text{if there is a link from node } j \text{ to node } i, \\
+    0 & \text{otherwise.}
+    \end{cases}
+    \]
+    \item \( \mathbf{e} \): A vector of size \( |\mathcal{V}| \) with all elements equal to \( \frac{1}{|\mathcal{V}|} \).
+\end{itemize}
+
+\subsubsection*{Iterative Solution}
+The PageRank vector \( \mathbf{PR} \) is computed iteratively:
+\[
+\mathbf{PR}^{(k+1)} = d \cdot \mathbf{A} \cdot \mathbf{PR}^{(k)} + \frac{1 - d}{|\mathcal{V}|} \cdot \mathbf{1}
+\]
+where \( \mathbf{1} \) is a column vector with all entries equal to 1.
+
+\subsubsection*{Handling Dead Ends and Spider Traps}
+\begin{itemize}
+    \item \textbf{Dead ends}: Nodes with no outgoing edges are resolved by redistributing their probabilities uniformly across all nodes.
+    \item \textbf{Spider traps}: Subgraphs that trap random walks are handled by introducing the damping factor \( d \).
+\end{itemize}
+
+\subsubsection*{Pseudo-code}
+\begin{verbatim}
+Input: Adjacency matrix A, damping factor d, tolerance \varepsilon
+Output: PageRank vector PR
+
+1. Initialize PR with uniform values: PR(i) = 1 / |\mathcal{V}| for all i.
+2. Normalize A into the transition matrix M:
+   M(i, j) = A(i, j) / out-degree(j) if out-degree(j) > 0, otherwise 1 / |\mathcal{V}|.
+3. Repeat:
+   a. Compute new PR:
+      PR_new = d * M * PR + (1 - d) / |\mathcal{V}| * 1.
+   b. Check convergence:
+      If ||PR_new - PR|| < \varepsilon, stop.
+   c. Update PR: PR = PR_new.
+4. Return PR.
+\end{verbatim}
+
+
+\subsubsection*{Expanded Matrix Formulation}
+In matrix notation:
+\[
+\mathbf{PR} = (1 - d) \cdot \mathbf{e} + d \cdot \mathbf{M} \cdot \mathbf{PR}
+\]
+The equation can also be solved directly as:
+\[
+\mathbf{PR} = (I - d \cdot \mathbf{M})^{-1} \cdot (1 - d) \cdot \mathbf{e}
+\]
+where \( I \) is the identity matrix, and \( \mathbf{M} \) is the stochastic matrix derived from the adjacency matrix.
+
+
+
+
+
+%% Tài liệu tham khảo
+\nocite{IDOLpro}
+\nocite{EmerGNN}
+\nocite{DGNN-DDI}
+\nocite{survey}
+\nocite{GCN}
+\nocite{GAT}
+\nocite{SAGPool}
+
+
+
+\printbibliography[heading=bibintoc, title={\textcolor{blue}{ BIBLIOGRAPHY}}, nottype={online}]
+
+\end{document}

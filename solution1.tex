@@ -1,0 +1,167 @@
+\documentclass{article}
+\usepackage[utf8]{vietnam}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{booktabs}
+
+\begin{document}
+
+\section*{Phân tích Mạng xã hội - Social Network Analysis}
+
+\subsection*{Q2: Các mặt tích cực và tiêu cực của mạng xã hội}
+
+\begin{table}[h!]
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textbf{Mặt tích cực} & \textbf{Mặt tiêu cực} \\
+\hline
+\textbf{1. Kết nối và tương tác xã hội} &
+\textbf{1. Vấn đề bảo mật và quyền riêng tư} \\
+• Dễ dàng kết nối với bạn bè, người thân ở xa &
+• Rò rỉ thông tin cá nhân \\
+• Mở rộng mạng lưới quan hệ xã hội và nghề nghiệp &
+• Lừa đảo trực tuyến \\
+• Chia sẻ thông tin, trải nghiệm nhanh chóng &
+• Đánh cắp danh tính \\
+\hline
+\textbf{2. Phát triển kinh doanh} &
+\textbf{2. Tác động tâm lý} \\
+• Marketing số với chi phí thấp &
+• Nghiện mạng xã hội \\
+• Tiếp cận khách hàng mục tiêu chính xác &
+• So sánh xã hội tiêu cực \\
+• Tương tác trực tiếp với khách hàng &
+• Trầm cảm, lo âu do FOMO \\
+\hline
+\textbf{3. Học tập và phát triển} &
+\textbf{3. Thông tin sai lệch} \\
+• Tiếp cận nguồn kiến thức đa dạng &
+• Tin giả lan truyền nhanh chóng \\
+• Học hỏi từ cộng đồng chuyên môn &
+• Các chiến dịch thông tin sai lệch có chủ đích \\
+• Cập nhật xu hướng mới &
+• Ảnh hưởng đến nhận thức công chúng \\
+\hline
+\end{tabularx}
+\caption{So sánh mặt tích cực và tiêu cực của mạng xã hội}
+\end{table}
+
+\subsection*{Q3: Cách thu thập dữ liệu từ các nền tảng mạng xã hội}
+
+\begin{lstlisting}[language=Python, caption=Facebook API]
+import facebook
+graph = facebook.GraphAPI(access_token)
+posts = graph.get_connections('me', 'posts')
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python, caption=Twitter API]
+import tweepy
+client = tweepy.Client(bearer_token)
+tweets = client.search_recent_tweets(query="keyword")
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python, caption=LinkedIn API]
+from linkedin import linkedin
+authentication = linkedin.LinkedInAuthentication(
+    API_KEY, API_SECRET, RETURN_URL)
+\end{lstlisting}
+
+\begin{table}[h!]
+\begin{tabularx}{\textwidth}{|X|X|X|}
+\hline
+\textbf{Facebook} & \textbf{Twitter} & \textbf{LinkedIn} \\
+\hline
+• Graph API & • Twitter API v2 & • LinkedIn API \\
+• Facebook SDK & • Academic Research API & • OAuth Authentication \\
+• Web Scraping & • Streaming API & • REST API \\
+\hline
+\textbf{Đặc điểm} & \textbf{Đặc điểm} & \textbf{Đặc điểm} \\
+\hline
+• Rate limits cao & • Rate limits thấp hơn & • Giới hạn nghiêm ngặt \\
+• Nhiều endpoint & • Real-time data & • Focus vào business \\
+• OAuth required & • Bearer token & • Yêu cầu phê duyệt \\
+\hline
+\end{tabularx}
+\caption{So sánh các phương thức thu thập dữ liệu}
+\end{table}
+
+\subsection*{Q4: So sánh tính năng của các nền tảng mạng xã hội}
+
+\begin{table}[h!]
+\begin{tabularx}{\textwidth}{|X|X|X|}
+\hline
+\textbf{Facebook} & \textbf{Twitter} & \textbf{LinkedIn} \\
+\hline
+• Đa dạng nội dung & • Giới hạn ký tự (280) & • Mạng chuyên nghiệp \\
+• Groups mạnh mẽ & • Real-time updates & • Job posting/searching \\
+• Marketplace & • Hashtag trending & • Endorsements kỹ năng \\
+• Messenger độc lập & • Quote tweets & • Publishing platform \\
+• Tương tác đa dạng & • Spaces (audio chat) & • Learning platform \\
+\hline
+\end{tabularx}
+\caption{So sánh tính năng của các nền tảng mạng xã hội}
+\end{table}
+
+\subsection*{Q5: Ứng dụng Facebook trong kinh doanh và quảng cáo}
+
+\begin{table}[h!]
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textbf{Công cụ} & \textbf{Chức năng} \\
+\hline
+\textbf{Business Manager} & • Quản lý trang doanh nghiệp \\
+& • Tạo chiến dịch quảng cáo \\
+& • Phân tích insights \\
+\hline
+\textbf{Targeting quảng cáo} & • Demographic targeting \\
+& • Interest-based targeting \\
+& • Behavioral targeting \\
+& • Lookalike/Custom audiences \\
+\hline
+\textbf{Format quảng cáo} & • Image/Video ads \\
+& • Carousel ads \\
+& • Collection/Stories ads \\
+\hline
+\textbf{Analytics} & • Facebook Pixel tracking \\
+& • A/B testing \\
+& • Conversion optimization \\
+& • ROI tracking \\
+\hline
+\end{tabularx}
+\caption{Ứng dụng Facebook trong kinh doanh}
+\end{table}
+
+\subsection*{Q6: Ứng dụng phân tích mạng xã hội trong đời sống}
+
+\begin{table}[h!]
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textbf{Lĩnh vực} & \textbf{Ứng dụng} \\
+\hline
+\textbf{Marketing \& Kinh doanh} & • Phân tích influencer \\
+& • Customer segmentation \\
+& • Brand sentiment analysis \\
+\hline
+\textbf{Y tế \& Dịch tễ học} & • Tracking dịch bệnh \\
+& • Phân tích lan truyền thông tin y tế \\
+& • Healthcare community detection \\
+\hline
+\textbf{An ninh} & • Phát hiện mạng lưới tội phạm \\
+& • Phân tích terrorist networks \\
+& • Cyber security threats \\
+\hline
+\textbf{Nghiên cứu xã hội} & • Social behavior patterns \\
+& • Information diffusion \\
+& • Community structure \\
+\hline
+\textbf{Giáo dục} & • Learning analytics \\
+& • Student interaction patterns \\
+& • Educational resource sharing \\
+\hline
+\end{tabularx}
+\caption{Ứng dụng phân tích mạng xã hội trong các lĩnh vực}
+\end{table}
+
+\end{document}
