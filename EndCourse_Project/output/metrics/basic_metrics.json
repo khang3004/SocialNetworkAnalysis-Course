@@ -25,5 +25,11 @@
         "median_out_degree": 1.0,
         "mean_out_degree": 2.688976377952756,
         "std_out_degree": 3.3698694651336907
+    },
+    "scale_free_analysis": {
+        "power_law_exponent": 1.7689611288455485,
+        "ks_statistic": 0.22665216308396197,
+        "p_value": 7.382838341910177e-12,
+        "is_scale_free": false
     }
 }

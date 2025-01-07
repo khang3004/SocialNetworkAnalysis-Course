@@ -92,18 +92,113 @@ class NetworkAnalyzer:
                 'std_out_degree': np.std(out_degrees)
             })
         
-        # Vẽ phân phối bậc
-        plt.figure(figsize=(10, 6))
-        plt.hist(degrees, bins=30, alpha=0.7, label='Degree')
+        # Phân tích phân phối bậc và kiểm tra tính scale-free
+        def fit_power_law(data):
+            """Fit phân phối power law và tính các tham số"""
+            data = np.array(data)
+            # Chỉ lấy các giá trị lớn hơn 0 để tính toán
+            data = data[data > 0]
+            log_data = np.log(data)
+            
+            # Tính alpha (hệ số mũ) bằng MLE
+            n = len(data)
+            alpha = 1 + n / np.sum(log_data - np.log(np.min(data)))
+            
+            # Tính Kolmogorov-Smirnov statistic
+            from scipy import stats
+            theoretical_cdf = lambda x: 1 - (x/np.min(data))**(1-alpha)
+            D, p_value = stats.kstest(data, theoretical_cdf)
+            
+            return alpha, D, p_value
+
+        # Phân tích phân phối bậc
+        plt.figure(figsize=(15, 10))
+        
+        # Subplot 1: Histogram thông thường
+        plt.subplot(2, 2, 1)
+        plt.hist(degrees, bins='auto', alpha=0.7, label='Degree', density=True)
         if self.G.is_directed():
-            plt.hist(in_degrees, bins=30, alpha=0.5, label='In-Degree')
-            plt.hist(out_degrees, bins=30, alpha=0.5, label='Out-Degree')
-        plt.xlabel('Degree')
-        plt.ylabel('Frequency')
+            plt.hist(in_degrees, bins='auto', alpha=0.5, label='In-Degree', density=True)
+            plt.hist(out_degrees, bins='auto', alpha=0.5, label='Out-Degree', density=True)
+        plt.xlabel('Degree (k)')
+        plt.ylabel('P(k)')
         plt.title('Degree Distribution')
         plt.legend()
-        plt.savefig(f"{self.output_dirs['visualizations']}/degree_distribution.png")
+        
+        # Subplot 2: Log-log plot với power law fit
+        plt.subplot(2, 2, 2)
+        
+        # Tính phân phối thực tế (loại bỏ các giá trị 0)
+        degrees_nonzero = np.array(degrees)[np.array(degrees) > 0]
+        unique_degrees, counts = np.unique(degrees_nonzero, return_counts=True)
+        prob = counts / len(degrees_nonzero)
+        
+        # Plot log-log
+        plt.loglog(unique_degrees, prob, 'bo', label='Observed', alpha=0.6)
+        
+        # Fit và plot power law
+        alpha, D, p_value = fit_power_law(degrees_nonzero)
+        x_min = min(degrees_nonzero)
+        x_max = max(degrees_nonzero)
+        x_fit = np.logspace(np.log10(x_min), np.log10(x_max), 100)
+        y_fit = x_fit**(-alpha)
+        # Normalize để khớp với dữ liệu thực tế
+        y_fit = y_fit * (prob[0] / y_fit[0])
+        plt.loglog(x_fit, y_fit, 'r-', label=f'Power Law (α={alpha:.2f})')
+        
+        plt.xlabel('Degree (k)')
+        plt.ylabel('P(k)')
+        plt.title('Log-Log Degree Distribution')
+        plt.legend()
+        
+        # Subplot 3: CCDF (Complementary Cumulative Distribution Function)
+        plt.subplot(2, 2, 3)
+        sorted_degrees = np.sort(degrees_nonzero)
+        ccdf = 1 - np.arange(len(sorted_degrees)) / float(len(sorted_degrees))
+        
+        plt.loglog(sorted_degrees, ccdf, 'bo', label='Observed CCDF', alpha=0.6)
+        
+        # Theoretical CCDF for power law (chỉ tính cho các giá trị dương)
+        ccdf_theory = (x_fit/x_min)**(1-alpha)
+        plt.loglog(x_fit, ccdf_theory * ccdf[0] / ccdf_theory[0], 'r-', 
+                  label='Power Law CCDF')
+        
+        plt.xlabel('Degree (k)')
+        plt.ylabel('P(K ≥ k)')
+        plt.title('CCDF of Degree Distribution')
+        plt.legend()
+        
+        # Thêm thông tin kiểm định vào subplot 4
+        plt.subplot(2, 2, 4)
+        plt.axis('off')
+        info_text = (
+            f"Power Law Analysis Results:\n\n"
+            f"Exponent (α) = {alpha:.3f}\n"
+            f"KS Statistic (D) = {D:.3f}\n"
+            f"p-value = {p_value:.3f}\n\n"
+            f"Scale-free Test:\n"
+            f"{'Network appears scale-free' if p_value > 0.05 else 'Network may not be scale-free'}\n"
+            f"(p > 0.05 suggests scale-free property)\n\n"
+            f"Additional Metrics:\n"
+            f"Mean degree: {np.mean(degrees):.2f}\n"
+            f"Median degree: {np.median(degrees):.2f}\n"
+            f"Max degree: {max(degrees)}\n"
+            f"Min degree: {min(degrees)}"
+        )
+        plt.text(0.1, 0.9, info_text, fontsize=10, va='top')
+        
+        plt.tight_layout()
+        plt.savefig(f"{self.output_dirs['visualizations']}/degree_distribution_analysis.png",
+                    dpi=300, bbox_inches='tight')
         plt.close()
+        
+        # Thêm kết quả phân tích scale-free vào metrics
+        metrics['scale_free_analysis'] = {
+            'power_law_exponent': float(alpha),
+            'ks_statistic': float(D),
+            'p_value': float(p_value),
+            'is_scale_free': bool(p_value > 0.05)
+        }
         
         # Lưu metrics
         with open(f"{self.output_dirs['metrics']}/basic_metrics.json", 'w', encoding='utf-8') as f:
@@ -247,22 +342,130 @@ class NetworkAnalyzer:
         G_train = self.G.copy()
         G_train.remove_edges_from(test_edges)
         G_train_undirected = G_train.to_undirected()
+
+        # Tính toán các chỉ số tương tự cho tất cả các cặp nodes
+        similarity_scores = {}
+        nodes = list(G_train.nodes())
+        n_nodes = len(nodes)
         
-        # Các phương pháp dự đoán truyền thống
-        predictors = {
-            'jaccard': nx.jaccard_coefficient(G_train_undirected),
-            'adamic_adar': nx.adamic_adar_index(G_train_undirected),
-            'preferential_attachment': nx.preferential_attachment(G_train_undirected),
-            'resource_allocation': nx.resource_allocation_index(G_train_undirected)
-        }
+        # 1. Jaccard Coefficient
+        jaccard_dict = {}
+        for u, v, score in nx.jaccard_coefficient(G_train_undirected):
+            jaccard_dict[(u, v)] = score
+        similarity_scores['jaccard'] = jaccard_dict
         
-        # Đánh giá các phương pháp
-        results = self._evaluate_link_prediction(predictors, test_edges)
+        # 2. Adamic-Adar Index
+        adamic_adar_dict = {}
+        for u, v, score in nx.adamic_adar_index(G_train_undirected):
+            adamic_adar_dict[(u, v)] = score
+        similarity_scores['adamic_adar'] = adamic_adar_dict
         
-        # Lưu kết quả
-        with open(f"{self.output_dirs['link_prediction']}/prediction_results.json", 'w') as f:
-            json.dump(results, f, indent=4)
+        # 3. Preferential Attachment
+        pa_dict = {}
+        for u, v, score in nx.preferential_attachment(G_train_undirected):
+            pa_dict[(u, v)] = score
+        similarity_scores['preferential_attachment'] = pa_dict
+        
+        # 4. Resource Allocation Index
+        ra_dict = {}
+        for u, v, score in nx.resource_allocation_index(G_train_undirected):
+            ra_dict[(u, v)] = score
+        similarity_scores['resource_allocation'] = ra_dict
+        
+        # 5. Common Neighbors
+        cn_dict = {}
+        for u in nodes:
+            for v in nodes:
+                if u != v:
+                    cn_dict[(u, v)] = len(list(nx.common_neighbors(G_train_undirected, u, v)))
+        similarity_scores['common_neighbors'] = cn_dict
+        
+        # 6. Cosine Similarity
+        cosine_dict = {}
+        adj_matrix = nx.adjacency_matrix(G_train_undirected).toarray()  # Chuyển sang numpy array
+        for i, u in enumerate(nodes):
+            u_vector = adj_matrix[i, :]  # Lấy vector hàng
+            for j, v in enumerate(nodes):
+                if i < j:  # Chỉ tính cho các cặp không trùng lặp
+                    v_vector = adj_matrix[j, :]  # Lấy vector hàng
+                    numerator = np.dot(u_vector, v_vector)  # Tích vô hướng
+                    denominator = np.sqrt(np.dot(u_vector, u_vector) * 
+                                        np.dot(v_vector, v_vector))
+                    if denominator != 0:
+                        cosine_dict[(u, v)] = float(numerator / denominator)  # Chuyển về float
+                    else:
+                        cosine_dict[(u, v)] = 0.0
+        similarity_scores['cosine'] = cosine_dict
+        
+        # 7. SimRank (simplified version for performance)
+        simrank_dict = {}
+        C = 0.8  # decay factor
+        max_iter = 5
+        
+        # Initialize SimRank scores
+        sim_old = {(u,v): 1.0 if u == v else 0.0 for u in nodes for v in nodes}
+        
+        # Iterate to compute SimRank
+        for _ in range(max_iter):
+            sim_new = {}
+            for u in nodes:
+                for v in nodes:
+                    if u == v:
+                        sim_new[(u,v)] = 1.0
+                    else:
+                        u_neighbors = list(G_train.predecessors(u))
+                        v_neighbors = list(G_train.predecessors(v))
+                        if not u_neighbors or not v_neighbors:
+                            sim_new[(u,v)] = 0.0
+                        else:
+                            sum_sim = 0.0
+                            for u_nb in u_neighbors:
+                                for v_nb in v_neighbors:
+                                    sum_sim += sim_old[(u_nb,v_nb)]
+                            sim_new[(u,v)] = (C * sum_sim / 
+                                          (len(u_neighbors) * len(v_neighbors)))
+            sim_old = sim_new
+        
+        similarity_scores['simrank'] = {(u,v): score for (u,v), score in sim_old.items() 
+                                      if u != v}
+        
+        # Tạo DataFrames cho từng phương pháp và lưu kết quả
+        for method, scores in similarity_scores.items():
+            # Convert to DataFrame
+            df = pd.DataFrame([(u, v, score) for (u,v), score in scores.items()],
+                             columns=['Node1', 'Node2', 'Similarity'])
             
+            # Sắp xếp theo điểm số giảm dần
+            df = df.sort_values('Similarity', ascending=False)
+            
+            # Lưu top pairs
+            top_pairs = df.head(20)
+            top_pairs.to_csv(f"{self.output_dirs['link_prediction']}/top_pairs_{method}.csv",
+                            index=False)
+            
+            # Visualize top pairs
+            plt.figure(figsize=(12, 6))
+            plt.bar(range(20), top_pairs['Similarity'])
+            plt.xticks(range(20), [f"{row['Node1']}-{row['Node2']}" 
+                                  for _, row in top_pairs.iterrows()],
+                      rotation=45, ha='right')
+            plt.title(f'Top 20 Most Similar Pairs ({method})')
+            plt.tight_layout()
+            plt.savefig(f"{self.output_dirs['visualizations']}/top_pairs_{method}.png")
+            plt.close()
+        
+        # Đánh giá dự đoán
+        results = self._evaluate_link_prediction(similarity_scores, test_edges)
+        
+        # Lưu kết quả đánh giá
+        with open(f"{self.output_dirs['link_prediction']}/prediction_results.json", 'w', 
+                  encoding='utf-8') as f:
+            json.dump(results, f, indent=4, ensure_ascii=False)
+        
+        # Tạo bảng so sánh các phương pháp
+        comparison_df = pd.DataFrame(results).T
+        comparison_df.to_csv(f"{self.output_dirs['link_prediction']}/method_comparison.csv")
+        
         return results
 
     def _prepare_clustering_features(self) -> np.ndarray:
@@ -324,31 +527,60 @@ class NetworkAnalyzer:
         
         return metrics
 
-    def _evaluate_link_prediction(self, predictors: Dict, test_edges: List) -> Dict:
+    def _evaluate_link_prediction(self, similarity_scores: Dict, test_edges: List) -> Dict:
         """Đánh giá kết quả dự đoán liên kết"""
         results = {}
         
-        for name, predictor in predictors.items():
-            # Thu thập các dự đoán
-            predictions = []
-            scores = []
-            for u, v, score in predictor:
-                predictions.append((u, v))
-                scores.append(score)
+        for method_name, score_dict in similarity_scores.items():
+            # Lấy top K predictions (K = số lượng test edges)
+            k = len(test_edges)
+            predictions = sorted(score_dict.items(), key=lambda x: x[1], reverse=True)[:k]
+            predicted_edges = [edge for edge, _ in predictions]
             
             # Tính các metrics
-            true_positives = sum(1 for edge in test_edges if edge in predictions or edge[::-1] in predictions)
-            precision = true_positives / len(predictions) if predictions else 0
+            true_positives = sum(1 for edge in test_edges 
+                               if edge in predicted_edges or edge[::-1] in predicted_edges)
+            
+            precision = true_positives / len(predicted_edges) if predicted_edges else 0
             recall = true_positives / len(test_edges) if test_edges else 0
             f1 = 2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0
             
-            results[name] = {
+            # Tính AUC
+            all_scores = []
+            all_labels = []
+            
+            # Tạo labels và scores cho tất cả các cặp có thể
+            for (u, v), score in score_dict.items():
+                all_scores.append(score)
+                # Label = 1 nếu edge có trong test_edges
+                label = 1 if (u, v) in test_edges or (v, u) in test_edges else 0
+                all_labels.append(label)
+                
+            # Tính AUC
+            try:
+                from sklearn.metrics import roc_auc_score
+                auc = roc_auc_score(all_labels, all_scores)
+            except:
+                auc = 0.0
+            
+            results[method_name] = {
                 'precision': precision,
                 'recall': recall,
                 'f1_score': f1,
-                'number_of_predictions': len(predictions)
+                'auc': auc,
+                'number_of_predictions': len(predicted_edges),
+                'true_positives': true_positives
             }
-        
+            
+            # In kết quả chi tiết
+            print(f"\nResults for {method_name}:")
+            print(f"Precision: {precision:.4f}")
+            print(f"Recall: {recall:.4f}")
+            print(f"F1-Score: {f1:.4f}")
+            print(f"AUC: {auc:.4f}")
+            print(f"True Positives: {true_positives}")
+            print(f"Number of Predictions: {len(predicted_edges)}")
+            
         return results
 
     def visualize_network(self) -> None:
