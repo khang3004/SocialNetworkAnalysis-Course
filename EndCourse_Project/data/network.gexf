@@ -1,168 +1,949 @@
 <?xml version='1.0' encoding='utf-8'?>
 <gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
-  <meta lastmodifieddate="2024-11-25">
-    <creator>NetworkX 3.1</creator>
+  <meta lastmodifieddate="2025-01-07">
+    <creator>NetworkX 3.4.2</creator>
   </meta>
-  <graph defaultedgetype="undirected" mode="static" name="">
+  <graph defaultedgetype="directed" mode="static" name="">
     <nodes>
-      <node id="https://www.youtube.com/channel/UCLOCzuU5ddDqvd_e3qpomZQ" label="https://www.youtube.com/channel/UCLOCzuU5ddDqvd_e3qpomZQ" />
-      <node id="https://www.youtube.com/channel/UC_Eqg-tBPUUvA0heBZfdu6Q" label="https://www.youtube.com/channel/UC_Eqg-tBPUUvA0heBZfdu6Q" />
-      <node id="https://www.youtube.com/channel/UC0BN9N2jPRI_1_SjhXxnQ2g" label="https://www.youtube.com/channel/UC0BN9N2jPRI_1_SjhXxnQ2g" />
-      <node id="https://www.youtube.com/channel/UCJwp8w_Ru1q--tCEfrPIA6g" label="https://www.youtube.com/channel/UCJwp8w_Ru1q--tCEfrPIA6g" />
-      <node id="https://www.youtube.com/channel/UCVKMmdpOGvFJmjoW_gYQV0Q" label="https://www.youtube.com/channel/UCVKMmdpOGvFJmjoW_gYQV0Q" />
-      <node id="https://www.youtube.com/channel/UCu4ZnhvM4AUpxM8D0SCnldA" label="https://www.youtube.com/channel/UCu4ZnhvM4AUpxM8D0SCnldA" />
-      <node id="https://www.youtube.com/channel/UCQ28VJsfsd0LZvE7fKuNfEQ" label="https://www.youtube.com/channel/UCQ28VJsfsd0LZvE7fKuNfEQ" />
-      <node id="https://www.youtube.com/channel/UCuaEF6lA8WUteAQfxxa2Kdw" label="https://www.youtube.com/channel/UCuaEF6lA8WUteAQfxxa2Kdw" />
-      <node id="https://www.youtube.com/channel/UCBrDYViUYjWPTJDd3QP0uBQ" label="https://www.youtube.com/channel/UCBrDYViUYjWPTJDd3QP0uBQ" />
-      <node id="https://www.youtube.com/channel/UCoISHZnrIOn4SunyqjrRt4w" label="https://www.youtube.com/channel/UCoISHZnrIOn4SunyqjrRt4w" />
-      <node id="https://www.youtube.com/channel/UCa2ZnT_X0vWgl7euxdIpQZA" label="https://www.youtube.com/channel/UCa2ZnT_X0vWgl7euxdIpQZA" />
-      <node id="https://www.youtube.com/channel/UCOsAQ2AX2yhmCdJg8o9Ugug" label="https://www.youtube.com/channel/UCOsAQ2AX2yhmCdJg8o9Ugug" />
-      <node id="https://www.youtube.com/channel/UCBwUkmfUTM3KMkL3B_M30Kw" label="https://www.youtube.com/channel/UCBwUkmfUTM3KMkL3B_M30Kw" />
-      <node id="https://www.youtube.com/channel/UCylKm61vgp0SO2G27clBaoQ" label="https://www.youtube.com/channel/UCylKm61vgp0SO2G27clBaoQ" />
-      <node id="https://www.youtube.com/channel/UC3O-gNkOsgemkuhuAopEGbA" label="https://www.youtube.com/channel/UC3O-gNkOsgemkuhuAopEGbA" />
-      <node id="https://www.youtube.com/channel/UC7fk9tVVNRZAjhjps2O4Ygg" label="https://www.youtube.com/channel/UC7fk9tVVNRZAjhjps2O4Ygg" />
-      <node id="https://www.youtube.com/channel/UCLa90xY6l4sEY1sC3tlwGGA" label="https://www.youtube.com/channel/UCLa90xY6l4sEY1sC3tlwGGA" />
-      <node id="https://www.youtube.com/channel/UCagJrflbG27aFuBWjvn6dig" label="https://www.youtube.com/channel/UCagJrflbG27aFuBWjvn6dig" />
-      <node id="https://www.youtube.com/channel/UCbzMNcaY8wpr7t85ZILw3sA" label="https://www.youtube.com/channel/UCbzMNcaY8wpr7t85ZILw3sA" />
-      <node id="https://www.youtube.com/channel/UCF38Ef0_QYBT9lf0HxU0kAQ" label="https://www.youtube.com/channel/UCF38Ef0_QYBT9lf0HxU0kAQ" />
-      <node id="https://www.youtube.com/channel/UC6wjclMOHQJwOHrvqVRi5Jw" label="https://www.youtube.com/channel/UC6wjclMOHQJwOHrvqVRi5Jw" />
-      <node id="https://www.youtube.com/channel/UC3Z0zWXrZeFXSpQ0pxeJ1SA" label="https://www.youtube.com/channel/UC3Z0zWXrZeFXSpQ0pxeJ1SA" />
-      <node id="https://www.youtube.com/channel/UCJ1-hqEyFm0TjHq-RjT-_Mg" label="https://www.youtube.com/channel/UCJ1-hqEyFm0TjHq-RjT-_Mg" />
-      <node id="https://www.youtube.com/channel/UCg-TicFdVD1fe2GLxYPi2FQ" label="https://www.youtube.com/channel/UCg-TicFdVD1fe2GLxYPi2FQ" />
-      <node id="https://www.youtube.com/channel/UCK5eQ1R9TYwKCRmJ6hdI7MA" label="https://www.youtube.com/channel/UCK5eQ1R9TYwKCRmJ6hdI7MA" />
-      <node id="https://www.youtube.com/channel/UCpg3O1quTzj7QpDHdhu6pNw" label="https://www.youtube.com/channel/UCpg3O1quTzj7QpDHdhu6pNw" />
-      <node id="https://www.youtube.com/channel/UCr8LK1AbwPz_HsQZ6P8vP5Q" label="https://www.youtube.com/channel/UCr8LK1AbwPz_HsQZ6P8vP5Q" />
-      <node id="https://www.youtube.com/channel/UC2OzDIKOESoKIdR1VtwCAAQ" label="https://www.youtube.com/channel/UC2OzDIKOESoKIdR1VtwCAAQ" />
-      <node id="https://www.youtube.com/channel/UCqosN4QGo-pmyWVoaiVAIEA" label="https://www.youtube.com/channel/UCqosN4QGo-pmyWVoaiVAIEA" />
-      <node id="https://www.youtube.com/channel/UCgv1ic9cuzW6KKg3rs2qzmw" label="https://www.youtube.com/channel/UCgv1ic9cuzW6KKg3rs2qzmw" />
-      <node id="https://www.youtube.com/channel/UC8ySs7ysHpyVlenRyw2Md_A" label="https://www.youtube.com/channel/UC8ySs7ysHpyVlenRyw2Md_A" />
-      <node id="https://www.youtube.com/channel/UCmlxFJcCTNKput_1M9qyEdg" label="https://www.youtube.com/channel/UCmlxFJcCTNKput_1M9qyEdg" />
-      <node id="https://www.youtube.com/channel/UCRAMsU8wYGnGXRq0Pk_vQTA" label="https://www.youtube.com/channel/UCRAMsU8wYGnGXRq0Pk_vQTA" />
-      <node id="https://www.youtube.com/channel/UCuKWFCkVDNzcFy5JGeJFrOw" label="https://www.youtube.com/channel/UCuKWFCkVDNzcFy5JGeJFrOw" />
-      <node id="https://www.youtube.com/channel/UChUJa1JyBc7Lc4orkiNKKQg" label="https://www.youtube.com/channel/UChUJa1JyBc7Lc4orkiNKKQg" />
-      <node id="https://www.youtube.com/channel/UCn3WDSMlmdeQKxWyDCMSvDQ" label="https://www.youtube.com/channel/UCn3WDSMlmdeQKxWyDCMSvDQ" />
-      <node id="https://www.youtube.com/channel/UCJ2UgHFZ7P4uHbkbrIJLudg" label="https://www.youtube.com/channel/UCJ2UgHFZ7P4uHbkbrIJLudg" />
-      <node id="https://www.youtube.com/channel/UC8HsmIbFckDQSoYgA1_7uuw" label="https://www.youtube.com/channel/UC8HsmIbFckDQSoYgA1_7uuw" />
-      <node id="https://www.youtube.com/channel/UCgz44a7jO0uOxXUF1MpAxew" label="https://www.youtube.com/channel/UCgz44a7jO0uOxXUF1MpAxew" />
-      <node id="https://www.youtube.com/channel/UCAhfSPCb_HzvHSI54YCZ6GA" label="https://www.youtube.com/channel/UCAhfSPCb_HzvHSI54YCZ6GA" />
-      <node id="https://www.youtube.com/channel/UCVsnRgnAXQb5YErd47-q9Fw" label="https://www.youtube.com/channel/UCVsnRgnAXQb5YErd47-q9Fw" />
-      <node id="https://www.youtube.com/channel/UC5AAuQmOSyxlaTGpRK-sXuQ" label="https://www.youtube.com/channel/UC5AAuQmOSyxlaTGpRK-sXuQ" />
-      <node id="https://www.youtube.com/channel/UCS8nVCGXzHQREU8fx-MwZaA" label="https://www.youtube.com/channel/UCS8nVCGXzHQREU8fx-MwZaA" />
-      <node id="https://www.youtube.com/channel/UCW0i_g0C1xaZ5ZSsfGIzr6Q" label="https://www.youtube.com/channel/UCW0i_g0C1xaZ5ZSsfGIzr6Q" />
-      <node id="https://www.youtube.com/channel/UC97K8n_8YTcLVfjfXHOkc0w" label="https://www.youtube.com/channel/UC97K8n_8YTcLVfjfXHOkc0w" />
-      <node id="https://www.youtube.com/channel/UCePWSQHSdXqzQlzyJfwY1Jg" label="https://www.youtube.com/channel/UCePWSQHSdXqzQlzyJfwY1Jg" />
-      <node id="https://www.youtube.com/channel/UClP6DSD9Ztkrdml-w-OZWCA" label="https://www.youtube.com/channel/UClP6DSD9Ztkrdml-w-OZWCA" />
-      <node id="https://www.youtube.com/channel/UCU7W0RcEZO6SAOIqen7xMGw" label="https://www.youtube.com/channel/UCU7W0RcEZO6SAOIqen7xMGw" />
-      <node id="https://www.youtube.com/channel/UCFNYJA4QU4NwjgDP8cM8NZQ" label="https://www.youtube.com/channel/UCFNYJA4QU4NwjgDP8cM8NZQ" />
-      <node id="https://www.youtube.com/channel/UClyA28-01x4z60eWQ2kiNbA" label="https://www.youtube.com/channel/UClyA28-01x4z60eWQ2kiNbA" />
-      <node id="https://www.youtube.com/channel/UCT062ZxFn6gwpwyPYO1fIrg" label="https://www.youtube.com/channel/UCT062ZxFn6gwpwyPYO1fIrg" />
-      <node id="https://www.youtube.com/channel/UCQ4snivOmAYFUR1vdFOwMKw" label="https://www.youtube.com/channel/UCQ4snivOmAYFUR1vdFOwMKw" />
-      <node id="https://www.youtube.com/channel/UCBODE_nAnkin93zshp6O_Pw" label="https://www.youtube.com/channel/UCBODE_nAnkin93zshp6O_Pw" />
-      <node id="https://www.youtube.com/channel/UCNVvY2-9TUcNIf58u_JFNLA" label="https://www.youtube.com/channel/UCNVvY2-9TUcNIf58u_JFNLA" />
-      <node id="https://www.youtube.com/channel/UCo2_zltvo5yFiNDv36mzQ2w" label="https://www.youtube.com/channel/UCo2_zltvo5yFiNDv36mzQ2w" />
-      <node id="https://www.youtube.com/channel/UCRjlisKnInHD9DGZdDdHq8A" label="https://www.youtube.com/channel/UCRjlisKnInHD9DGZdDdHq8A" />
-      <node id="https://www.youtube.com/channel/UCqiEslfTF6HkPRApOxcGhMg" label="https://www.youtube.com/channel/UCqiEslfTF6HkPRApOxcGhMg" />
-      <node id="https://www.youtube.com/channel/UCrPLEmS3lLi5IO2lAU9Ybqw" label="https://www.youtube.com/channel/UCrPLEmS3lLi5IO2lAU9Ybqw" />
-      <node id="https://www.youtube.com/channel/UCf41A5Sz6BSwRGR2stGsIog" label="https://www.youtube.com/channel/UCf41A5Sz6BSwRGR2stGsIog" />
-      <node id="https://www.youtube.com/channel/UCCDxvxd-4g6xCXQAfAPJysA" label="https://www.youtube.com/channel/UCCDxvxd-4g6xCXQAfAPJysA" />
-      <node id="https://www.youtube.com/channel/UCxklIR-uZgG2mK2JfauAq0g" label="https://www.youtube.com/channel/UCxklIR-uZgG2mK2JfauAq0g" />
-      <node id="https://www.youtube.com/channel/UClUe3v0Qp3dYgcJOdYXp2Gw" label="https://www.youtube.com/channel/UClUe3v0Qp3dYgcJOdYXp2Gw" />
-      <node id="https://www.youtube.com/channel/UCG44ngVzqC1Jp_WBWOvNx1g" label="https://www.youtube.com/channel/UCG44ngVzqC1Jp_WBWOvNx1g" />
-      <node id="https://www.youtube.com/channel/UCSv2RfL3lw40SkYj3F8wbxQ" label="https://www.youtube.com/channel/UCSv2RfL3lw40SkYj3F8wbxQ" />
-      <node id="https://www.youtube.com/channel/UCNEt3zLm2LkEeZOuDGLiN_A" label="https://www.youtube.com/channel/UCNEt3zLm2LkEeZOuDGLiN_A" />
-      <node id="https://www.youtube.com/channel/UCR-Nnen-pkDXU81MigOee0A" label="https://www.youtube.com/channel/UCR-Nnen-pkDXU81MigOee0A" />
-      <node id="https://www.youtube.com/channel/UCpVvunMbMvVj9DgCiOSBdcg" label="https://www.youtube.com/channel/UCpVvunMbMvVj9DgCiOSBdcg" />
-      <node id="https://www.youtube.com/channel/UCGRIV5jOtKyAibhjBdIndZQ" label="https://www.youtube.com/channel/UCGRIV5jOtKyAibhjBdIndZQ" />
-      <node id="https://www.youtube.com/channel/UC97_mZ6eszag42Fg7NFHu6w" label="https://www.youtube.com/channel/UC97_mZ6eszag42Fg7NFHu6w" />
-      <node id="https://www.youtube.com/channel/UCZgz1RI3E_RiTSdPovgOT6w" label="https://www.youtube.com/channel/UCZgz1RI3E_RiTSdPovgOT6w" />
-      <node id="https://www.youtube.com/channel/UCFZnxd_p1iFgIZW3Yb790FA" label="https://www.youtube.com/channel/UCFZnxd_p1iFgIZW3Yb790FA" />
-      <node id="https://www.youtube.com/channel/UCd17-IirviG7a-7x6rYiUTw" label="https://www.youtube.com/channel/UCd17-IirviG7a-7x6rYiUTw" />
-      <node id="https://www.youtube.com/channel/UCuxh56VsQXSrRzbeKwDIyqQ" label="https://www.youtube.com/channel/UCuxh56VsQXSrRzbeKwDIyqQ" />
-      <node id="https://www.youtube.com/channel/UCKhqOj4gSTegq0kk3hFXw1A" label="https://www.youtube.com/channel/UCKhqOj4gSTegq0kk3hFXw1A" />
-      <node id="https://www.youtube.com/channel/UCmgGhZ_OMFGRn5cbfd4Svrw" label="https://www.youtube.com/channel/UCmgGhZ_OMFGRn5cbfd4Svrw" />
-      <node id="https://www.youtube.com/channel/UCVIIa6OL-FautUqhHjAoz_A" label="https://www.youtube.com/channel/UCVIIa6OL-FautUqhHjAoz_A" />
-      <node id="https://www.youtube.com/channel/UCx0q1ER-ki5PujaQuxrUkZQ" label="https://www.youtube.com/channel/UCx0q1ER-ki5PujaQuxrUkZQ" />
-      <node id="https://www.youtube.com/channel/UC8exC52C8Dq6n5EvDDtP2wA" label="https://www.youtube.com/channel/UC8exC52C8Dq6n5EvDDtP2wA" />
-      <node id="https://www.youtube.com/channel/UCslSPDF6cePzp1ZZQ0oSKuQ" label="https://www.youtube.com/channel/UCslSPDF6cePzp1ZZQ0oSKuQ" />
-      <node id="https://www.youtube.com/channel/UCqKrivVwltNtS_I7V5APvFw" label="https://www.youtube.com/channel/UCqKrivVwltNtS_I7V5APvFw" />
-      <node id="https://www.youtube.com/channel/UCN__8LL7aLFCgHu44usIn_A" label="https://www.youtube.com/channel/UCN__8LL7aLFCgHu44usIn_A" />
-      <node id="https://www.youtube.com/channel/UCE8YBGnZOi76GDKkuOiNfJw" label="https://www.youtube.com/channel/UCE8YBGnZOi76GDKkuOiNfJw" />
-      <node id="https://www.youtube.com/channel/UCLFOZcEUPlwdc02FHkOpqkA" label="https://www.youtube.com/channel/UCLFOZcEUPlwdc02FHkOpqkA" />
-      <node id="https://www.youtube.com/channel/UCi_RaMQ4Hhdml1Cff4SCpQA" label="https://www.youtube.com/channel/UCi_RaMQ4Hhdml1Cff4SCpQA" />
-      <node id="https://www.youtube.com/channel/UCw_w4aXdHTb1ZLxPb-mfgHQ" label="https://www.youtube.com/channel/UCw_w4aXdHTb1ZLxPb-mfgHQ" />
-      <node id="https://www.youtube.com/channel/UCECbDfLf32erTqPyOEiqbxg" label="https://www.youtube.com/channel/UCECbDfLf32erTqPyOEiqbxg" />
-      <node id="https://www.youtube.com/channel/UCfyRO9bHoLldQg_0X0JTWJg" label="https://www.youtube.com/channel/UCfyRO9bHoLldQg_0X0JTWJg" />
-      <node id="https://www.youtube.com/channel/UC8-k2-jg0zgkEAvmBjHquqQ" label="https://www.youtube.com/channel/UC8-k2-jg0zgkEAvmBjHquqQ" />
-      <node id="https://www.youtube.com/channel/UCYb4Rb4Gznn2OkydUS1XTog" label="https://www.youtube.com/channel/UCYb4Rb4Gznn2OkydUS1XTog" />
-      <node id="https://www.youtube.com/channel/UCSjZoY-s5bASPDQ3ZCXaWZw" label="https://www.youtube.com/channel/UCSjZoY-s5bASPDQ3ZCXaWZw" />
-      <node id="https://www.youtube.com/channel/UC8EB7c0E_TS4tpTQwMtv6fw" label="https://www.youtube.com/channel/UC8EB7c0E_TS4tpTQwMtv6fw" />
-      <node id="https://www.youtube.com/channel/UCgCrotgA4en50zJ3wjQ7X7w" label="https://www.youtube.com/channel/UCgCrotgA4en50zJ3wjQ7X7w" />
-      <node id="https://www.youtube.com/channel/UC-SOB_IEhdOJ5nMUpCGPUcQ" label="https://www.youtube.com/channel/UC-SOB_IEhdOJ5nMUpCGPUcQ" />
-      <node id="https://www.youtube.com/channel/UC5mNFpQqedW1ok-NX5rwkEQ" label="https://www.youtube.com/channel/UC5mNFpQqedW1ok-NX5rwkEQ" />
-      <node id="https://www.youtube.com/channel/UCvB3nzHHMO72jv25SOqHg3w" label="https://www.youtube.com/channel/UCvB3nzHHMO72jv25SOqHg3w" />
-      <node id="https://www.youtube.com/channel/UCskyAyDja-WVQp5lT6Hk2QQ" label="https://www.youtube.com/channel/UCskyAyDja-WVQp5lT6Hk2QQ" />
-      <node id="https://www.youtube.com/channel/UCcyy_mCsUzX2q4ht-atRmng" label="https://www.youtube.com/channel/UCcyy_mCsUzX2q4ht-atRmng" />
-      <node id="https://www.youtube.com/channel/UCXlRAKceM0aecMDBdEscQ4A" label="https://www.youtube.com/channel/UCXlRAKceM0aecMDBdEscQ4A" />
-      <node id="https://www.youtube.com/channel/UCLEaBEflacQYEhOKJ23nRuQ" label="https://www.youtube.com/channel/UCLEaBEflacQYEhOKJ23nRuQ" />
-      <node id="https://www.youtube.com/channel/UC6-Hoz4peyDhEGjW3mE7mvQ" label="https://www.youtube.com/channel/UC6-Hoz4peyDhEGjW3mE7mvQ" />
-      <node id="https://www.youtube.com/channel/UCrjiT1zJFaHHuipCkIYZsfw" label="https://www.youtube.com/channel/UCrjiT1zJFaHHuipCkIYZsfw" />
-      <node id="https://www.youtube.com/channel/UChzeJg6IM0iuko3PVPd9kag" label="https://www.youtube.com/channel/UChzeJg6IM0iuko3PVPd9kag" />
-      <node id="https://www.youtube.com/channel/UCR67MQWauiwkot5mXWA60ng" label="https://www.youtube.com/channel/UCR67MQWauiwkot5mXWA60ng" />
-      <node id="https://www.youtube.com/channel/UCx5gc6Jg2Yx8uk1ilXCXJrw" label="https://www.youtube.com/channel/UCx5gc6Jg2Yx8uk1ilXCXJrw" />
-      <node id="https://www.youtube.com/channel/UCx4B5Awm-hVnW6lMiEsomYA" label="https://www.youtube.com/channel/UCx4B5Awm-hVnW6lMiEsomYA" />
-      <node id="https://www.youtube.com/channel/UCCX21W_4L7e4QxHUHX1vu0w" label="https://www.youtube.com/channel/UCCX21W_4L7e4QxHUHX1vu0w" />
-      <node id="https://www.youtube.com/channel/UCJir0VguafZLPG4g1fF0EDw" label="https://www.youtube.com/channel/UCJir0VguafZLPG4g1fF0EDw" />
-      <node id="https://www.youtube.com/channel/UCeOFEPDcFH91jKE-6LnZwKQ" label="https://www.youtube.com/channel/UCeOFEPDcFH91jKE-6LnZwKQ" />
-      <node id="https://www.youtube.com/channel/UCAVR4my5l3vPwtvWJgreWzg" label="https://www.youtube.com/channel/UCAVR4my5l3vPwtvWJgreWzg" />
-      <node id="https://www.youtube.com/channel/UCvFOwWIU2vgppuzQbNFK9kQ" label="https://www.youtube.com/channel/UCvFOwWIU2vgppuzQbNFK9kQ" />
-      <node id="https://www.youtube.com/channel/UCSCSop9yGxDHz0kuyCKwUhQ" label="https://www.youtube.com/channel/UCSCSop9yGxDHz0kuyCKwUhQ" />
-      <node id="https://www.youtube.com/channel/UChm9JDLV6b3bDDTgxjHZ63A" label="https://www.youtube.com/channel/UChm9JDLV6b3bDDTgxjHZ63A" />
-      <node id="https://www.youtube.com/channel/UCP9VjzPk9qHilQ8m7Pt6l_w" label="https://www.youtube.com/channel/UCP9VjzPk9qHilQ8m7Pt6l_w" />
-      <node id="https://www.youtube.com/channel/UCe8b9jSSD-bNabF4hkNN5PQ" label="https://www.youtube.com/channel/UCe8b9jSSD-bNabF4hkNN5PQ" />
-      <node id="https://www.youtube.com/channel/UCQDIKdUi8OXQ_JxFo8yFmgg" label="https://www.youtube.com/channel/UCQDIKdUi8OXQ_JxFo8yFmgg" />
-      <node id="https://www.youtube.com/channel/UCCF91sLycgCnTMUN6nNwEGQ" label="https://www.youtube.com/channel/UCCF91sLycgCnTMUN6nNwEGQ" />
-      <node id="https://www.youtube.com/channel/UCrwm1utmmmt94HiBa4OwrLw" label="https://www.youtube.com/channel/UCrwm1utmmmt94HiBa4OwrLw" />
-      <node id="https://www.youtube.com/channel/UC40matwhaoY44zR4bvTljYg" label="https://www.youtube.com/channel/UC40matwhaoY44zR4bvTljYg" />
-      <node id="https://www.youtube.com/channel/UCuutSru42e2zl0znLxSkWTg" label="https://www.youtube.com/channel/UCuutSru42e2zl0znLxSkWTg" />
-      <node id="https://www.youtube.com/channel/UCgV0uGcOodDJ2POCr15yjIw" label="https://www.youtube.com/channel/UCgV0uGcOodDJ2POCr15yjIw" />
-      <node id="https://www.youtube.com/channel/UCTJrZpgzFNEe04ubFd_ZmnA" label="https://www.youtube.com/channel/UCTJrZpgzFNEe04ubFd_ZmnA" />
-      <node id="https://www.youtube.com/channel/UChwfecHYBVGrjGwfTlnVjBQ" label="https://www.youtube.com/channel/UChwfecHYBVGrjGwfTlnVjBQ" />
-      <node id="https://www.youtube.com/channel/UCQnw0PycCRlSsT8fQlTDyBA" label="https://www.youtube.com/channel/UCQnw0PycCRlSsT8fQlTDyBA" />
-      <node id="https://www.youtube.com/channel/UCSo4q8zOlxO2Fv_boQZnSww" label="https://www.youtube.com/channel/UCSo4q8zOlxO2Fv_boQZnSww" />
-      <node id="https://www.youtube.com/channel/UC0_SgHUpOMUFcNNTaIJi7iA" label="https://www.youtube.com/channel/UC0_SgHUpOMUFcNNTaIJi7iA" />
-      <node id="https://www.youtube.com/channel/UC0IpGYsi1KVorZ7QVCHfdag" label="https://www.youtube.com/channel/UC0IpGYsi1KVorZ7QVCHfdag" />
-      <node id="https://www.youtube.com/channel/UC7tPk1F9H5e2vGUmTDlz9nQ" label="https://www.youtube.com/channel/UC7tPk1F9H5e2vGUmTDlz9nQ" />
-      <node id="https://www.youtube.com/channel/UCZzKnnb8ENdw1AFrK8xLDDg" label="https://www.youtube.com/channel/UCZzKnnb8ENdw1AFrK8xLDDg" />
-      <node id="https://www.youtube.com/channel/UCj8P9PoNifFdyOkMjyJHRNw" label="https://www.youtube.com/channel/UCj8P9PoNifFdyOkMjyJHRNw" />
-      <node id="https://www.youtube.com/channel/UCRSHYSsTnEhdjVhlDoPSZtA" label="https://www.youtube.com/channel/UCRSHYSsTnEhdjVhlDoPSZtA" />
-      <node id="https://www.youtube.com/channel/UCQg14P4pRpJL1d74JzLDu_w" label="https://www.youtube.com/channel/UCQg14P4pRpJL1d74JzLDu_w" />
-      <node id="https://www.youtube.com/channel/UCCCRRUvgvygH82HAugJjDLw" label="https://www.youtube.com/channel/UCCCRRUvgvygH82HAugJjDLw" />
-      <node id="https://www.youtube.com/channel/UCehq9BsjHmWi17L67EI7w9w" label="https://www.youtube.com/channel/UCehq9BsjHmWi17L67EI7w9w" />
-      <node id="https://www.youtube.com/channel/UCsEofLKnglPtM8sH2Zt5_Ng" label="https://www.youtube.com/channel/UCsEofLKnglPtM8sH2Zt5_Ng" />
-      <node id="https://www.youtube.com/channel/UCmH_2uDJVfCetrSOWW5wL7Q" label="https://www.youtube.com/channel/UCmH_2uDJVfCetrSOWW5wL7Q" />
-      <node id="https://www.youtube.com/channel/UCO0oapLrKVfBlFzWgyiHguw" label="https://www.youtube.com/channel/UCO0oapLrKVfBlFzWgyiHguw" />
-      <node id="https://www.youtube.com/channel/UC9Hw3DS7hvi1iCzPSpFigSw" label="https://www.youtube.com/channel/UC9Hw3DS7hvi1iCzPSpFigSw" />
-      <node id="https://www.youtube.com/channel/UCsGulrXKYm511WlI1hQ2-cA" label="https://www.youtube.com/channel/UCsGulrXKYm511WlI1hQ2-cA" />
-      <node id="https://www.youtube.com/channel/UCCLiifabOyu-SvMFaf_eL2g" label="https://www.youtube.com/channel/UCCLiifabOyu-SvMFaf_eL2g" />
-      <node id="https://www.youtube.com/channel/UC1_MyGRQttNnVJ_X0vcEeaA" label="https://www.youtube.com/channel/UC1_MyGRQttNnVJ_X0vcEeaA" />
-      <node id="https://www.youtube.com/channel/UCtpX-hGGBtH2ZvVX9_5RwFg" label="https://www.youtube.com/channel/UCtpX-hGGBtH2ZvVX9_5RwFg" />
-      <node id="https://www.youtube.com/channel/UCXKnIgvBwPV6G-uT7gBXhcA" label="https://www.youtube.com/channel/UCXKnIgvBwPV6G-uT7gBXhcA" />
-      <node id="https://www.youtube.com/channel/UCvUye1AU4hAx3jjLAZ5qvQg" label="https://www.youtube.com/channel/UCvUye1AU4hAx3jjLAZ5qvQg" />
-      <node id="https://www.youtube.com/channel/UCVLnK_UJLdcYxUrpYTrkoMg" label="https://www.youtube.com/channel/UCVLnK_UJLdcYxUrpYTrkoMg" />
-      <node id="https://www.youtube.com/channel/UCLdJlbgSIjl8Ef86NMeVExg" label="https://www.youtube.com/channel/UCLdJlbgSIjl8Ef86NMeVExg" />
-      <node id="https://www.youtube.com/channel/UC_EtVkHQQnFPPos_3GGdUwA" label="https://www.youtube.com/channel/UC_EtVkHQQnFPPos_3GGdUwA" />
-      <node id="https://www.youtube.com/channel/UC90LfbAFYhRLh86Qd-Fs4zg" label="https://www.youtube.com/channel/UC90LfbAFYhRLh86Qd-Fs4zg" />
-      <node id="https://www.youtube.com/channel/UC9nl0H_OspkMEofEghAfVeQ" label="https://www.youtube.com/channel/UC9nl0H_OspkMEofEghAfVeQ" />
-      <node id="https://www.youtube.com/channel/UCFBA2nejAXBgDxR1025NddQ" label="https://www.youtube.com/channel/UCFBA2nejAXBgDxR1025NddQ" />
-      <node id="https://www.youtube.com/channel/UCziQeY6RkNVKa9PF5UzF4yA" label="https://www.youtube.com/channel/UCziQeY6RkNVKa9PF5UzF4yA" />
-      <node id="https://www.youtube.com/channel/UCQ7d2lO-qGUy6wwM4n3KHfw" label="https://www.youtube.com/channel/UCQ7d2lO-qGUy6wwM4n3KHfw" />
-      <node id="https://www.youtube.com/channel/UCbRXXmI3umYdohM1MAi5N1w" label="https://www.youtube.com/channel/UCbRXXmI3umYdohM1MAi5N1w" />
-      <node id="https://www.youtube.com/channel/UCX0wsb6MZ6tJjYMKnmzswmw" label="https://www.youtube.com/channel/UCX0wsb6MZ6tJjYMKnmzswmw" />
-      <node id="https://www.youtube.com/channel/UCMLVQcgkkFsTR7o8_sMt7lQ" label="https://www.youtube.com/channel/UCMLVQcgkkFsTR7o8_sMt7lQ" />
-      <node id="https://www.youtube.com/channel/UCWu91J5KWEj1bQhCBuGeJxw" label="https://www.youtube.com/channel/UCWu91J5KWEj1bQhCBuGeJxw" />
-      <node id="https://www.youtube.com/channel/UCP8MnHU5bWcR0PnJQSOqU5g" label="https://www.youtube.com/channel/UCP8MnHU5bWcR0PnJQSOqU5g" />
-      <node id="https://www.youtube.com/channel/UCio_6rvS5Juc6fGG_b29MfQ" label="https://www.youtube.com/channel/UCio_6rvS5Juc6fGG_b29MfQ" />
+      <node id="16 Typh" label="16 Typh" />
+      <node id="Lil Wuyn" label="Lil Wuyn" />
+      <node id="1989s Entertainment" label="1989s Entertainment" />
+      <node id="DuongK" label="DuongK" />
+      <node id="Tiên Cookie" label="Tiên Cookie" />
+      <node id="Đoàn Thuý Trang" label="Đoàn Thuý Trang" />
+      <node id="BigDaddy" label="BigDaddy" />
+      <node id="Đức Phúc" label="Đức Phúc" />
+      <node id="MIN" label="MIN" />
+      <node id="ERIK" label="ERIK" />
+      <node id="Sơn Tùng M-TP" label="Sơn Tùng M-TP"/>
+      <node id="Đông Nhi" label="Đông Nhi" />
+      <node id="Hà Anh Tuấn" label="Hà Anh Tuấn" />
+      <node id="Bích Phương" label="Bích Phương" />
+      <node id="Quốc Thiên" label="Quốc Thiên" />
+      <node id="Hồ Ngọc Hà" label="Hồ Ngọc Hà" />
+      <node id="Emily" label="Emily" />
+      <node id='MONO' label='MONO' />
+      <node id="Trungg I.U" label="Trungg I.U" />
+      <node id="Lâm Bảo Ngọc" label="Lâm Bảo Ngọc" />
+      <node id="Massew" label="Massew" />
+      <node id="Double2T" label="Double2T" />
+      <node id="Đạt G" label="Đạt G" />
+      <node id="Akira Phan" label="Akira Phan" />
+      <node id="Thanh Thảo" label="Thanh Thảo" />
+      <node id="Andiez" label="Andiez" />
+      <node id="Zing MP3" label="Zing MP3" />
+      <node id="Anh Tú" label="Anh Tú" />
+      <node id="HIEUTHUHAI" label="HIEUTHUHAI" />
+      <node id="LyLy" label="LyLy" />
+      <node id="Vương Anh Tú" label="Vương Anh Tú" />
+      <node id="Anh Tú Atus" label="Anh Tú Atus" />
+      <node id="Rhyder" label="Rhyder" />
+      <node id="2pillz" label="2pillz" />
+      <node id="B Ray" label="B Ray" />
+      <node id="AMEE" label="AMEE" />
+      <node id="Sofia" label="Sofia" />
+      <node id="Châu Đăng Khoa" label="Châu Đăng Khoa" />
+      <node id="Han Sara" label="Han Sara" />
+      <node id="Hoàng Tôn" label="Hoàng Tôn" />
+      <node id="GREY D" label="GREY D" />
+      <node id="Karik" label="Karik" />
+      <node id="Đen Vâu" label="Đen Vâu" />
+      <node id="Phúc Du" label="Phúc Du" />
+      <node id="Tez" label="Tez" />
+      <node id="Yến Nhi" label="Yến Nhi" />
+      <node id="Mai Khôi" label="Mai Khôi" />
+      <node id="Touliver" label="Touliver" />
+      <node id="JustaTee" label="JustaTee" />
+      <node id="Binz" label="Binz" />
+      <node id="SlimV" label="SlimV" />
+      <node id="Thu Minh" label="Thu Minh" />
+      <node id="Bình Gold" label="Bình Gold" />
+      <node id="Pháo" label="Pháo" />
+      <node id="Bùi Anh Tuấn" label="Bùi Anh Tuấn" />
+      <node id="Yeah1" label="Yeah1" />
+      <node id="Hương Tràm" label="Hương Tràm" />
+      <node id="Bùi Công Nam" label="Bùi Công Nam" />
+      <node id="Mew Amazing" label="Mew Amazing" />
+      <node id="Ricky Star" label="Ricky Star" />
+      <node id="Bảo Anh" label="Bảo Anh" />
+      <node id="Phùng Khánh Linh" label="Phùng Khánh Linh" />
+      <node id="Mr. Siro" label="Mr. Siro" />
+      <node id="Bảo Yến Rosie" label="Bảo Yến Rosie" />
+      <node id="Jombie" label="Jombie" />
+      <node id="Quân A.P" label="Quân A.P" />
+      <node id="Lou Hoàng" label="Lou Hoàng" />
+      <node id="Hứa Kim Tuyền" label="Hứa Kim Tuyền" />
+      <node id="POPS MUSIC" label="POPS MUSIC" />
+      <node id="Cao Thái Sơn" label="Cao Thái Sơn" />
+      <node id="Captain" label="Captain" />
+      <node id="Charmy Pham" label="Charmy Pham" />
+      <node id="Hoàng Thùy Linh" label="Hoàng Thùy Linh" />
+      <node id="Phương Ly" label="Phương Ly" />
+      <node id="Chi Dân" label="Chi Dân" />
+      <node id="SuperBrothers" label="SuperBrothers" />
+      <node id="Chi Pu" label="Chi Pu" />
+      <node id="Như Quỳnh" label="Như Quỳnh" />
+      <node id="Chillies" label="Chillies" />
+      <node id="Orange" label="Orange" />
+      <node id="Suni Hạ Linh" label="Suni Hạ Linh" />
+      <node id="Rhymastic" label="Rhymastic" />
+      <node id="Châu Khải Phong" label="Châu Khải Phong" />
+      <node id="Da LAB" label="Da LAB" />
+      <node id="Miu Lê" label="Miu Lê" />
+      <node id="Datmaniac" label="Datmaniac" />
+      <node id="Cá Hồi Hoang" label="Cá Hồi Hoang" />
+      <node id="Dong Tay Shows" label="Dong Tay Shows" />
+      <node id="Phạm Anh Duy" label="Phạm Anh Duy" />
+      <node id="Pháp Kiều" label="Pháp Kiều" />
+      <node id="Mai Tiến Dũng" label="Mai Tiến Dũng" />
+      <node id="Hoàng Hải" label="Hoàng Hải" />
+      <node id="Vũ Thảo My" label="Vũ Thảo My" />
+      <node id="Lương Bích Hữu" label="Lương Bích Hữu" />
+      <node id="Dương Edward" label="Dương Edward" />
+      <node id="Thanh Lam" label="Thanh Lam" />
+      <node id="DongTay Promotion" label="DongTay Promotion" />
+      <node id="Myra Trần" label="Myra Trần" />
+      <node id="Jun Phạm" label="Jun Phạm" />
+      <node id="Blacka" label="Blacka" />
+      <node id="Ái Phương" label="Ái Phương" />
+      <node id="Tùng Dương" label="Tùng Dương" />
+      <node id="Đức Tuấn" label="Đức Tuấn" />
+      <node id="Hồ Trung Dũng" label="Hồ Trung Dũng" />
+      <node id="Chí Thiện" label="Chí Thiện" />
+      <node id="Bằng Kiều" label="Bằng Kiều" />
+      <node id="Võ Hạ Trâm" label="Võ Hạ Trâm" />
+      <node id="Tóc Tiên" label="Tóc Tiên" />
+      <node id="DreamS Entertainment" label="DreamS Entertainment" />
+      <node id="JSOL" label="JSOL" />
+      <node id="Khắc Hưng" label="Khắc Hưng" />
+      <node id="Kai Đinh" label="Kai Đinh" />
+      <node id="ViruSs" label="ViruSs" />
+      <node id="Dương Domic" label="Dương Domic" />
+      <node id="T.R.I" label="T.R.I" />
+      <node id="Khắc Việt" label="Khắc Việt" />
+      <node id="Dương Hoàng Yến" label="Dương Hoàng Yến" />
+      <node id="Dương Khắc Linh" label="Dương Khắc Linh" />
+      <node id="Dương Triệu Vũ" label="Dương Triệu Vũ" />
+      <node id="Đàm Vĩnh Hưng" label="Đàm Vĩnh Hưng" />
+      <node id="Lệ Quyên" label="Lệ Quyên" />
+      <node id="Dế Choắt" label="Dế Choắt" />
+      <node id="Pjpo" label="Pjpo" />
+      <node id="Tiên Tiên" label="Tiên Tiên" />
+      <node id="DTAP" label="DTAP" />
+      <node id="OSAD" label="OSAD" />
+      <node id="Hòa Minzy" label="Hòa Minzy" />
+      <node id="MCK" label="MCK" />
+      <node id="Tlinh" label="Tlinh" />
+      <node id="Mỹ Tâm" label="Mỹ Tâm" />
+      <node id="Obito" label="Obito" />
+      <node id="Hoàng Dũng" label="Hoàng Dũng" />
+      <node id="Hoàng Yến Chibi" label="Hoàng Yến Chibi" />
+      <node id="Giang Hồng Ngọc" label="Giang Hồng Ngọc" />
+      <node id="Gin Tuấn Kiệt" label="Gin Tuấn Kiệt" />
+      <node id="Nguyễn Minh Cường" label="Nguyễn Minh Cường" />
+      <node id="Tage" label="Tage" />
+      <node id="Negav" label="Negav" />
+      <node id="HurryKng" label="HurryKng" />
+      <node id="Đỗ Hoàng Dương" label="Đỗ Hoàng Dương" />
+      <node id="Kay Trần" label="Kay Trần" />
+      <node id="Only C" label="Only C" />
+      <node id="Ông Cao Thắng" label="Ông Cao Thắng" />
+      <node id="Hiền Hồ" label="Hiền Hồ" />
+      <node id="Thiều Bảo Trâm" label="Thiều Bảo Trâm" />
+      <node id="Hoaprox" label="Hoaprox" />
+      <node id="Hoài Lâm" label="Hoài Lâm" />
+      <node id="DC Tâm" label="DC Tâm" />
+      <node id="Thu Phương" label="Thu Phương" />
+      <node id="Rick" label="Rick" />
+      <node id="Hoàng Rapper" label="Hoàng Rapper" />
+      <node id="Nguyễn Đình Vũ" label="Nguyễn Đình Vũ" />
+      <node id="Jang Mi" label="Jang Mi" />
+      <node id="Hồ Quang Hiếu" label="Hồ Quang Hiếu" />
+      <node id="Khánh Linh" label="Khánh Linh" />
+      <node id="Kimmese" label="Kimmese" />
+      <node id="Vũ" label="Vũ" />
+      <node id="Du Uyên" label="Du Uyên" />
+      <node id="Uni5" label="Uni5" />
+      <node id="Hà Nhi" label="Hà Nhi" />
+      <node id="Đỗ Hiếu" label="Đỗ Hiếu" />
+      <node id="Suboi" label="Suboi" />
+      <node id="Noo Phước Thịnh" label="Noo Phước Thịnh" />
+      <node id="Hồ Việt Trung" label="Hồ Việt Trung" />
+      <node id="Nguyên Hà" label="Nguyên Hà" />
+      <node id="Isaac" label="Isaac" />
+      <node id="Yuno Bigboi" label="Yuno Bigboi" />
+      <node id="Lăng LD" label="Lăng LD" />
+      <node id="Khánh Phương" label="Khánh Phương" />
+      <node id="LONA" label="LONA" />
+      <node id="Pjnboys" label="Pjnboys" />
+      <node id="Lương Gia Huy" label="Lương Gia Huy" />
+      <node id="Thành Đạt" label="Thành Đạt" />
+      <node id="ACV Entertainment" label="ACV Entertainment" />
+      <node id="Khởi My" label="Khởi My" />
+      <node id="Lam Trường" label="Lam Trường" />
+      <node id="Phạm Quỳnh Anh" label="Phạm Quỳnh Anh" />
+      <node id="Low G" label="Low G" />
+      <node id="Lynk Lee" label="Lynk Lee" />
+      <node id="MC ILL" label="MC ILL" />
+      <node id="Lâm Chấn Khang" label="Lâm Chấn Khang" />
+      <node id="Ali Hoàng Dương" label="Ali Hoàng Dương" />
+      <node id="Quang Vinh" label="Quang Vinh" />
+      <node id="Ưng Hoàng Phúc" label="Ưng Hoàng Phúc" />
+      <node id="Đan Trường" label="Đan Trường" />
+      <node id="Ngô Kiến Huy" label="Ngô Kiến Huy" />
+      <node id="M4U" label="M4U" />
+      <node id="Minh Vương" label="Minh Vương" />
+      <node id="Thùy Chi" label="Thùy Chi" />
+      <node id="RPT MCK" label="RPT MCK" />
+      <node id="Minh Hằng" label="Minh Hằng" />
+      <node id="Yến Lê" label="Yến Lê" />
+      <node id="Vie Channel - MUSIC" label="Vie Channel - MUSIC" />
+      <node id="Thanh Duy" label="Thanh Duy" />
+      <node id="Tăng Phúc" label="Tăng Phúc" />
+      <node id="S.T Sơn Thạch" label="S.T Sơn Thạch" />
+      <node id="Tuấn Hưng" label="Tuấn Hưng" />
+      <node id="V.A.T" label="V.A.T" />
+      <node id="Mr. T" label="Mr. T" />
+      <node id="Phạm Hồng Phước" label="Phạm Hồng Phước" />
+      <node id="Nam Em" label="Nam Em" />
+      <node id="Phạm Đình Thái Ngân" label="Phạm Đình Thái Ngân" />
+      <node id="Nguyễn Hải Yến" label="Nguyễn Hải Yến" />
+      <node id="Nguyễn Hồng Thuận" label="Nguyễn Hồng Thuận" />
+      <node id="Nguyễn Văn Chung" label="Nguyễn Văn Chung" />
+      <node id="Bùi Lan Hương" label="Bùi Lan Hương" />
+      <node id="Ngô Lan Hương" label="Ngô Lan Hương" />
+      <node id="Nhóm MTV" label="Nhóm MTV" />
+      <node id="Phương Thanh" label="Phương Thanh" />
+      <node id="Monstar" label="Monstar" />
+      <node id="Nhóm UNI5" label="Nhóm UNI5" />
+      <node id="Đinh Mạnh Ninh" label="Đinh Mạnh Ninh" />
+      <node id="Quang Hùng MasterD" label="Quang Hùng MasterD" />
+      <node id="Trang Pháp" label="Trang Pháp" />
+      <node id="Ưng Đại Vệ" label="Ưng Đại Vệ" />
+      <node id="Phan Mạnh Quỳnh" label="Phan Mạnh Quỳnh" />
+      <node id="Trấn Thành" label="Trấn Thành" />
+      <node id="Tino" label="Tino" />
+      <node id="Thanh Bùi" label="Thanh Bùi" />
+      <node id="Quang Hà" label="Quang Hà" />
+      <node id="Hải Đăng Doo" label="Hải Đăng Doo" />
+      <node id="Phạm Toàn Thắng" label="Phạm Toàn Thắng" />
+      <node id="Phương Mỹ Chi" label="Phương Mỹ Chi" />
+      <node id="Phượng Vũ" label="Phượng Vũ" />
+      <node id="WEAN" label="WEAN" />
+      <node id="Quang Lê" label="Quang Lê" />
+      <node id="COOLKID" label="COOLKID" />
+      <node id="SOOBIN" label="SOOBIN" />
+      <node id="ST.319 Entertainment" label="ST.319 Entertainment" />
+      <node id="Sivan" label="Sivan" />
+      <node id="Song Luân" label="Song Luân" />
+      <node id="SpaceSpeakers Collective" label="SpaceSpeakers Collective" />
+      <node id="HuyR" label="HuyR" />
+      <node id="Quang Dũng" label="Quang Dũng" />
+      <node id="Trung Quân Idol" label="Trung Quân Idol" />
+      <node id="Văn Mai Hương" label="Văn Mai Hương" />
+      <node id="Trúc Nhân" label="Trúc Nhân" />
+      <node id="Trương Thảo Nhi" label="Trương Thảo Nhi" />
+      <node id="Trịnh Thăng Bình" label="Trịnh Thăng Bình" />
+      <node id="Lương Bằng Quang" label="Lương Bằng Quang" />
+      <node id="Tăng Duy Tân" label="Tăng Duy Tân" />
+      <node id="Vicky Nhung" label="Vicky Nhung" />
+      <node id="VieOn" label="VieOn" />
+      <node id="Viva Network" label="Viva Network" />
+      <node id="Vũ Thịnh" label="Vũ Thịnh" />
+      <node id="WePro Entertainment" label="WePro Entertainment" />
+      <node id="Will" label="Will" />
+      <node id="Wowy" label="Wowy" />
+      <node id="Thịnh Suy" label="Thịnh Suy" />
+      <node id="SMO" label="SMO" />
+      <node id="Wren Evans" label="Wren Evans" />
+      <node id="Xesi" label="Xesi" />
+      <node id="Hồng Nhung" label="Hồng Nhung" />
+      <node id="Mỹ Linh" label="Mỹ Linh" />
     </nodes>
-    <edges />
+    <edges>
+      <edge source="16 Typh" target="Lil Wuyn" id="0" weight="1" />
+      <edge source="Lil Wuyn" target="16 Typh" id="1" weight="2" />
+      <edge source="1989s Entertainment" target="DuongK" id="2" weight="1" />
+      <edge source="1989s Entertainment" target="Tiên Cookie" id="3" weight="7" />
+      <edge source="1989s Entertainment" target="Đoàn Thuý Trang" id="4" weight="2" />
+      <edge source="1989s Entertainment" target="BigDaddy" id="5" weight="1" />
+      <edge source="1989s Entertainment" target="Đức Phúc" id="6" weight="2" />
+      <edge source="1989s Entertainment" target="MIN" id="7" weight="1" />
+      <edge source="1989s Entertainment" target="ERIK" id="8" weight="1" />
+      <edge source="1989s Entertainment" target="Đông Nhi" id="9" weight="1" />
+      <edge source="1989s Entertainment" target="Hà Anh Tuấn" id="10" weight="1" />
+      <edge source="1989s Entertainment" target="Bích Phương" id="11" weight="4" />
+      <edge source="1989s Entertainment" target="Quốc Thiên" id="12" weight="1" />
+      <edge source="1989s Entertainment" target="Hồ Ngọc Hà" id="13" weight="1" />
+      <edge source="1989s Entertainment" target="Emily" id="14" weight="1" />
+      <edge source="BigDaddy" target="Emily" id="15" weight="12" />
+      <edge source="BigDaddy" target="Phúc Du" id="16" weight="1" />
+      <edge source="BigDaddy" target="DuongK" id="17" weight="1" />
+      <edge source="BigDaddy" target="Tez" id="18" weight="1" />
+      <edge source="BigDaddy" target="GREY D" id="19" weight="1" />
+      <edge source="BigDaddy" target="Yến Nhi" id="20" weight="5" />
+      <edge source="BigDaddy" target="HIEUTHUHAI" id="21" weight="1" />
+      <edge source="BigDaddy" target="Mai Khôi" id="22" weight="1" />
+      <edge source="BigDaddy" target="Touliver" id="23" weight="1" />
+      <edge source="BigDaddy" target="JustaTee" id="24" weight="1" />
+      <edge source="Đức Phúc" target="Khắc Hưng" id="25" weight="2" />
+      <edge source="Đức Phúc" target="Zing MP3" id="26" weight="2" />
+      <edge source="Đức Phúc" target="Hồng Nhung" id="27" weight="1" />
+      <edge source="Đức Phúc" target="Tăng Duy Tân" id="28" weight="1" />
+      <edge source="Đức Phúc" target="DTAP" id="29" weight="1" />
+      <edge source="Đức Phúc" target="Mew Amazing" id="30" weight="1" />
+      <edge source="Đức Phúc" target="Lăng LD" id="31" weight="1" />
+      <edge source="Đức Phúc" target="ViruSs" id="32" weight="2" />
+      <edge source="Đức Phúc" target="Suboi" id="33" weight="1" />
+      <edge source="Đức Phúc" target="Nguyễn Hồng Thuận" id="34" weight="1" />
+      <edge source="Đức Phúc" target="Thùy Chi" id="35" weight="1" />
+      <edge source="MIN" target="Hứa Kim Tuyền" id="36" weight="1" />
+      <edge source="MIN" target="HIEUTHUHAI" id="37" weight="1" />
+      <edge source="MIN" target="16 Typh" id="38" weight="1" />
+      <edge source="MIN" target="JustaTee" id="39" weight="2" />
+      <edge source="MIN" target="Yuno Bigboi" id="40" weight="1" />
+      <edge source="MIN" target="Đen Vâu" id="41" weight="1" />
+      <edge source="MIN" target="Khắc Hưng" id="42" weight="1" />
+      <edge source="MIN" target="ERIK" id="43" weight="1" />
+      <edge source="MIN" target="Rhymastic" id="44" weight="1" />
+      <edge source="ERIK" target="Phúc Du" id="45" weight="1" />
+      <edge source="ERIK" target="DTAP" id="46" weight="1" />
+      <edge source="ERIK" target="Khắc Hưng" id="47" weight="1" />
+      <edge source="ERIK" target="Suni Hạ Linh" id="48" weight="1" />
+      <edge source="ERIK" target="OSAD" id="49" weight="1" />
+      <edge source="ERIK" target="Hòa Minzy" id="50" weight="1" />
+      <edge source="Đông Nhi" target="Jun Phạm" id="51" weight="1" />
+      <edge source="Đông Nhi" target="Bùi Công Nam" id="52" weight="1" />
+      <edge source="Đông Nhi" target="DTAP" id="53" weight="2" />
+      <edge source="Đông Nhi" target="Tlinh" id="54" weight="1" />
+      <edge source="Đông Nhi" target="Wowy" id="55" weight="1" />
+      <edge source="Đông Nhi" target="Zing MP3" id="56" weight="1" />
+      <edge source="Đông Nhi" target="Ông Cao Thắng" id="57" weight="5" />
+      <edge source="Đông Nhi" target="Han Sara" id="58" weight="2" />
+      <edge source="Đông Nhi" target="Anh Tú" id="59" weight="1" />
+      <edge source="Bích Phương" target="1989s Entertainment" id="60" weight="2" />
+      <edge source="Bích Phương" target="Thu Minh" id="61" weight="1" />
+      <edge source="Bích Phương" target="Bình Gold" id="62" weight="1" />
+      <edge source="Quốc Thiên" target="Zing MP3" id="63" weight="1" />
+      <edge source="Quốc Thiên" target="Emily" id="64" weight="1" />
+      <edge source="Hồ Ngọc Hà" target="Yeah1" id="65" weight="1" />
+      <edge source="Hồ Ngọc Hà" target="DTAP" id="66" weight="1" />
+      <edge source="Hồ Ngọc Hà" target="Đỗ Hiếu" id="67" weight="1" />
+      <edge source="Hồ Ngọc Hà" target="Suboi" id="68" weight="1" />
+      <edge source="Hồ Ngọc Hà" target="Thu Minh" id="69" weight="2" />
+      <edge source="Hồ Ngọc Hà" target="Noo Phước Thịnh" id="70" weight="1" />
+      <edge source="Emily" target="BigDaddy" id="71" weight="14" />
+      <edge source="Emily" target="Phúc Du" id="72" weight="1" />
+      <edge source="Emily" target="Tez" id="73" weight="1" />
+      <edge source="Emily" target="DuongK" id="74" weight="1" />
+      <edge source="Emily" target="GREY D" id="75" weight="1" />
+      <edge source="Emily" target="Yến Nhi" id="76" weight="5" />
+      <edge source="Emily" target="HIEUTHUHAI" id="77" weight="1" />
+      <edge source="Emily" target="Mai Khôi" id="78" weight="1" />
+      <edge source="Emily" target="Touliver" id="79" weight="1" />
+      <edge source="Emily" target="JustaTee" id="80" weight="1" />
+      <edge source="Trungg I.U" target="Lâm Bảo Ngọc" id="81" weight="1" />
+      <edge source="Massew" target="Double2T" id="82" weight="1" />
+      <edge source="Massew" target="Đạt G" id="83" weight="1" />
+      <edge source="Đạt G" target="Bùi Lan Hương" id="84" weight="1" />
+      <edge source="Đạt G" target="Du Uyên" id="85" weight="1" />
+      <edge source="Akira Phan" target="Thanh Thảo" id="86" weight="1" />
+      <edge source="Thanh Thảo" target="Quang Dũng" id="87" weight="1" />
+      <edge source="Andiez" target="Zing MP3" id="88" weight="3" />
+      <edge source="Zing MP3" target="Trấn Thành" id="89" weight="1" />
+      <edge source="Zing MP3" target="Da LAB" id="90" weight="1" />
+      <edge source="Zing MP3" target="Đạt G" id="91" weight="1" />
+      <edge source="Zing MP3" target="Hiền Hồ" id="92" weight="1" />
+      <edge source="Zing MP3" target="Han Sara" id="93" weight="1" />
+      <edge source="Zing MP3" target="Bảo Anh" id="94" weight="1" />
+      <edge source="Zing MP3" target="Quân A.P" id="95" weight="1" />
+      <edge source="Zing MP3" target="Chi Pu" id="96" weight="1" />
+      <edge source="Zing MP3" target="MIN" id="97" weight="1" />
+      <edge source="Zing MP3" target="Tino" id="98" weight="1" />
+      <edge source="Zing MP3" target="Vũ Thảo My" id="99" weight="1" />
+      <edge source="Zing MP3" target="Chi Dân" id="100" weight="1" />
+      <edge source="Zing MP3" target="Phan Mạnh Quỳnh" id="101" weight="1" />
+      <edge source="Zing MP3" target="Miu Lê" id="102" weight="1" />
+      <edge source="Zing MP3" target="Chí Thiện" id="103" weight="1" />
+      <edge source="Zing MP3" target="Tiên Tiên" id="104" weight="1" />
+      <edge source="Zing MP3" target="Thanh Bùi" id="105" weight="1" />
+      <edge source="Anh Tú" target="HIEUTHUHAI" id="106" weight="1" />
+      <edge source="Anh Tú" target="LyLy" id="107" weight="1" />
+      <edge source="Anh Tú" target="Vương Anh Tú" id="108" weight="2" />
+      <edge source="HIEUTHUHAI" target="Phương Ly" id="109" weight="2" />
+      <edge source="HIEUTHUHAI" target="Tage" id="110" weight="1" />
+      <edge source="HIEUTHUHAI" target="B Ray" id="111" weight="1" />
+      <edge source="HIEUTHUHAI" target="Negav" id="112" weight="1" />
+      <edge source="HIEUTHUHAI" target="Hoàng Tôn" id="113" weight="2" />
+      <edge source="HIEUTHUHAI" target="HurryKng" id="114" weight="1" />
+      <edge source="LyLy" target="Ricky Star" id="115" weight="1" />
+      <edge source="LyLy" target="Anh Tú" id="116" weight="2" />
+      <edge source="LyLy" target="Hứa Kim Tuyền" id="117" weight="1" />
+      <edge source="LyLy" target="HIEUTHUHAI" id="118" weight="1" />
+      <edge source="LyLy" target="Zing MP3" id="119" weight="2" />
+      <edge source="Vương Anh Tú" target="Hiền Hồ" id="120" weight="1" />
+      <edge source="Anh Tú Atus" target="Rhyder" id="121" weight="1" />
+      <edge source="Anh Tú Atus" target="2pillz" id="122" weight="1" />
+      <edge source="Rhyder" target="Dương Domic" id="123" weight="1" />
+      <edge source="Rhyder" target="Pháp Kiều" id="124" weight="1" />
+      <edge source="Rhyder" target="COOLKID" id="125" weight="1" />
+      <edge source="B Ray" target="AMEE" id="126" weight="2" />
+      <edge source="B Ray" target="Sofia" id="127" weight="1" />
+      <edge source="B Ray" target="Châu Đăng Khoa" id="128" weight="1" />
+      <edge source="B Ray" target="Han Sara" id="129" weight="1" />
+      <edge source="B Ray" target="Hoàng Tôn" id="130" weight="1" />
+      <edge source="B Ray" target="GREY D" id="131" weight="1" />
+      <edge source="B Ray" target="Zing MP3" id="132" weight="1" />
+      <edge source="B Ray" target="Karik" id="133" weight="1" />
+      <edge source="B Ray" target="Đen Vâu" id="134" weight="1" />
+      <edge source="Châu Đăng Khoa" target="Sofia" id="135" weight="4" />
+      <edge source="Châu Đăng Khoa" target="Thu Minh" id="136" weight="1" />
+      <edge source="Châu Đăng Khoa" target="Karik" id="137" weight="3" />
+      <edge source="Châu Đăng Khoa" target="Orange" id="138" weight="4" />
+      <edge source="Châu Đăng Khoa" target="LyLy" id="139" weight="1" />
+      <edge source="Châu Đăng Khoa" target="SuperBrothers" id="140" weight="2" />
+      <edge source="Châu Đăng Khoa" target="Binz" id="141" weight="1" />
+      <edge source="Han Sara" target="Đỗ Hoàng Dương" id="142" weight="2" />
+      <edge source="Han Sara" target="DTAP" id="143" weight="1" />
+      <edge source="Han Sara" target="Kay Trần" id="144" weight="1" />
+      <edge source="Han Sara" target="Only C" id="145" weight="1" />
+      <edge source="Han Sara" target="Ông Cao Thắng" id="146" weight="1" />
+      <edge source="Hoàng Tôn" target="Vũ" id="147" weight="2" />
+      <edge source="Hoàng Tôn" target="Đạt G" id="148" weight="1" />
+      <edge source="Hoàng Tôn" target="Du Uyên" id="149" weight="1" />
+      <edge source="GREY D" target="Hứa Kim Tuyền" id="150" weight="4" />
+      <edge source="GREY D" target="AMEE" id="151" weight="16" />
+      <edge source="GREY D" target="MCK" id="152" weight="1" />
+      <edge source="GREY D" target="Chillies" id="153" weight="1" />
+      <edge source="GREY D" target="Tlinh" id="154" weight="1" />
+      <edge source="GREY D" target="Mỹ Tâm" id="155" weight="1" />
+      <edge source="GREY D" target="Obito" id="156" weight="1" />
+      <edge source="GREY D" target="Hoàng Dũng" id="157" weight="1" />
+      <edge source="GREY D" target="Zing MP3" id="158" weight="2" />
+      <edge source="GREY D" target="Karik" id="159" weight="1" />
+      <edge source="GREY D" target="Ricky Star" id="160" weight="1" />
+      <edge source="GREY D" target="Rhymastic" id="161" weight="1" />
+      <edge source="GREY D" target="Lou Hoàng" id="162" weight="1" />
+      <edge source="GREY D" target="ViruSs" id="163" weight="1" />
+      <edge source="GREY D" target="Hoàng Yến Chibi" id="164" weight="1" />
+      <edge source="GREY D" target="B Ray" id="165" weight="2" />
+      <edge source="GREY D" target="Monstar" id="166" weight="4" />
+      <edge source="Karik" target="Miu Lê" id="167" weight="2" />
+      <edge source="Karik" target="Only C" id="168" weight="2" />
+      <edge source="Karik" target="Hoàng Thùy Linh" id="169" weight="1" />
+      <edge source="Karik" target="Orange" id="170" weight="1" />
+      <edge source="Karik" target="Bùi Công Nam" id="171" weight="1" />
+      <edge source="Karik" target="Yuno Bigboi" id="172" weight="1" />
+      <edge source="Đen Vâu" target="JustaTee" id="173" weight="1" />
+      <edge source="Đen Vâu" target="Lynk Lee" id="174" weight="3" />
+      <edge source="Đen Vâu" target="Kimmese" id="175" weight="2" />
+      <edge source="Đen Vâu" target="Binz" id="176" weight="1" />
+      <edge source="Phúc Du" target="Hoàng Dũng" id="177" weight="1" />
+      <edge source="Phúc Du" target="Bích Phương" id="178" weight="1" />
+      <edge source="Tez" target="Emily" id="179" weight="1" />
+      <edge source="Touliver" target="JustaTee" id="180" weight="1" />
+      <edge source="Touliver" target="Kimmese" id="181" weight="1" />
+      <edge source="JustaTee" target="Double2T" id="182" weight="1" />
+      <edge source="JustaTee" target="BigDaddy" id="183" weight="2" />
+      <edge source="JustaTee" target="Rhymastic" id="184" weight="2" />
+      <edge source="JustaTee" target="MCK" id="185" weight="1" />
+      <edge source="JustaTee" target="Tlinh" id="186" weight="1" />
+      <edge source="JustaTee" target="Tiên Tiên" id="187" weight="1" />
+      <edge source="JustaTee" target="Hoàng Thùy Linh" id="188" weight="1" />
+      <edge source="JustaTee" target="ViruSs" id="189" weight="1" />
+      <edge source="JustaTee" target="Phương Ly" id="190" weight="1" />
+      <edge source="JustaTee" target="Binz" id="191" weight="1" />
+      <edge source="JustaTee" target="Emily" id="192" weight="1" />
+      <edge source="JustaTee" target="Tiên Cookie" id="193" weight="1" />
+      <edge source="Binz" target="Touliver" id="194" weight="6" />
+      <edge source="Binz" target="Zing MP3" id="195" weight="2" />
+      <edge source="Binz" target="SlimV" id="196" weight="1" />
+      <edge source="Thu Minh" target="Mew Amazing" id="197" weight="1" />
+      <edge source="Thu Minh" target="SlimV" id="198" weight="1" />
+      <edge source="Thu Minh" target="Thanh Bùi" id="199" weight="2" />
+      <edge source="Pháo" target="Tez" id="200" weight="1" />
+      <edge source="Pháo" target="HIEUTHUHAI" id="201" weight="1" />
+      <edge source="Bùi Anh Tuấn" target="Yeah1" id="202" weight="1" />
+      <edge source="Bùi Anh Tuấn" target="Hương Tràm" id="203" weight="2" />
+      <edge source="Yeah1" target="Thanh Duy" id="204" weight="2" />
+      <edge source="Yeah1" target="Tăng Phúc" id="205" weight="2" />
+      <edge source="Yeah1" target="Quốc Thiên" id="206" weight="2" />
+      <edge source="Yeah1" target="Rhymastic" id="207" weight="2" />
+      <edge source="Yeah1" target="S.T Sơn Thạch" id="208" weight="2" />
+      <edge source="Yeah1" target="Tuấn Hưng" id="209" weight="2" />
+      <edge source="Yeah1" target="Binz" id="210" weight="2" />
+      <edge source="Yeah1" target="Jun Phạm" id="211" weight="2" />
+      <edge source="Yeah1" target="Bằng Kiều" id="212" weight="2" />
+      <edge source="Yeah1" target="Ông Cao Thắng" id="213" weight="1" />
+      <edge source="Yeah1" target="Đông Nhi" id="214" weight="1" />
+      <edge source="Yeah1" target="Ưng Đại Vệ" id="215" weight="1" />
+      <edge source="Yeah1" target="HIEUTHUHAI" id="216" weight="1" />
+      <edge source="Yeah1" target="Hòa Minzy" id="217" weight="1" />
+      <edge source="Yeah1" target="BigDaddy" id="218" weight="1" />
+      <edge source="Yeah1" target="Touliver" id="219" weight="1" />
+      <edge source="Hương Tràm" target="Charmy Pham" id="220" weight="2" />
+      <edge source="Hương Tràm" target="Đức Phúc" id="221" weight="2" />
+      <edge source="Hương Tràm" target="Hoàng Thùy Linh" id="222" weight="2" />
+      <edge source="Hương Tràm" target="Phương Ly" id="223" weight="2" />
+      <edge source="Bùi Công Nam" target="Mew Amazing" id="224" weight="1" />
+      <edge source="Bùi Công Nam" target="Ricky Star" id="225" weight="1" />
+      <edge source="Ricky Star" target="Pjpo" id="226" weight="2" />
+      <edge source="Bảo Anh" target="Bích Phương" id="227" weight="1" />
+      <edge source="Bảo Anh" target="Phùng Khánh Linh" id="228" weight="1" />
+      <edge source="Bảo Anh" target="Châu Đăng Khoa" id="229" weight="1" />
+      <edge source="Bảo Anh" target="HIEUTHUHAI" id="230" weight="1" />
+      <edge source="Bảo Anh" target="Mr. Siro" id="231" weight="1" />
+      <edge source="Bảo Anh" target="Hoàng Tôn" id="232" weight="1" />
+      <edge source="Phùng Khánh Linh" target="Cá Hồi Hoang" id="233" weight="1" />
+      <edge source="Phùng Khánh Linh" target="Phạm Toàn Thắng" id="234" weight="1" />
+      <edge source="Phùng Khánh Linh" target="DuongK" id="235" weight="1" />
+      <edge source="Phùng Khánh Linh" target="Zing MP3" id="236" weight="1" />
+      <edge source="Mr. Siro" target="BigDaddy" id="237" weight="1" />
+      <edge source="Bảo Yến Rosie" target="Châu Đăng Khoa" id="238" weight="1" />
+      <edge source="Bảo Yến Rosie" target="Jombie" id="239" weight="1" />
+      <edge source="Quân A.P" target="Lou Hoàng" id="240" weight="2" />
+      <edge source="Quân A.P" target="Hứa Kim Tuyền" id="241" weight="2" />
+      <edge source="Quân A.P" target="Bùi Công Nam" id="242" weight="2" />
+      <edge source="Quân A.P" target="POPS MUSIC" id="243" weight="2" />
+      <edge source="Lou Hoàng" target="Only C" id="244" weight="1" />
+      <edge source="Hứa Kim Tuyền" target="Hà Nhi" id="245" weight="1" />
+      <edge source="Hứa Kim Tuyền" target="Nguyên Hà" id="246" weight="1" />
+      <edge source="Hứa Kim Tuyền" target="Hoàng Dũng" id="247" weight="1" />
+      <edge source="POPS MUSIC" target="Nguyễn Đình Vũ" id="248" weight="1" />
+      <edge source="POPS MUSIC" target="Ricky Star" id="249" weight="1" />
+      <edge source="POPS MUSIC" target="LONA" id="250" weight="1" />
+      <edge source="POPS MUSIC" target="Suni Hạ Linh" id="251" weight="1" />
+      <edge source="POPS MUSIC" target="Pjnboys" id="252" weight="1" />
+      <edge source="POPS MUSIC" target="Yuno Bigboi" id="253" weight="1" />
+      <edge source="POPS MUSIC" target="Lương Gia Huy" id="254" weight="1" />
+      <edge source="POPS MUSIC" target="Thành Đạt" id="255" weight="2" />
+      <edge source="Cao Thái Sơn" target="Zing MP3" id="256" weight="2" />
+      <edge source="Cao Thái Sơn" target="POPS MUSIC" id="257" weight="2" />
+      <edge source="Cao Thái Sơn" target="Vương Anh Tú" id="258" weight="1" />
+      <edge source="Captain" target="Rhyder" id="259" weight="1" />
+      <edge source="Charmy Pham" target="Đức Phúc" id="261" weight="1" />
+      <edge source="Charmy Pham" target="Hoàng Thùy Linh" id="262" weight="1" />
+      <edge source="Charmy Pham" target="Phương Ly" id="263" weight="1" />
+      <edge source="Hoàng Thùy Linh" target="Zing MP3" id="264" weight="1" />
+      <edge source="Hoàng Thùy Linh" target="DTAP" id="265" weight="3" />
+      <edge source="Hoàng Thùy Linh" target="Karik" id="266" weight="1" />
+      <edge source="Hoàng Thùy Linh" target="Tùng Dương" id="267" weight="1" />
+      <edge source="Hoàng Thùy Linh" target="Thanh Lam" id="268" weight="1" />
+      <edge source="Hoàng Thùy Linh" target="Khánh Linh" id="269" weight="1" />
+      <edge source="Hoàng Thùy Linh" target="Binz" id="270" weight="1" />
+      <edge source="Hoàng Thùy Linh" target="Kimmese" id="271" weight="1" />
+      <edge source="Hoàng Thùy Linh" target="Chi Pu" id="272" weight="1" />
+      <edge source="Phương Ly" target="Low G" id="273" weight="1" />
+      <edge source="Phương Ly" target="Rhymastic" id="274" weight="1" />
+      <edge source="Phương Ly" target="JustaTee" id="275" weight="1" />
+      <edge source="Chi Dân" target="SuperBrothers" id="276" weight="1" />
+      <edge source="SuperBrothers" target="Sofia" id="277" weight="4" />
+      <edge source="SuperBrothers" target="Châu Đăng Khoa" id="278" weight="8" />
+      <edge source="SuperBrothers" target="Thu Minh" id="279" weight="1" />
+      <edge source="SuperBrothers" target="Karik" id="280" weight="3" />
+      <edge source="SuperBrothers" target="Orange" id="281" weight="4" />
+      <edge source="SuperBrothers" target="LyLy" id="282" weight="1" />
+      <edge source="SuperBrothers" target="Binz" id="283" weight="1" />
+      <edge source="Chi Pu" target="Zing MP3" id="284" weight="2" />
+      <edge source="Chi Pu" target="Như Quỳnh" id="285" weight="1" />
+      <edge source="Chillies" target="Orange" id="286" weight="1" />
+      <edge source="Chillies" target="Suni Hạ Linh" id="287" weight="1" />
+      <edge source="Chillies" target="Rhymastic" id="288" weight="1" />
+      <edge source="Orange" target="Mew Amazing" id="289" weight="4" />
+      <edge source="Orange" target="Only C" id="290" weight="1" />
+      <edge source="Orange" target="Hứa Kim Tuyền" id="291" weight="3" />
+      <edge source="Orange" target="T.R.I" id="292" weight="1" />
+      <edge source="Orange" target="Phúc Du" id="293" weight="2" />
+      <edge source="Orange" target="Hoàng Dũng" id="294" weight="1" />
+      <edge source="Suni Hạ Linh" target="GREY D" id="295" weight="1" />
+      <edge source="Suni Hạ Linh" target="ST.319 Entertainment" id="296" weight="1" />
+      <edge source="Suni Hạ Linh" target="Lou Hoàng" id="297" weight="1" />
+      <edge source="Rhymastic" target="Dương Hoàng Yến" id="298" weight="1" />
+      <edge source="Rhymastic" target="Touliver" id="299" weight="2" />
+      <edge source="Rhymastic" target="Suboi" id="300" weight="1" />
+      <edge source="Châu Khải Phong" target="Pháo" id="301" weight="1" />
+      <edge source="Da LAB" target="Đức Phúc" id="302" weight="1" />
+      <edge source="Da LAB" target="Orange" id="303" weight="1" />
+      <edge source="Da LAB" target="Phương Ly" id="304" weight="1" />
+      <edge source="Da LAB" target="Rhymastic" id="305" weight="1" />
+      <edge source="Da LAB" target="Miu Lê" id="306" weight="1" />
+      <edge source="Miu Lê" target="Pjnboys" id="307" weight="1" />
+      <edge source="Miu Lê" target="Yuno Bigboi" id="308" weight="2" />
+      <edge source="Miu Lê" target="DTAP" id="309" weight="1" />
+      <edge source="Miu Lê" target="Châu Đăng Khoa" id="310" weight="1" />
+      <edge source="Miu Lê" target="Karik" id="311" weight="2" />
+      <edge source="Miu Lê" target="Bùi Công Nam" id="312" weight="2" />
+      <edge source="Miu Lê" target="Hoàng Dũng" id="313" weight="1" />
+      <edge source="Miu Lê" target="Đạt G" id="314" weight="1" />
+      <edge source="Miu Lê" target="V.A.T" id="315" weight="1" />
+      <edge source="Datmaniac" target="Cá Hồi Hoang" id="316" weight="1" />
+      <edge source="Dong Tay Shows" target="Phạm Anh Duy" id="317" weight="3" />
+      <edge source="Dong Tay Shows" target="Thu Minh" id="318" weight="2" />
+      <edge source="Dong Tay Shows" target="Lâm Bảo Ngọc" id="319" weight="3" />
+      <edge source="Dong Tay Shows" target="Pháp Kiều" id="320" weight="1" />
+      <edge source="Dong Tay Shows" target="Mai Tiến Dũng" id="321" weight="6" />
+      <edge source="Dong Tay Shows" target="Hoàng Hải" id="322" weight="5" />
+      <edge source="Dong Tay Shows" target="LyLy" id="323" weight="5" />
+      <edge source="Dong Tay Shows" target="Orange" id="324" weight="1" />
+      <edge source="Dong Tay Shows" target="Vũ Thảo My" id="325" weight="1" />
+      <edge source="Dong Tay Shows" target="Lương Bích Hữu" id="326" weight="2" />
+      <edge source="Dong Tay Shows" target="Dương Edward" id="327" weight="1" />
+      <edge source="Dong Tay Shows" target="Thanh Lam" id="328" weight="2" />
+      <edge source="Pháp Kiều" target="Hải Đăng Doo" id="329" weight="1" />
+      <edge source="Mai Tiến Dũng" target="Lương Bích Hữu" id="330" weight="1" />
+      <edge source="Hoàng Hải" target="Rick" id="331" weight="1" />
+      <edge source="Lương Bích Hữu" target="Hoàng Dũng" id="332" weight="1" />
+      <edge source="Lương Bích Hữu" target="Yuno Bigboi" id="333" weight="1" />
+      <edge source="Lương Bích Hữu" target="DTAP" id="334" weight="1" />
+      <edge source="Lương Bích Hữu" target="Khánh Phương" id="335" weight="1" />
+      <edge source="Lương Bích Hữu" target="Cao Thái Sơn" id="336" weight="1" />
+      <edge source="Lương Bích Hữu" target="Quang Vinh" id="337" weight="1" />
+      <edge source="Lương Bích Hữu" target="Ưng Hoàng Phúc" id="338" weight="1" />
+      <edge source="Lương Bích Hữu" target="Đan Trường" id="339" weight="1" />
+      <edge source="Lương Bích Hữu" target="Ngô Kiến Huy" id="340" weight="1" />
+      <edge source="Dương Edward" target="Khắc Việt" id="341" weight="2" />
+      <edge source="Dương Edward" target="SlimV" id="342" weight="1" />
+      <edge source="DongTay Promotion" target="Myra Trần" id="343" weight="1" />
+      <edge source="DongTay Promotion" target="Jun Phạm" id="344" weight="1" />
+      <edge source="DongTay Promotion" target="Blacka" id="345" weight="1" />
+      <edge source="DongTay Promotion" target="Ái Phương" id="346" weight="1" />
+      <edge source="DongTay Promotion" target="Quốc Thiên" id="347" weight="1" />
+      <edge source="DongTay Promotion" target="Tùng Dương" id="348" weight="1" />
+      <edge source="DongTay Promotion" target="Đức Tuấn" id="349" weight="1" />
+      <edge source="DongTay Promotion" target="Hồ Trung Dũng" id="350" weight="1" />
+      <edge source="DongTay Promotion" target="Chí Thiện" id="351" weight="1" />
+      <edge source="DongTay Promotion" target="Bằng Kiều" id="352" weight="1" />
+      <edge source="DongTay Promotion" target="Võ Hạ Trâm" id="353" weight="1" />
+      <edge source="DongTay Promotion" target="Tóc Tiên" id="354" weight="1" />
+      <edge source="Myra Trần" target="Binz" id="355" weight="1" />
+      <edge source="Myra Trần" target="Phạm Hồng Phước" id="356" weight="1" />
+      <edge source="Tùng Dương" target="Double2T" id="357" weight="1" />
+      <edge source="Hồ Trung Dũng" target="Võ Hạ Trâm" id="358" weight="1" />
+      <edge source="Tóc Tiên" target="Tlinh" id="359" weight="1" />
+      <edge source="Tóc Tiên" target="Mew Amazing" id="360" weight="4" />
+      <edge source="Tóc Tiên" target="Touliver" id="361" weight="9" />
+      <edge source="Tóc Tiên" target="Binz" id="362" weight="1" />
+      <edge source="Tóc Tiên" target="Rhymastic" id="363" weight="4" />
+      <edge source="Tóc Tiên" target="Zing MP3" id="364" weight="1" />
+      <edge source="Tóc Tiên" target="Bùi Công Nam" id="365" weight="1" />
+      <edge source="Tóc Tiên" target="Lương Bằng Quang" id="366" weight="1" />
+      <edge source="Tóc Tiên" target="Suboi" id="367" weight="1" />
+      <edge source="Tóc Tiên" target="Tiên Tiên" id="368" weight="1" />
+      <edge source="Tóc Tiên" target="JustaTee" id="369" weight="1" />
+      <edge source="DreamS Entertainment" target="JSOL" id="370" weight="7" />
+      <edge source="DreamS Entertainment" target="Khắc Hưng" id="371" weight="2" />
+      <edge source="DreamS Entertainment" target="Kai Đinh" id="372" weight="1" />
+      <edge source="DreamS Entertainment" target="ViruSs" id="373" weight="1" />
+      <edge source="DreamS Entertainment" target="Lou Hoàng" id="374" weight="1" />
+      <edge source="DreamS Entertainment" target="Hứa Kim Tuyền" id="375" weight="1" />
+      <edge source="Khắc Hưng" target="Hứa Kim Tuyền" id="376" weight="2" />
+      <edge source="Dương Domic" target="T.R.I" id="377" weight="1" />
+      <edge source="T.R.I" target="Zing MP3" id="378" weight="10" />
+      <edge source="T.R.I" target="Ricky Star" id="379" weight="1" />
+      <edge source="T.R.I" target="Yuno Bigboi" id="380" weight="1" />
+      <edge source="Khắc Việt" target="Dương Hoàng Yến" id="381" weight="2" />
+      <edge source="Khắc Việt" target="POPS MUSIC" id="382" weight="1" />
+      <edge source="Khắc Việt" target="ACV Entertainment" id="383" weight="1" />
+      <edge source="Khắc Việt" target="Khắc Hưng" id="384" weight="1" />
+      <edge source="Khắc Việt" target="Hương Tràm" id="385" weight="1" />
+      <edge source="Dương Hoàng Yến" target="POPS MUSIC" id="386" weight="1" />
+      <edge source="Dương Hoàng Yến" target="Đạt G" id="387" weight="1" />
+      <edge source="Dương Hoàng Yến" target="Quân A.P" id="388" weight="1" />
+      <edge source="Dương Khắc Linh" target="Karik" id="389" weight="1" />
+      <edge source="Dương Triệu Vũ" target="Đàm Vĩnh Hưng" id="390" weight="1" />
+      <edge source="Dương Triệu Vũ" target="Lệ Quyên" id="391" weight="1" />
+      <edge source="Đàm Vĩnh Hưng" target="Trúc Nhân" id="392" weight="1" />
+      <edge source="Đàm Vĩnh Hưng" target="Ricky Star" id="393" weight="1" />
+      <edge source="Đàm Vĩnh Hưng" target="LONA" id="394" weight="1" />
+      <edge source="Đàm Vĩnh Hưng" target="Bùi Công Nam" id="395" weight="1" />
+      <edge source="Đàm Vĩnh Hưng" target="Binz" id="396" weight="1" />
+      <edge source="Dế Choắt" target="Pjpo" id="397" weight="1" />
+      <edge source="Dế Choắt" target="Tiên Tiên" id="398" weight="1" />
+      <edge source="Tiên Tiên" target="Touliver" id="399" weight="1" />
+      <edge source="OSAD" target="Pháo" id="400" weight="1" />
+      <edge source="OSAD" target="Zing MP3" id="401" weight="1" />
+      <edge source="OSAD" target="MIN" id="402" weight="1" />
+      <edge source="OSAD" target="Đinh Mạnh Ninh" id="403" weight="1" />
+      <edge source="Hòa Minzy" target="Hứa Kim Tuyền" id="404" weight="1" />
+      <edge source="Hòa Minzy" target="Bùi Công Nam" id="405" weight="1" />
+      <edge source="Hòa Minzy" target="Mew Amazing" id="406" weight="1" />
+      <edge source="Hòa Minzy" target="ERIK" id="407" weight="1" />
+      <edge source="Hòa Minzy" target="Đức Phúc" id="408" weight="1" />
+      <edge source="Hòa Minzy" target="Mr. Siro" id="409" weight="1" />
+      <edge source="Hòa Minzy" target="Châu Đăng Khoa" id="410" weight="1" />
+      <edge source="MCK" target="RPT MCK" id="411" weight="5" />
+      <edge source="MCK" target="2pillz" id="412" weight="1" />
+      <edge source="MCK" target="Tlinh" id="413" weight="1" />
+      <edge source="Tlinh" target="GREY D" id="414" weight="1" />
+      <edge source="Tlinh" target="2pillz" id="415" weight="4" />
+      <edge source="Tlinh" target="Low G" id="416" weight="1" />
+      <edge source="Tlinh" target="Hoàng Tôn" id="417" weight="1" />
+      <edge source="Tlinh" target="Zing MP3" id="418" weight="1" />
+      <edge source="Mỹ Tâm" target="Khắc Hưng" id="419" weight="8" />
+      <edge source="Mỹ Tâm" target="Suboi" id="420" weight="1" />
+      <edge source="Hoàng Dũng" target="Suni Hạ Linh" id="421" weight="1" />
+      <edge source="Hoàng Dũng" target="Zing MP3" id="422" weight="1" />
+      <edge source="Hoàng Dũng" target="Miu Lê" id="423" weight="1" />
+      <edge source="Hoàng Dũng" target="Thu Phương" id="424" weight="1" />
+      <edge source="Hoàng Yến Chibi" target="Khắc Hưng" id="425" weight="2" />
+      <edge source="Hoàng Yến Chibi" target="B Ray" id="426" weight="1" />
+      <edge source="Hoàng Yến Chibi" target="LyLy" id="427" weight="2" />
+      <edge source="Hoàng Yến Chibi" target="Tlinh" id="428" weight="2" />
+      <edge source="Hoàng Yến Chibi" target="Uni5" id="429" weight="1" />
+      <edge source="Hoàng Yến Chibi" target="Bùi Công Nam" id="430" weight="1" />
+      <edge source="Giang Hồng Ngọc" target="Zing MP3" id="431" weight="1" />
+      <edge source="Gin Tuấn Kiệt" target="Nguyễn Minh Cường" id="432" weight="1" />
+      <edge source="Gin Tuấn Kiệt" target="Mr. Siro" id="433" weight="1" />
+      <edge source="Đỗ Hoàng Dương" target="Han Sara" id="434" weight="2" />
+      <edge source="Kay Trần" target="Obito" id="435" weight="1" />
+      <edge source="Kay Trần" target="Lăng LD" id="436" weight="1" />
+      <edge source="Kay Trần" target="Hoàng Tôn" id="437" weight="1" />
+      <edge source="Only C" target="Ricky Star" id="438" weight="1" />
+      <edge source="Only C" target="Karik" id="439" weight="3" />
+      <edge source="Only C" target="Lou Hoàng" id="440" weight="14" />
+      <edge source="Only C" target="Quang Hùng MasterD" id="441" weight="1" />
+      <edge source="Only C" target="Uni5" id="442" weight="1" />
+      <edge source="Only C" target="Bùi Anh Tuấn" id="443" weight="1" />
+      <edge source="Only C" target="Isaac" id="444" weight="1" />
+      <edge source="Only C" target="Trang Pháp" id="445" weight="1" />
+      <edge source="Only C" target="Phạm Quỳnh Anh" id="446" weight="1" />
+      <edge source="Only C" target="Chi Dân" id="447" weight="1" />
+      <edge source="Only C" target="Suni Hạ Linh" id="448" weight="1" />
+      <edge source="Only C" target="Đức Phúc" id="449" weight="1" />
+      <edge source="Only C" target="Monstar" id="450" weight="1" />
+      <edge source="Only C" target="Ưng Đại Vệ" id="451" weight="1" />
+      <edge source="Only C" target="Bảo Anh" id="452" weight="1" />
+      <edge source="Only C" target="Bích Phương" id="453" weight="1" />
+      <edge source="Only C" target="Tóc Tiên" id="454" weight="1" />
+      <edge source="Hiền Hồ" target="Zing MP3" id="455" weight="1" />
+      <edge source="Hiền Hồ" target="Thiều Bảo Trâm" id="456" weight="1" />
+      <edge source="Hiền Hồ" target="Vương Anh Tú" id="457" weight="2" />
+      <edge source="Thiều Bảo Trâm" target="Châu Đăng Khoa" id="458" weight="1" />
+      <edge source="Thiều Bảo Trâm" target="Lou Hoàng" id="459" weight="1" />
+      <edge source="Hoaprox" target="JustaTee" id="460" weight="1" />
+      <edge source="Hoài Lâm" target="DC Tâm" id="461" weight="2" />
+      <edge source="Hoàng Rapper" target="Nguyễn Đình Vũ" id="462" weight="2" />
+      <edge source="Hoàng Rapper" target="Jang Mi" id="463" weight="1" />
+      <edge source="Hoàng Rapper" target="Hồ Quang Hiếu" id="464" weight="1" />
+      <edge source="Nguyễn Đình Vũ" target="Tăng Phúc" id="465" weight="2" />
+      <edge source="Nguyễn Đình Vũ" target="Yuno Bigboi" id="466" weight="1" />
+      <edge source="Nguyễn Đình Vũ" target="DC Tâm" id="467" weight="1" />
+      <edge source="Hồ Quang Hiếu" target="Hoàng Rapper" id="468" weight="2" />
+      <edge source="Vũ" target="Binz" id="469" weight="1" />
+      <edge source="Vũ" target="Phúc Du" id="470" weight="1" />
+      <edge source="Vũ" target="Kimmese" id="471" weight="1" />
+      <edge source="Du Uyên" target="Ngô Lan Hương" id="472" weight="1" />
+      <edge source="Uni5" target="Đỗ Hiếu" id="473" weight="2" />
+      <edge source="Hà Nhi" target="Anh Tú" id="474" weight="1" />
+      <edge source="Hà Nhi" target="Zing MP3" id="475" weight="1" />
+      <edge source="Hà Nhi" target="DC Tâm" id="476" weight="1" />
+      <edge source="Hà Nhi" target="Hứa Kim Tuyền" id="477" weight="1" />
+      <edge source="Đỗ Hiếu" target="OSAD" id="478" weight="2" />
+      <edge source="Suboi" target="Mỹ Tâm" id="479" weight="1" />
+      <edge source="Noo Phước Thịnh" target="Han Sara" id="480" weight="1" />
+      <edge source="Noo Phước Thịnh" target="Hồ Ngọc Hà" id="481" weight="1" />
+      <edge source="Hồ Việt Trung" target="Zing MP3" id="482" weight="1" />
+      <edge source="Isaac" target="POPS MUSIC" id="483" weight="1" />
+      <edge source="Isaac" target="Mr. Siro" id="484" weight="2" />
+      <edge source="Isaac" target="Lou Hoàng" id="485" weight="1" />
+      <edge source="Isaac" target="BigDaddy" id="486" weight="1" />
+      <edge source="Yuno Bigboi" target="Miu Lê" id="487" weight="1" />
+      <edge source="Yuno Bigboi" target="DTAP" id="488" weight="1" />
+      <edge source="Lăng LD" target="Ricky Star" id="489" weight="1" />
+      <edge source="Khánh Phương" target="DC Tâm" id="490" weight="2" />
+      <edge source="LONA" target="Đỗ Hiếu" id="491" weight="1" />
+      <edge source="LONA" target="Ricky Star" id="492" weight="1" />
+      <edge source="Thành Đạt" target="DC Tâm" id="493" weight="1" />
+      <edge source="Khởi My" target="Bùi Công Nam" id="494" weight="1" />
+      <edge source="Khởi My" target="Nguyễn Đình Vũ" id="495" weight="1" />
+      <edge source="Lam Trường" target="Phạm Quỳnh Anh" id="496" weight="1" />
+      <edge source="Phạm Quỳnh Anh" target="Ricky Star" id="497" weight="1" />
+      <edge source="Phạm Quỳnh Anh" target="Ưng Hoàng Phúc" id="498" weight="1" />
+      <edge source="Low G" target="Tlinh" id="499" weight="5" />
+      <edge source="Lynk Lee" target="MC ILL" id="500" weight="1" />
+      <edge source="Lâm Chấn Khang" target="Châu Khải Phong" id="501" weight="2" />
+      <edge source="Lâm Chấn Khang" target="DC Tâm" id="502" weight="1" />
+      <edge source="Lâm Chấn Khang" target="Như Quỳnh" id="503" weight="1" />
+      <edge source="Lâm Chấn Khang" target="Vương Anh Tú" id="504" weight="2" />
+      <edge source="Lâm Chấn Khang" target="Ali Hoàng Dương" id="505" weight="1" />
+      <edge source="Lâm Chấn Khang" target="Quang Vinh" id="506" weight="1" />
+      <edge source="Quang Vinh" target="Mr. Siro" id="507" weight="1" />
+      <edge source="Ưng Hoàng Phúc" target="Mỹ Linh" id="508" weight="1" />
+      <edge source="Ưng Hoàng Phúc" target="Blacka" id="509" weight="1" />
+      <edge source="Ưng Hoàng Phúc" target="Wowy" id="510" weight="1" />
+      <edge source="Ngô Kiến Huy" target="Karik" id="511" weight="1" />
+      <edge source="Ngô Kiến Huy" target="Vương Anh Tú" id="512" weight="2" />
+      <edge source="Ngô Kiến Huy" target="Tăng Phúc" id="513" weight="1" />
+      <edge source="Ngô Kiến Huy" target="Yuno Bigboi" id="514" weight="1" />
+      <edge source="Ngô Kiến Huy" target="Lăng LD" id="515" weight="1" />
+      <edge source="Ngô Kiến Huy" target="Đỗ Hiếu" id="516" weight="2" />
+      <edge source="M4U" target="Minh Vương" id="517" weight="2" />
+      <edge source="M4U" target="Thùy Chi" id="518" weight="1" />
+      <edge source="Minh Vương" target="M4U" id="519" weight="1" />
+      <edge source="Minh Vương" target="Thùy Chi" id="520" weight="1" />
+      <edge source="Thùy Chi" target="Bùi Công Nam" id="521" weight="1" />
+      <edge source="Thùy Chi" target="Ricky Star" id="522" weight="1" />
+      <edge source="Thùy Chi" target="ViruSs" id="523" weight="1" />
+      <edge source="Thùy Chi" target="Trấn Thành" id="524" weight="1" />
+      <edge source="Thùy Chi" target="M4U" id="525" weight="2" />
+      <edge source="Thùy Chi" target="Phạm Hồng Phước" id="526" weight="1" />
+      <edge source="Thùy Chi" target="Trung Quân Idol" id="527" weight="1" />
+      <edge source="RPT MCK" target="MCK" id="528" weight="2" />
+      <edge source="RPT MCK" target="2pillz" id="529" weight="1" />
+      <edge source="RPT MCK" target="Tlinh" id="530" weight="1" />
+      <edge source="Minh Hằng" target="Đỗ Hiếu" id="531" weight="1" />
+      <edge source="Minh Hằng" target="HIEUTHUHAI" id="532" weight="2" />
+      <edge source="Minh Hằng" target="Yến Lê" id="533" weight="1" />
+      <edge source="Minh Hằng" target="Bùi Công Nam" id="543" weight="1" />
+      <edge source="Minh Hằng" target="Mỹ Tâm" id="544" weight="1" />
+      <edge source="Vie Channel - MUSIC" target="Suboi" id="545" weight="1" />
+      <edge source="Vie Channel - MUSIC" target="JSOL" id="546" weight="1" />
+      <edge source="Vie Channel - MUSIC" target="HIEUTHUHAI" id="547" weight="1" />
+      <edge source="Vie Channel - MUSIC" target="ERIK" id="548" weight="1" />
+      <edge source="Vie Channel - MUSIC" target="Karik" id="549" weight="1" />
+      <edge source="Tăng Phúc" target="Bùi Công Nam" id="550" weight="1" />
+      <edge source="Tăng Phúc" target="Kai Đinh" id="551" weight="1" />
+      <edge source="Tăng Phúc" target="Trương Thảo Nhi" id="552" weight="2" />
+      <edge source="Tăng Phúc" target="Nguyễn Đình Vũ" id="553" weight="3" />
+      <edge source="Tăng Phúc" target="Vương Anh Tú" id="554" weight="1" />
+      <edge source="Tăng Phúc" target="Yuno Bigboi" id="555" weight="1" />
+      <edge source="Tăng Phúc" target="Ngô Kiến Huy" id="556" weight="1" />
+      <edge source="S.T Sơn Thạch" target="DTAP" id="557" weight="1" />
+      <edge source="V.A.T" target="Vương Anh Tú" id="558" weight="7" />
+      <edge source="V.A.T" target="Hiền Hồ" id="559" weight="1" />
+      <edge source="Mr. T" target="Khắc Hưng" id="560" weight="2" />
+      <edge source="Mr. T" target="Hòa Minzy" id="561" weight="2" />
+      <edge source="Mr. T" target="SlimV" id="562" weight="1" />
+      <edge source="Nam Em" target="Phạm Đình Thái Ngân" id="563" weight="1" />
+      <edge source="Phạm Đình Thái Ngân" target="Lăng LD" id="564" weight="3" />
+      <edge source="Phạm Đình Thái Ngân" target="Zing MP3" id="565" weight="1" />
+      <edge source="Nguyễn Hải Yến" target="Tăng Phúc" id="566" weight="1" />
+      <edge source="Nguyễn Hồng Thuận" target="Thành Đạt" id="567" weight="1" />
+      <edge source="Nguyễn Hồng Thuận" target="Tăng Phúc" id="568" weight="1" />
+      <edge source="Nguyễn Văn Chung" target="Nguyễn Đình Vũ" id="569" weight="1" />
+      <edge source="Nguyễn Văn Chung" target="Hoàng Rapper" id="570" weight="1" />
+      <edge source="Nguyễn Văn Chung" target="Hoài Lâm" id="571" weight="1" />
+      <edge source="Ngô Lan Hương" target="DTAP" id="572" weight="1" />
+      <edge source="Ngô Lan Hương" target="Ricky Star" id="573" weight="1" />
+      <edge source="Nhóm MTV" target="Phương Thanh" id="574" weight="1" />
+      <edge source="Nhóm MTV" target="Karik" id="575" weight="1" />
+      <edge source="Phương Thanh" target="Lam Trường" id="576" weight="1" />
+      <edge source="Monstar" target="Zing MP3" id="577" weight="1" />
+      <edge source="Monstar" target="Monstar" id="578" weight="9" />
+      <edge source="Monstar" target="Khắc Hưng" id="579" weight="2" />
+      <edge source="Monstar" target="AMEE" id="580" weight="1" />
+      <edge source="Monstar" target="Rhymastic" id="581" weight="1" />
+      <edge source="Nhóm UNI5" target="Uni5" id="582" weight="8" />
+      <edge source="Nhóm UNI5" target="Đỗ Hiếu" id="583" weight="2" />
+      <edge source="Quang Hùng MasterD" target="ERIK" id="584" weight="1" />
+      <edge source="Quang Hùng MasterD" target="Pháp Kiều" id="585" weight="1" />
+      <edge source="Quang Hùng MasterD" target="Negav" id="586" weight="2" />
+      <edge source="Quang Hùng MasterD" target="Ali Hoàng Dương" id="587" weight="1" />
+      <edge source="Quang Hùng MasterD" target="Rhyder" id="588" weight="1" />
+      <edge source="Quang Hùng MasterD" target="Captain" id="589" weight="1" />
+      <edge source="Quang Hùng MasterD" target="WEAN" id="590" weight="1" />
+      <edge source="Trang Pháp" target="JSOL" id="591" weight="1" />
+      <edge source="Trang Pháp" target="Hoàng Dũng" id="592" weight="1" />
+      <edge source="Trang Pháp" target="Dương Khắc Linh" id="593" weight="1" />
+      <edge source="Trang Pháp" target="SlimV" id="594" weight="1" />
+      <edge source="Phan Mạnh Quỳnh" target="Orange" id="595" weight="1" />
+      <edge source="Phan Mạnh Quỳnh" target="Hoàng Thùy Linh" id="596" weight="1" />
+      <edge source="Phan Mạnh Quỳnh" target="Karik" id="597" weight="1" />
+      <edge source="Trấn Thành" target="Phan Mạnh Quỳnh" id="598" weight="3" />
+      <edge source="Trấn Thành" target="Ali Hoàng Dương" id="599" weight="5" />
+      <edge source="Trấn Thành" target="Thùy Chi" id="600" weight="2" />
+      <edge source="Trấn Thành" target="ViruSs" id="601" weight="2" />
+      <edge source="Trấn Thành" target="Trúc Nhân" id="602" weight="3" />
+      <edge source="Tino" target="Hoàng Yến Chibi" id="603" weight="2" />
+      <edge source="Quang Hà" target="Khắc Việt" id="604" weight="1" />
+      <edge source="Phương Mỹ Chi" target="Thanh Thảo" id="605" weight="12" />
+      <edge source="Phương Mỹ Chi" target="DTAP" id="606" weight="18" />
+      <edge source="Phương Mỹ Chi" target="Suboi" id="607" weight="1" />
+      <edge source="Phương Mỹ Chi" target="Pháo" id="608" weight="1" />
+      <edge source="Phương Mỹ Chi" target="ERIK" id="609" weight="1" />
+      <edge source="Phượng Vũ" target="Mew Amazing" id="610" weight="1" />
+      <edge source="WEAN" target="HurryKng" id="611" weight="1" />
+      <edge source="WEAN" target="Tlinh" id="612" weight="1" />
+      <edge source="Quang Lê" target="Lệ Quyên" id="613" weight="3" />
+      <edge source="SOOBIN" target="Tiên Cookie" id="614" weight="1" />
+      <edge source="SOOBIN" target="Touliver" id="615" weight="1" />
+      <edge source="SOOBIN" target="Tlinh" id="616" weight="1" />
+      <edge source="SOOBIN" target="SlimV" id="617" weight="2" />
+      <edge source="SOOBIN" target="Rhymastic" id="618" weight="1" />
+      <edge source="SOOBIN" target="Binz" id="619" weight="3" />
+      <edge source="SOOBIN" target="ERIK" id="620" weight="1" />
+      <edge source="ST.319 Entertainment" target="Monstar" id="621" weight="9" />
+      <edge source="ST.319 Entertainment" target="Khắc Hưng" id="622" weight="2" />
+      <edge source="ST.319 Entertainment" target="AMEE" id="623" weight="1" />
+      <edge source="ST.319 Entertainment" target="Rhymastic" id="624" weight="1" />
+      <edge source="Sivan" target="Kai Đinh" id="625" weight="1" />
+      <edge source="Song Luân" target="Đạt G" id="626" weight="1" />
+      <edge source="SpaceSpeakers Collective" target="Touliver" id="627" weight="2" />
+      <edge source="SpaceSpeakers Collective" target="Rhymastic" id="628" weight="3" />
+      <edge source="SpaceSpeakers Collective" target="16 Typh" id="629" weight="1" />
+      <edge source="SpaceSpeakers Collective" target="SOOBIN" id="630" weight="2" />
+      <edge source="SpaceSpeakers Collective" target="Lil Wuyn" id="631" weight="1" />
+      <edge source="SpaceSpeakers Collective" target="Quốc Thiên" id="632" weight="2" />
+      <edge source="SpaceSpeakers Collective" target="Hoàng Tôn" id="633" weight="2" />
+      <edge source="SpaceSpeakers Collective" target="HuyR" id="634" weight="2" />
+      <edge source="SpaceSpeakers Collective" target="Thanh Duy" id="635" weight="2" />
+      <edge source="SpaceSpeakers Collective" target="Binz" id="636" weight="1" />
+      <edge source="SpaceSpeakers Collective" target="Bùi Công Nam" id="637" weight="2" />
+      <edge source="SpaceSpeakers Collective" target="Kay Trần" id="638" weight="1" />
+      <edge source="Trung Quân Idol" target="Bùi Công Nam" id="639" weight="1" />
+      <edge source="Trung Quân Idol" target="Văn Mai Hương" id="640" weight="1" />
+      <edge source="Trung Quân Idol" target="Hà Nhi" id="641" weight="1" />
+      <edge source="Trung Quân Idol" target="Vương Anh Tú" id="642" weight="1" />
+      <edge source="Trung Quân Idol" target="Negav" id="643" weight="1" />
+      <edge source="Văn Mai Hương" target="Khắc Hưng" id="644" weight="1" />
+      <edge source="Văn Mai Hương" target="Châu Đăng Khoa" id="645" weight="1" />
+      <edge source="Văn Mai Hương" target="Blacka" id="646" weight="1" />
+      <edge source="Văn Mai Hương" target="Negav" id="647" weight="1" />
+      <edge source="Văn Mai Hương" target="Như Quỳnh" id="648" weight="1" />
+      <edge source="Văn Mai Hương" target="Bùi Anh Tuấn" id="649" weight="1" />
+      <edge source="Trúc Nhân" target="Bùi Công Nam" id="650" weight="2" />
+      <edge source="Trúc Nhân" target="OSAD" id="651" weight="1" />
+      <edge source="Trúc Nhân" target="Pháo" id="652" weight="1" />
+      <edge source="Trúc Nhân" target="Vũ" id="653" weight="1" />
+      <edge source="Trúc Nhân" target="Hứa Kim Tuyền" id="654" weight="1" />
+      <edge source="Trúc Nhân" target="MIN" id="655" weight="2" />
+      <edge source="Trúc Nhân" target="HIEUTHUHAI" id="656" weight="1" />
+      <edge source="Trúc Nhân" target="Mew Amazing" id="657" weight="2" />
+      <edge source="Trúc Nhân" target="Ricky Star" id="658" weight="1" />
+      <edge source="Trương Thảo Nhi" target="Tăng Phúc" id="659" weight="1" />
+      <edge source="Trịnh Thăng Bình" target="Hoàng Hải" id="660" weight="1" />
+      <edge source="Trịnh Thăng Bình" target="Quang Vinh" id="661" weight="1" />
+      <edge source="Trịnh Thăng Bình" target="OSAD" id="662" weight="1" />
+      <edge source="Tăng Duy Tân" target="Zing MP3" id="663" weight="1" />
+      <edge source="Vicky Nhung" target="Zing MP3" id="664" weight="3" />
+      <edge source="Vicky Nhung" target="Nguyễn Văn Chung" id="665" weight="1" />
+      <edge source="Vicky Nhung" target="Mew Amazing" id="666" weight="1" />
+      <edge source="VieOn" target="Bùi Lan Hương" id="667" weight="1" />
+      <edge source="Viva Network" target="Đông Nhi" id="668" weight="1" />
+      <edge source="Viva Network" target="Isaac" id="669" weight="1" />
+      <edge source="Vũ Thịnh" target="Zing MP3" id="670" weight="1" />
+      <edge source="WePro Entertainment" target="Rhymastic" id="671" weight="1" />
+      <edge source="WePro Entertainment" target="Ông Cao Thắng" id="672" weight="1" />
+      <edge source="WePro Entertainment" target="Đông Nhi" id="673" weight="1" />
+      <edge source="WePro Entertainment" target="Ưng Hoàng Phúc" id="674" weight="1" />
+      <edge source="WePro Entertainment" target="Trịnh Thăng Bình" id="675" weight="1" />
+      <edge source="WePro Entertainment" target="Đức Phúc" id="676" weight="1" />
+      <edge source="WePro Entertainment" target="Hương Tràm" id="677" weight="1" />
+      <edge source="WePro Entertainment" target="Hoàng Thùy Linh" id="678" weight="1" />
+      <edge source="Will" target="Andiez" id="679" weight="1" />
+      <edge source="Will" target="Han Sara" id="680" weight="1" />
+      <edge source="Wowy" target="Low G" id="681" weight="1" />
+      <edge source="Wowy" target="Thịnh Suy" id="682" weight="1" />
+      <edge source="Wowy" target="MCK" id="683" weight="1" />
+      <edge source="Wowy" target="Dế Choắt" id="684" weight="1" />
+      <edge source="Wowy" target="SMO" id="685" weight="9" />
+      <edge source="Wowy" target="Lil Wuyn" id="686" weight="1" />
+      <edge source="Wowy" target="WEAN" id="687" weight="1" />
+      <edge source="Wowy" target="Karik" id="688" weight="1" />
+      <edge source="Wren Evans" target="Mew Amazing" id="689" weight="1" />
+      <edge source="Xesi" target="T.R.I" id="690" weight="1" />
+      <edge source="Xesi" target="Zing MP3" id="691" weight="1" />
+      <edge source="Xesi" target="Ricky Star" id="692" weight="1" />
+    </edges>
   </graph>
 </gexf>

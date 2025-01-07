@@ -28,46 +28,17 @@ class YouTubeNetworkAnalyzer:
         }
         self.G = nx.Graph()
         self.channel_info = {}
+        self.channel_cache = {}
         
-        # Khởi tạo danh sách core_artists
-        self.core_artists = {
-            # Mainstream hiện tại
-            'Son Tung MTP', 'Hoang Thuy Linh', 'Den Vau', 'JACK', 'Binz', 'MIN', 
-            'Duc Phuc', 'ERIK', 'Chi Pu', 'Karik', 'Suboi', 'Rhymastic', 'JustaTee',
-            'Soobin Hoang Son', 'Bich Phuong', 'My Tam', 'Noo Phuoc Thinh',
-            'Ha Anh Tuan', 'Toc Tien', 'Dong Nhi', 'Vu Cat Tuong', 'Huong Tram',
-            
-            # New Gen
-            'tlinh', 'MCK', 'Wren Evans', 'MONO', 'HIEUTHUHAI', 'Grey D',
-            'Phan Manh Quynh', 'Vu', 'Chillies', 'Hoang Dung', 'Amee',
-            'Han Sara', 'Juky San', 'Orange', 'Hoang Thuy', 'Lyly',
-            'Phuc Du', 'Obito', 'Wxrdie', 'Sol7', 'RPT MCK', 'Low G',
-            
-            # Underground/Indie
-            'Da LAB', 'Ngot Band', 'Ca Hoi Hoang', 'Chillies', 'Madihu',
-            'Trang', '7UPPERCUTS', 'Lil Wuyn', 'Manbo', 'Thieu Bao Tram',
-            
-            # Thế hệ trước
-            'Dam Vinh Hung', 'Ho Ngoc Ha', 'Le Quyen', 'Tuan Hung', 'Quang Dung',
-            'Thanh Thao', 'Lam Truong', 'Dan Truong', 'Cam Ly', 'Duy Manh',
-            'Quang Le', 'Hong Ngoc', 'Minh Tuyet', 'Nhu Quynh', 'Manh Quynh',
-            
-            # Nhạc sĩ
-            'Vu Thanh An', 'Trinh Cong Son', 'Pham Duy', 'Nguyen Van Ty',
-            'Tran Tien', 'Thanh Tung', 'Quoc Bao', 'Duc Tri', 'Nguyen Hai Phong',
-            
-            # Rapper
-            'Andree Right Hand', 'B Ray', 'Young H', 'Datmaniac', 'Blacka',
-            'Lil Shady', 'Nah', 'Coldzy', 'Tage', 'Pjpo', 'Dick', '16 Typh',
-            
-            # Producer
-            'Masew', 'Hoaprox', 'Triple D', 'SpaceSpeakers', 'Onionn',
-            'Touliver', 'Slim V', 'Hoang Touliver', 'Long Halo', 'DJ Minh Tri',
-            
-            # Band/Group
-            'Buc Tuong', 'Microwave', 'Black Infinity', 'Unlimited', 'The Men',
-            'MTV Band', 'Quai Vat Ti Hon', '365DaBand', 'Monstar', 'Zero 9'
-        }
+        # Đọc danh sách nghệ sĩ từ CSV thay vì hardcode
+        try:
+            import pandas as pd
+            df = pd.read_csv('Vietnamese_Artists_Unique.csv')
+            self.core_artists = set(df['Artist'].str.strip().unique())
+            print(f"Đã đọc {len(self.core_artists)} nghệ sĩ từ CSV")
+        except Exception as e:
+            print(f"Lỗi khi đọc file CSV: {str(e)}")
+            self.core_artists = set()  # Fallback to empty set if CSV read fails
 
     def search_channels(self) -> Set[str]:
         """Tìm kiếm thông minh các kênh YouTube của nghệ sĩ VPop"""
@@ -92,7 +63,7 @@ class YouTubeNetworkAnalyzer:
                 for channels in results:
                     found_channels.update(channels)
             
-            print(f"\nĐã tìm thấy {len(found_channels)} kênh verified")
+            print(f"\nĐã tìm th���y {len(found_channels)} kênh verified")
             return found_channels
             
         except Exception as e:
@@ -113,7 +84,7 @@ class YouTubeNetworkAnalyzer:
                             if self._is_vpop_artist(artist['name']):
                                 artists.add(artist['name'])
                 
-                # Trường hợp 2: artist là dict trực tiếp
+                # Trường hợp 2: artist là dict trc tiếp
                 elif 'artist' in item and isinstance(item['artist'], dict):
                     if 'name' in item['artist']:
                         if self._is_vpop_artist(item['artist']['name']):
@@ -197,7 +168,7 @@ class YouTubeNetworkAnalyzer:
                 time.sleep(1)  # Tránh rate limit
 
             # 3. Tìm kiếm related artists
-            found_artists = list(artists)[:30]  # Lấy 30 nghệ sĩ đầu làm seed
+            found_artists = list(artists)[:30]  # Lấy 30 ngh sĩ đầu làm seed
             for artist_name in found_artists:
                 try:
                     # Tìm related artists
@@ -228,118 +199,86 @@ class YouTubeNetworkAnalyzer:
             print(f"Lỗi tổng thể khi lấy danh sách nghệ sĩ: {str(e)}")
             return self.core_artists
 
-    def get_channel_videos(self, channel_url: str, min_videos: int = 20) -> List[str]:
+    def get_channel_videos(self, channel_url: str, min_videos: int = 10) -> List[str]:
         """Lấy danh sách video chính thức của kênh"""
         videos = []
+        
         try:
-            # Thử tìm video từ kênh YouTube với limit cao hơn
-            channel_id = channel_url.split('/')[-1]
-            search_queries = [
-                f"ytsearch50:{channel_id} official music video",
-                f"ytsearch50:{channel_id} official mv",
-                f"ytsearch50:{channel_id} lyric video",
-                f"ytsearch50:{channel_id} visualizer",
-                f"ytsearch50:{channel_id} official audio"
-            ]
-            
-            for query in search_queries:
+            with YoutubeDL(self.ydl_opts) as ydl:
+                # Thêm error handling
+                if not channel_url or 'youtube.com' not in channel_url:
+                    return videos
+                    
+                # Lấy playlist "Uploads" của kênh
                 try:
-                    with YoutubeDL(self.ydl_opts) as ydl:
-                        results = ydl.extract_info(query, download=False)
-                        if results and 'entries' in results:
-                            for entry in results['entries']:
-                                if not entry:
-                                    continue
-                                    
-                                # Kiểm tra xem video có phải của kênh này không
-                                if entry.get('channel_id') != channel_id:
-                                    continue
-                                    
-                                title = str(entry.get('title', '')).lower()
+                    channel_info = ydl.extract_info(channel_url, download=False)
+                    if not channel_info or 'id' not in channel_info:
+                        return videos
+                        
+                    uploads_playlist = f"UU{channel_info['id'][2:]}"
+                    playlist_info = ydl.extract_info(
+                        f"https://www.youtube.com/playlist?list={uploads_playlist}",
+                        download=False
+                    )
+                    
+                    if playlist_info and 'entries' in playlist_info:
+                        for entry in playlist_info['entries']:
+                            if not entry:
+                                continue
                                 
-                                # Các từ khóa cho video chính thức
-                                official_keywords = [
-                                    'official mv', 'official music video', 
-                                    'official lyric', 'official visualizer',
-                                    'official audio', 'm/v', 'mv official',
-                                    'lyric video', 'lyrics video',
-                                    'visualizer', 'official version',
-                                    'audio official', 'audio lyric'
-                                ]
+                            # Kiểm tra null trước khi access
+                            title = entry.get('title', '')
+                            description = entry.get('description', '')
+                            
+                            if title and description:  # Chỉ xử lý khi có data
+                                title = title.lower()
+                                description = description.lower()
                                 
-                                # Các từ khóa để loại trừ
-                                exclude_keywords = [
-                                    'behind the scenes', 'making', 'karaoke', 
-                                    'live', 'concert', 'dance practice', 'cover',
-                                    'reaction', 'teaser', 'trailer', 'preview',
-                                    'talkshow', 'interview', 'gameshow', 'vlog',
-                                    'shorts', 'tiktok', 'rehearsal', 'practice',
-                                    'fanmade', 'fan made', 'unofficial'
-                                ]
-                                
-                                # Kiểm tra video
-                                if (any(k in title for k in official_keywords) and 
-                                    not any(k in title for k in exclude_keywords)):
+                                if self._is_official_video(title, description):
                                     video_url = entry.get('webpage_url', '')
                                     if video_url and video_url not in videos:
                                         videos.append(video_url)
                                         print(f"\nTìm thấy video chính thức: {title}")
-                                            
+                                        
+                                if len(videos) >= min_videos:
+                                    break
+                                    
                 except Exception as e:
-                    print(f"\nLỗi khi tìm kiếm video: {str(e)}")
-                    continue
+                    print(f"\nLỗi khi lấy playlist của {channel_url}: {str(e)}")
+                    return videos
                     
-                time.sleep(1)  # Tránh rate limit
-
-            # Thử tìm thêm từ YouTube Music API
-            try:
-                artist_name = self.channel_info.get(channel_url, {}).get('artist')
-                if artist_name:
-                    # Tìm kiếm với nhiều queries
-                    search_queries = [
-                        f"{artist_name} official mv",
-                        f"{artist_name} music video",
-                        f"{artist_name} lyric video",
-                        f"{artist_name} visualizer"
-                    ]
-                    
-                    for query in search_queries:
-                        search_results = self.ytmusic.search(query, filter='videos', limit=50)
-                        
-                        for result in search_results:
-                            video_id = result.get('videoId')
-                            if not video_id:
-                                continue
-                                
-                            try:
-                                with YoutubeDL(self.ydl_opts) as ydl:
-                                    video_info = ydl.extract_info(
-                                        f"https://www.youtube.com/watch?v={video_id}", 
-                                        download=False
-                                    )
-                                    if (video_info and 
-                                        video_info.get('channel_id') == channel_id):
-                                        video_url = video_info.get('webpage_url', '')
-                                        if video_url and video_url not in videos:
-                                            videos.append(video_url)
-                                            print(f"\nTìm thấy video từ YT Music: {video_info.get('title', '')}")
-                            except Exception:
-                                continue
-                                
-            except Exception as e:
-                print(f"\nLỗi khi tìm từ YT Music API: {str(e)}")
-
         except Exception as e:
             print(f"\nLỗi khi lấy video của {channel_url}: {str(e)}")
+            
+        return videos
 
-        print(f"\nTìm thấy {len(videos)} video chính thức của kênh")
+    def _is_official_video(self, title: str, description: str) -> bool:
+        """Kiểm tra xem video có phải là MV chính thức không"""
+        title = title.lower()
+        description = description.lower()
         
-        # Chỉ trả về kênh nếu có đủ số lượng video tối thiểu
-        if len(videos) >= min_videos:
-            return videos
-        else:
-            print(f"\nBỏ qua kênh do không đủ {min_videos} video chính thức")
-            return []
+        # Các từ khóa chỉ video chính thức
+        official_keywords = {
+            'official mv', 'official music video', 
+            'official lyric', 'official visualizer',
+            'm/v', 'mv official', 'lyric video',
+            'lyrics video', 'visualizer'
+        }
+        
+        # Các từ khóa loại trừ
+        exclude_keywords = {
+            'behind the scenes', 'making', 'karaoke', 
+            'live', 'concert', 'dance practice', 'cover',
+            'reaction', f'teaser', 'trailer', 'preview',
+            'talkshow', 'interview', 'gameshow', 'vlog',
+            'shorts', 'tiktok', 'rehearsal', 'practice',
+            'fanmade', 'fan made', 'unofficial'
+        }
+        
+        return (
+            any(k in title for k in official_keywords) and
+            not any(k in title for k in exclude_keywords)
+        )
 
     def _is_vpop_artist(self, artist_name: str) -> bool:
         """Kiểm tra xem có phải nghệ sĩ VPop không"""
@@ -445,25 +384,37 @@ class YouTubeNetworkAnalyzer:
         processed_channels = set()
         
         try:
-            # 1. Kiểm tra trước xem có phải nghệ sĩ Việt không
-            if not self._is_vpop_artist(artist_name):
-                return channels
+            # 1. Kiểm tra cache trước
+            cache_key = artist_name.lower().strip()
+            if cache_key in self.channel_cache:
+                return self.channel_cache[cache_key]
 
             # 2. Tìm kiếm với nhiều biến thể tên
-            search_queries = [
-                f'"{artist_name}" official channel',
-                f'"{artist_name}" official music',
-                f'"{artist_name}" CHÍNH THỨC',
-                f'"{artist_name}" OFFICIAL'
+            name_variants = [
+                artist_name,
+                f"{artist_name} Official",
+                f"{artist_name} OFFICIAL",
+                f"{artist_name} Chính Thức",
+                f"{artist_name} Music",
+                f"Official {artist_name}",
+                f"{artist_name} Entertainment",
+                f"{artist_name} TV",
+                f"{artist_name} Channel",
+                # Thêm các biến thể viết thường
+                artist_name.lower(),
+                f"{artist_name.lower()} official",
+                f"official {artist_name.lower()}"
             ]
             
-            for query in search_queries:
+            for query in name_variants:
                 if channels:  # Nếu đã tìm thấy thì dừng
                     break
                     
                 try:
                     with YoutubeDL(self.ydl_opts) as ydl:
-                        results = ydl.extract_info(f"ytsearch3:{query}", download=False)
+                        # Tăng số lượng kết quả tìm kiếm
+                        results = ydl.extract_info(f"ytsearch5:{query}", download=False)
+                        
                         if results and 'entries' in results:
                             for entry in results['entries']:
                                 if not entry:
@@ -473,35 +424,37 @@ class YouTubeNetworkAnalyzer:
                                 channel_id = entry.get('channel_id', '')
                                 channel_name = entry.get('channel', '')
                                 
-                                if not channel_url or channel_id in processed_channels:
+                                if not channel_url or not channel_id or channel_id in processed_channels:
                                     continue
                                     
                                 processed_channels.add(channel_id)
                                 
-                                # Kiểm tra tên kênh có hợp lệ không
-                                if not self._is_valid_channel_name(channel_name, artist_name):
-                                    continue
-                                    
-                                # Kiểm tra xem có phải kênh chính thức không
-                                if self._is_official_channel(channel_name, artist_name):
-                                    channels.add(channel_url)
-                                    self.channel_info[channel_url] = {
-                                        'name': channel_name,
-                                        'artist': artist_name,
-                                        'verified': True
-                                    }
-                                    print(f"\nTìm thấy kênh chính thức: {channel_name}")
-                                    break
-                                    
+                                # Cải thiện việc kiểm tra tên kênh
+                                if self._is_valid_channel_name(channel_name, artist_name):
+                                    if self._verify_channel_content(channel_url, artist_name):
+                                        channels.add(channel_url)
+                                        self.channel_info[channel_url] = {
+                                            'name': channel_name,
+                                            'artist': artist_name,
+                                            'verified': True,
+                                            'id': channel_id
+                                        }
+                                        print(f"\nTìm thấy kênh chính thức: {channel_name}")
+                                        break
+                            
                 except Exception as e:
+                    print(f"\nLỗi khi tìm kiếm với query '{query}': {str(e)}")
                     continue
                     
-                time.sleep(0.5)
+                time.sleep(0.5)  # Tránh rate limit
 
+            # Lưu vào cache
+            self.channel_cache[cache_key] = channels
+            return channels
+                
         except Exception as e:
             print(f"\nLỗi khi tìm kênh của {artist_name}: {str(e)}")
-            
-        return channels
+            return channels
 
     def _is_valid_channel_name(self, channel_name: str, artist_name: str) -> bool:
         """Kiểm tra tên kênh có hợp lệ không"""
@@ -548,7 +501,7 @@ class YouTubeNetworkAnalyzer:
         return True
 
     def _is_official_channel(self, channel_name: str, artist_name: str, channel_id: str = None) -> bool:
-        """Kiểm tra xem có phải kênh chính thức không"""
+        """Kiểm tra xem có ph��i kênh chính thức không"""
         if not isinstance(channel_name, str) or not isinstance(artist_name, str):
             return False
         
@@ -574,7 +527,7 @@ class YouTubeNetworkAnalyzer:
             if not has_official_keyword:
                 return False
 
-            # 3. Kiểm tra các từ khóa chỉ kênh không chính thức
+            # 3. Kiểm tra cc từ khóa chỉ kênh không chính thức
             unofficial_keywords = {
                 'fan', 'club', 'fc', 'community', 'cover', 'reaction',
                 'tribute', 'best of', 'collection', 'mix', 'playlist',
@@ -785,7 +738,7 @@ class YouTubeNetworkAnalyzer:
                                 channel_artist=channel_artist  # Truyền tên nghệ sĩ của kênh
                             )
                             
-                            # Thêm vào mạng lưới
+                            # Thêm vào mng lưới
                             if collaborators:
                                 network[channel_artist].update(collaborators)
                                 # Thêm cả chiều ngược lại
@@ -832,7 +785,7 @@ class YouTubeNetworkAnalyzer:
             with open('channel_data.json', 'w', encoding='utf-8') as f:
                 json.dump(channel_data, f, ensure_ascii=False, indent=2)
                 
-            # 2. Lưu dữ liệu mạng lưới
+            # 2. Lưu dữ liệu mng lưới
             # Convert set thành list để có thể serialize
             graph_data = {
                 artist: list(collaborators)
@@ -842,12 +795,6 @@ class YouTubeNetworkAnalyzer:
             with open('graph_data.json', 'w', encoding='utf-8') as f:
                 json.dump(graph_data, f, ensure_ascii=False, indent=2)
                 
-            print("\nĐã lưu dữ liệu vào channel_data.json và graph_data.json")
-            
-        except Exception as e:
-            print(f"\nLỗi khi lưu dữ liệu: {str(e)}")
-                json.dump(graph_data, f, ensure_ascii=False, indent=2)
-            
             print("\nĐã lưu dữ liệu vào channel_data.json và graph_data.json")
             
         except Exception as e:
@@ -897,7 +844,7 @@ class YouTubeNetworkAnalyzer:
             print(f"\nLỗi khi trực quan hóa: {str(e)}")
 
     def analyze_metrics(self) -> None:
-        """Phân tích các metrics của mạng lưới"""
+        """Phân tích các metrics ca mạng lưới"""
         try:
             # 1. Tính toán các metrics cơ bản
             n_nodes = self.G.number_of_nodes()
@@ -980,14 +927,55 @@ class YouTubeNetworkAnalyzer:
         except Exception as e:
             print(f"\nLỗi khi phân tích metrics: {str(e)}")
 
+    def _verify_channel_content(self, channel_url: str, artist_name: str) -> bool:
+        """Xác minh nội dung kênh có phải của nghệ sĩ không"""
+        try:
+            with YoutubeDL(self.ydl_opts) as ydl:
+                channel_info = ydl.extract_info(channel_url, download=False)
+                
+                if not channel_info:
+                    return False
+                    
+                # 1. Kiểm tra subscriber count
+                subscriber_count = channel_info.get('subscriber_count', 0)
+                if subscriber_count < 1000:  # Kênh quá nhỏ
+                    return False
+                    
+                # 2. Kiểm tra video count
+                video_count = channel_info.get('video_count', 0) 
+                if video_count < 5:  # Quá ít video
+                    return False
+                    
+                # 3. Kiểm tra description
+                description = channel_info.get('description', '').lower()
+                music_keywords = {
+                    'ca sĩ', 'nghệ sĩ', 'rapper', 'producer', 'nhạc sĩ',
+                    'musician', 'artist', 'singer', 'composer', 'official',
+                    'chính thức', 'channel', 'music', 'entertainment'
+                }
+                if not any(keyword in description for keyword in music_keywords):
+                    return False
+                    
+                # 4. Kiểm tra tên kênh một lần nữa
+                channel_name = channel_info.get('channel', '').lower()
+                artist_name_lower = artist_name.lower()
+                
+                if artist_name_lower not in channel_name:
+                    return False
+                    
+                return True
+                
+        except Exception:
+            return False
+
 def main():
     analyzer = YouTubeNetworkAnalyzer()
     
-    # Phân tích mạng lưới
-    analyzer.analyze_network()
+    # Phân tích mạng lưới và lưu kết quả
+    network = analyzer.analyze_network()
     
-    # Lưu dữ liệu
-    analyzer.save_data()
+    # Lưu dữ liệu với network đã phân tích
+    analyzer.save_data(network)
     
     # Phân tích metrics
     analyzer.analyze_metrics()

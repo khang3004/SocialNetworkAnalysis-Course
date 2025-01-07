@@ -1,0 +1,5 @@
+,louvain,lpa,girvan_newman,kmeans,gmm,dbscan
+number_of_communities,16.0,26.0,4.0,5.0,5.0,3.0
+avg_community_size,15.875,9.7692,63.5,50.8,50.8,84.6667
+modularity,0.5748,0.3647,0.006,0.0,0.0,0.0
+silhouette_score,0.0,0.0,0.0,0.0,0.0,0.0

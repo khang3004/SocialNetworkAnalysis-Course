@@ -1,0 +1,29 @@
+{
+    "nodes": 254,
+    "edges": 683,
+    "density": 0.010628365130248047,
+    "avg_clustering": 0.07129559316101967,
+    "largest_strongly_connected_component_size": 107,
+    "avg_shortest_path_in_largest_component": 4.178628107917475,
+    "diameter_in_largest_component": 11,
+    "avg_degree": 5.377952755905512,
+    "number_of_components": 146,
+    "reciprocity": 0.09956076134699854,
+    "degree_stats": {
+        "max_degree": 44,
+        "min_degree": 0,
+        "median_degree": 4.0,
+        "mean_degree": 5.377952755905512,
+        "std_degree": 5.1937714572864975,
+        "max_in_degree": 27,
+        "min_in_degree": 0,
+        "median_in_degree": 2.0,
+        "mean_in_degree": 2.688976377952756,
+        "std_in_degree": 3.174969237781576,
+        "max_out_degree": 17,
+        "min_out_degree": 0,
+        "median_out_degree": 1.0,
+        "mean_out_degree": 2.688976377952756,
+        "std_out_degree": 3.3698694651336907
+    }
+}

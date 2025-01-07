@@ -1,0 +1,26 @@
+{
+    "jaccard": {
+        "precision": 0.004081116137808852,
+        "recall": 0.9416058394160584,
+        "f1_score": 0.008127008127008128,
+        "number_of_predictions": 31609
+    },
+    "adamic_adar": {
+        "precision": 0.004081116137808852,
+        "recall": 0.9416058394160584,
+        "f1_score": 0.008127008127008128,
+        "number_of_predictions": 31609
+    },
+    "preferential_attachment": {
+        "precision": 0.004081116137808852,
+        "recall": 0.9416058394160584,
+        "f1_score": 0.008127008127008128,
+        "number_of_predictions": 31609
+    },
+    "resource_allocation": {
+        "precision": 0.004081116137808852,
+        "recall": 0.9416058394160584,
+        "f1_score": 0.008127008127008128,
+        "number_of_predictions": 31609
+    }
+}
